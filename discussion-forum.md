@@ -1,6 +1,6 @@
 ## Discussion Forum
 
-For a more collaborative learning experience, I want to reward participation in asking, discussing and answering questions on this [google group]() with up to 5% of the total points, see also [Assessment](assessment.md). 
+For a more collaborative learning experience, I want to reward participation in asking, discussing and answering questions on our google group with up to 5% of the total points, see also [Assessment](assessment.md). 
 
 As I want this forum to be a space for collaborative learning, I will grade participation, not the correctness of answers.
 

@@ -29,7 +29,7 @@ Note that this has been (slightly) modified from the current [course catalogue](
 
 ## Required Text
 
-The technical content of the course will be distributed [lecture-by-lecture](lecture-by-lecture.md). For general background you should read [Goedel-Escher-Bach](GEB.md).
+The technical content of the course will be distributed [lecture-by-lecture](lecture-by-lecture.md). For general background I recommend to read [Goedel-Escher-Bach](GEB.md).
 
 ## Course Materials 
 
