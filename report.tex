@@ -1,0 +1,126 @@
+\documentclass{article}
+
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage[usenames]{color}
+\usepackage{hyperref}
+  \hypersetup{
+    colorlinks = true,
+    urlcolor = blue,     % color of external links using \href
+    linkcolor= blue,       % color of internal links 
+    citecolor= blue,        % color of links to bibliography
+    filecolor= blue,         % color of file links
+    }
+    
+\usepackage{listings}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=haskell,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\title{CPSC-354 Report}
+\author{Your Name  \\ Chapman University}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Short introduction to your report \ldots 
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}\label{intro}
+
+Replace Section~\ref{intro} with your own short introduction. 
+
+\subsection{General Remarks}
+
+First you need to \href{https://www.latex-project.org/get/}{download and install} LaTeX. Alternatively, you can use an online editor such as \href{https://www.overleaf.com/learn}{Overleaf}. I prefer to have my own installation, but to get started Overleaf may be easier. 
+
+\medskip\noindent
+LaTeX is a markup language (as is, for example, HTML). The source code is in a \verb+.tex+ file and needs to be compiled for viewing, usually to \verb+.pdf+.
+
+
+\medskip\noindent
+If you want to change the default layout, you need to type commands. For example, \verb+\medskip+ inserts a medium vertical space and \verb+\noindent+ starts a paragraph without indentation.
+ 
+\medskip\noindent
+Mathematics is typeset between double dollars, for example $$x+y=y+x.$$
+
+
+\subsection{LaTeX Resources}
+
+I start a new subsection, so that you can see how it appears in the table of contents.
+
+\begin{itemize}
+\item This is how you itemize in LaTeX.
+\item I think a good way to learn LaTeX is by starting from this template file and build it up step by step. Often stackoverflow will answer your questions. But here are a few resources:
+  \begin{enumerate}
+  \item \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{Learn LaTeX in 30 minutes}
+  \item \href{https://www.latex-project.org/}{LaTeX – A document preparation system} \dots by the way, you can change the color of the links \ldots
+\end{enumerate}
+\end{itemize}
+
+\subsection{Plagiarism}
+
+To avoid plagiarism, make sure that in addition to \cite{PL} you also cite all the external sources you use.
+
+\section{Haskell}\label{haskell}
+
+This section will contain your own introduction to Haskell. 
+
+\medskip\noindent
+To typeset Haskell there are several possibilities. For the example below I took the LaTeX code from \href{https://stackoverflow.com/a/3175141/4600290}{stackoverflow} and the Haskell code from \href{https://hackmd.io/@alexhkurz/HylLKujCP}{my tutorial}.
+
+\begin{lstlisting}
+-- run the transition function on a word and a state
+run :: (State -> Char -> State) -> State -> [Char] -> State
+run delta q [] = q
+run delta q (c:cs) = run delta (delta q c) cs 
+\end{lstlisting}
+
+\medskip\noindent
+This works well for short snippets of code. For entire programs, it is better to have external links to, for example, Github or \href{https://replit.com/@alexhkurz/automata01#main.hs}{Replit} (click on the "Run" button and/or the "Code" tab).
+
+
+\section{Programming Languages Theory}
+
+In this section you will show what you learned about the theory of programming languages. 
+
+\section{Project}
+
+In this section you will describe a short project. It can either be in Haskell or of a theoretical nature,
+
+\section{Conclusions}\label{conclusions}
+Short conclusion. 
+
+\begin{thebibliography}{99}
+\bibitem[PL]{PL} \href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
+\end{thebibliography}
+
+\end{document}

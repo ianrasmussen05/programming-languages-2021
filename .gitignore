@@ -1,4 +1,9 @@
-.log
-.bib
-.aux
-.toc
+*.log
+*.bib
+*.aux
+*.toc
+*.pygstyle
+*.out
+*.synctex.gz
+
+

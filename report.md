@@ -11,10 +11,10 @@ I believe that this will have several advantages:
 The report will be divided in three parts.
 
 - Part I (40 points, approx 10 pages) will be on Haskell
-- Part II (40 points, approx 10 pages) will be on the theoretical aspects.
-- Part III (20 points, approx 5 pages) will be a mini-project going beyond what we do in class.
+- Part II (40 points, approx 10 pages) will be on the theoretical aspects of the course.
+- Part III (20 points, approx 5 pages) will be a mini-project of your choice where you can go beyond what we do in class.
 
-[LaTeX Template](report.tex).
+The [LaTeX template](report.tex) and the compiled [pdf](report.pdf).
 
 Grading Guidelines.
 
