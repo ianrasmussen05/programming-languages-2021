@@ -1,6 +1,6 @@
 # Programming Languages 
 
-(to be adapted from 2020 ... some links may be broken ... to run next time in Fall 2021)
+(currently being adapted from 2020 ... some links may be broken ... to run next time in Fall 2021)
 
 You already know some programming languages (such as Python, Java, or C++) and you are able to teach yourself a new one. But did you ever wonder how to design your own programming language? How would you even get started on a project like this? 
 
@@ -23,10 +23,9 @@ We will also have the opportunity to touch on philosophical questions such as "W
 - [Lecture by Lecture](lecture-by-lecture.md)  
 - [Discussion Forum](discussion-forum.md)  
 - [Assignments](assignments.md)
-- [Blog](blog.md)
+- [Report](report.md)
 - [On the Use of Git](git-best-practices.md)
-- [Extra Credit](extra-credit.md)
-- [Relationship to Other Courses](other-courses.md)
+- [Relationship to Some Other Courses at Chapman](other-courses.md)
 
 
 ## Other Courses on Programming Languages
@@ -88,7 +87,13 @@ I would let the modern history of programming languages begin with Fortran and L
 
 ## Discussion Topics 
 
-(from 2020 ... more to follow in 2021)
+#### New for 2021:
+
+- [We need a safer systems programming language](https://msrc-blog.microsoft.com/2019/07/18/we-need-a-safer-systems-programming-language/). Quote: "*whenever possible software should eventually be moved to a completely memory-safe language [...] If there are legitimate reasons for needing the speed, control and predictability of a language like C++, see if you can move to a systems-level programming language that is memory safe*". The next post advertising Rust is also interesting. If you want to see how these problems inspire current research in programming languages look for example at [Project Verona](https://github.com/microsoft/verona/blob/master/docs/faq.md).
+(Btw, I found this article linked in a [blog by Edward Snowden](https://edwardsnowden.substack.com/p/ns-oh-god-how-is-this-legal)  who is always worth reading when it comes to the topics of privacy, surveillence and security.)
+- [10 Papers Every Developer Should Read](https://michaelfeathers.silvrback.com/10-papers-every-developer-should-read-at-least-twice) ... these papers could make an interesting discussion.
+
+#### From 2020 (but still of interest):
 
 None of this is required reading, but all of it is part of the wider landscape in which this course is situated. Many of these links are to talks, videos, articles and blogs that do not represent carefully researched peer-reviewed authoritative expert consensus. Do not take opinions for granted but as an invitation to start a discussion.
 
