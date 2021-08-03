@@ -4,7 +4,7 @@ Instead of a midterm and final exam, I will experiment this year with letting yo
 
 I believe that this will have several advantages:
 - You will have more opportunities to show me what you have been learning.
-- I will have me more opportunities to give you feedback.
+- I will have more opportunities to give you feedback.
 - You will be able to react to my feedback by improving your report.
 - You will learn how to use LaTeX to write a professional report.
 
