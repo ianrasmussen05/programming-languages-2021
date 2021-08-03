@@ -16,6 +16,7 @@ The report will be divided in three parts.
 
 The [LaTeX template](report.tex) and the compiled [pdf](report.pdf).
 
+<!--
 Grading Guidelines.
 
 ... 
@@ -25,6 +26,6 @@ Suggestions for Part I:
 Suggestions for Part II:
 
 Suggestions for Part III:
-
+-->
 
 
