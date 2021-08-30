@@ -13,4 +13,6 @@ To clarify the learning outcomes: What we have learned in [Part 0]() and [Part 1
 
 ### Part 0: Functional Programming (0)
 
-[First Haskell Steps](https://hackmd.io/@alexhkurz/SJgHGZ_nw)
+- [First Haskell Steps](https://hackmd.io/@alexhkurz/SJgHGZ_nw)
+
+- Lecture 1.1: coming up on Tuesday ...
