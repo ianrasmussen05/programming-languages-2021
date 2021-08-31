@@ -3,9 +3,9 @@
 ## General Information
 - Class: CPSC 354 Programming Languages 
 - Instructor: [Alexander Kurz](https://alexhkurz.github.io/)  
-- Lectures (tbc): 
+- Lectures in Leatherby Libraries Lab B13 (Aug 30 - Dec 18): 
   - 354-01: TuTh 8:30AM - 9:45AM 
-  - 354-01: TuTh 1:00PM - 2:15PM 
+  - 354-02: TuTh 10:00AM - 11:15PM 
 - Office Hours: tba ... or contact me via [email(mailto:alexhkurz@gmail.com?subject=CPSC 354) 
 
 
