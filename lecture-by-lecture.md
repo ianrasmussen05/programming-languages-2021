@@ -1,8 +1,6 @@
 
 # Course Materials
 
-(under construction ... currently being adapted for 2021 ... subject to change)
-
 **Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ... [BNFC](BNFC-installation.md) ... [Haskell projects](haskell-projects.md) ... [videos](videos.md)
 
 <!--
@@ -15,5 +13,5 @@ To clarify the learning outcomes: What we have learned in [Part 0]() and [Part 1
 
 - [First Haskell Steps](https://hackmd.io/@alexhkurz/SJgHGZ_nw)
 
-- [Lecture 1.1](https://hackmd.io/@alexhkurz/HyvPg4YbK)
-- L 1.2: Coming up on Thursday
+- L 1.1: [What is language?](https://hackmd.io/@alexhkurz/HyvPg4YbK)
+- L 1.2: [Imperative vs functional programming](https://hackmd.io/@alexhkurz/SJKWvna6U) and [Recursive programming in Haskell](https://hackmd.io/@alexhkurz/H1jUka4Gv)  
