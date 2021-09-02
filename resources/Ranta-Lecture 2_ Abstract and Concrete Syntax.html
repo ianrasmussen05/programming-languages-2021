@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0081)https://www.cse.chalmers.se/edu/year/2011/course/TIN321/lectures/proglang-02.html -->
+<html><script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="generator" content="http://txt2tags.sf.net">
+<title>Lecture 2: Abstract and Concrete Syntax</title>
+</head><body bgcolor="white" text="black">
+<p align="center"></p><center><h1>Lecture 2: Abstract and Concrete Syntax</h1>
+<font size="4">
+<i>Programming Languages Course</i><br>
+Aarne Ranta (aarne@chalmers.se)
+</font></center>
+
+<p>
+Book: 2.8.2, 4.1 - 4.3
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>The central role of abstract syntax</h2>
+<p>
+Although lexing is the first compiler phase, we don't start from it.
+</p>
+<p>
+Instead, we start from the middle, abstract syntax, which is
+</p>
+<ul>
+<li>the goal of lexing + parsing
+</li><li>the starting point of code generation
+</li><li>the domain of type checking and many optimizations
+</li><li>the hub between the front end and the back end
+</li></ul>
+
+<p>
+This lecture: how syntax rules look like.
+</p>
+<p>
+Next lecture: how to write a grammar to generate a compiler front end.
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Abstract and concrete syntax</h2>
+<p>
+<b>Abstract syntax</b>: what are the significant parts of the expression?
+</p>
+<p>
+Example: a sum expression has its two operand expressions as its significant parts
+</p>
+<p>
+<img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/abstract.png" border="0" alt="">
+</p>
+<p>
+<b>Concrete syntaz</b>: what does the expression look like?
+</p>
+<p>
+Example: <i>the same</i> sum expression can look in different ways:
+</p>
+<pre>    2 + 3                         -- infix
+    
+    (+ 2 3)                       -- prefix
+  
+    (2 3 +)                       -- postfix
+  
+    bipush 2                      -- JVM 
+    bipush 3 
+    iadd 
+  
+    the sum of 2 and 3            -- English
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Parse trees and abstract syntax trees</h2>
+<p>
+Parse tree (left): show the concrete syntax (how tokens are grouped together)
+</p>
+<ul>
+<li>the tree initially constructed by the parser
+</li></ul>
+
+<p>
+Abstract tree (right): show the semantically significant structure
+</p>
+<ul>
+<li>the tree returned by the parser and manipulated by type checker
+</li></ul>
+
+<table align="center" cellpadding="4">
+<tbody><tr>
+<td><img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/parse.png" border="0" alt=""> <img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/abstract.png" border="0" alt=""></td>
+</tr>
+</tbody></table>
+
+<p>
+<!-- NEW -->
+</p>
+<h2>The structure of trees</h2>
+<p>
+Parse tree: 
+</p>
+<ul>
+<li>nodes: <b>nonterminals</b> (= <b>syntactic categories</b>)
+</li><li>leaves: <b>terminals</b> (= <b>tokens</b>)
+</li></ul>
+
+<p>
+Abstract tree: 
+</p>
+<ul>
+<li>nodes: <b>constructor functions</b>
+</li><li>leaves: atoms (= zero-place constructor functions)
+</li></ul>
+
+<table align="center" cellpadding="4">
+<tbody><tr>
+<td><img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/parse.png" border="0" alt=""> <img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/abstract.png" border="0" alt=""></td>
+</tr>
+</tbody></table>
+
+<p>
+<!-- NEW -->
+</p>
+<h2>The definition and construction of trees</h2>
+<p>
+Parse trees
+are defined by <b>context-free grammars</b>
+</p>
+<pre>    Exp  ::= Exp  "+" Exp ;
+    Exp  ::= "2" ;
+    Exp  ::= "3" ;
+</pre>
+<p></p>
+<p>
+Abstract trees
+are defined by <b>constructor type signatures</b>
+</p>
+<pre>    plus : (Exp, Exp) -&gt; Exp 
+    2    : Exp
+    3    : Exp
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>From concrete to abstract syntax</h2>
+<p>
+1. Give a name (= label) to each rule:
+</p>
+<pre>    Exp ::= Exp  "+" Exp        ==&gt;    plus. Exp ::= Exp "+" Exp
+</pre>
+<p></p>
+<p>
+2. Ignore terminals (= tokens, in quotes):
+</p>
+<pre>    plus .Exp ::= Exp  "+" Exp  ==&gt;    plus. Exp ::= Exp Exp
+</pre>
+<p></p>
+<p>
+3. Treat label as constructor name, 
+LHS (left-hand-side) as value type, RHS as argument types:
+</p>
+<pre>    plus. Exp ::= Exp Exp       ==&gt;    plus : (Exp, Exp) -&gt; Exp    
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>One abstract, many concrete</h2>
+<p>
+One abstract syntax tree can have infinitely many 
+concrete syntax representations.
+</p>
+<pre>    2 + 3                         -- infix
+    
+    (+ 2 3)                       -- prefix
+  
+    (2 3 +)                       -- postfix
+  
+    bipush 2                      -- JVM 
+    bipush 3 
+    iadd 
+  
+    the sum of 2 and 3            -- English
+</pre>
+<p>
+Remember: terminals don't matter.
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Separating abstract from concrete syntax</h2>
+<p>
+One could give a separate abstract syntax rule
+</p>
+<pre>    fun plus : Exp -&gt; Exp -&gt; Exp
+</pre>
+<p>
+and functions computing the concrete syntax as <b>linearization</b>:
+</p>
+<pre>    lin plus x y = x ++ "+" ++ y                     -- infix
+  
+    lin plus x y = "(" ++ "+" ++ x ++ y ++ ")"       -- prefix
+  
+    lin plus x y = "(" ++ x ++ y ++ "+" ++ ")"       -- postfix
+  
+    lin plus x y = x ++ y ++ "iadd"                  -- JVM
+  
+    lin plus x y = "the sum of" ++ x ++ "and" ++ y   -- English
+</pre>
+<p>
+This leads to more expressive grammars, definable in
+<a href="http://grammaticalframework.org/">GF</a> (Grammatical Framework).
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>(For fun) using GF</h2>
+<p>
+Concrete syntaxes can be different languages.
+</p>
+<p>
+GF has tools for visualizing trees and word alignment:
+</p>
+<p>
+<a href="http://tournesol.cs.chalmers.se:41296/"><code>tournesol.cs.chalmers.se:41296</code></a>
+</p>
+<p>
+The fridge magnet interface:
+</p>
+<p>
+<a href="http://tournesol.cs.chalmers.se:41296/fridge"><code>tournesol.cs.chalmers.se:41296/fridge</code></a>
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>The main idea of compilation</h2>
+<p>
+To compile: 
+</p>
+<ul>
+<li><b>parse</b> with the concrete syntax of source language
+</li><li><b>linearize</b> the resulting tree into the target language
+</li></ul>
+
+<pre>                         +                    bipush 2
+    2 + 3   -------&gt;    / \    -----------&gt;   bipush 3
+            parse      2   3   linearize      iadd
+</pre>
+<p>
+This is the idea of <b>syntax-directed translation</b>.
+</p>
+<p>
+Notice: from a grammar, both parsing and linearization are created automatically.
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Algebraic datatypes</h2>
+<p>
+Abstract syntax can be expressed as <b>algebraic datatypes</b>.
+</p>
+<p>
+They have a direct support in Haskell, as <code>data</code> types.
+</p>
+<p>
+You just have to follow the syntax convetions: constructor 
+begin with capital letters.
+</p>
+<pre>    data Exp = Eplus Exp Exp
+             | E2
+             | E3
+</pre>
+<p>
+This is one reason why Haskell is so well suited for 
+compiler construction.
+</p>
+<p>
+But: we will show later how algebraic datatypes are
+encoded in Java.
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Context-free grammars</h2>
+<p>
+Concrete syntax is described by <b>context-free grammars</b>.
+</p>
+<p>
+Context-free grammar = <b>BNF grammar</b> (Backus-Naur form).
+</p>
+<p>
+The mathematical definition is simple:
+</p>
+<p>
+A context-free grammar is a quadruple (<i>T,N,S,R</i>) where
+</p>
+<ul>
+<li><i>T</i> and <i>N</i> are disjoint sets, called <b>terminals</b> and
+  <b>nonterminals</b>, respectively
+</li><li><i>S</i> is a nonterminal, the <b>start category</b>
+</li><li><i>R</i> is a finite set of <b>rules</b>
+</li><li>a rule is a pair (<i>C</i>, <i>t_1</i>...<i>t_n</i>) where
+  <ul>
+  <li><i>C</i> is a nonterminal
+  </li><li>each <i>t_1</i> is a terminal or a nonterminal
+  </li><li>n &gt;= 0
+  </li></ul>
+</li></ul>
+
+<p>
+Example (the one above):
+</p>
+<ul>
+<li><i>T</i> = {"+", "2", "3"}
+</li><li><i>N</i> = {Exp}
+</li><li><i>S</i> = Exp
+</li><li><i>R</i> = ((Exp, Exp "+" Exp), (Exp, "2"), (Exp, "3"))
+</li></ul>
+
+<p>
+<!-- NEW -->
+</p>
+<h2>The BNF Converter</h2>
+<p>
+We will follow the notation of BNF Converter (= BNFC), where
+</p>
+<ul>
+<li>rules have the form <code>C ::= ... ;</code>
+</li><li>terminals are quoted strings e.g. <code>"+"</code>
+</li><li>nonterminals are unquoted identifiers e.g. <code>Exp</code>
+</li><li>each rule is preceded by a label and a dot, e.g. <code>EPlus.</code>
+</li></ul>
+
+<p>
+From a BNF grammar, the program automatically generates
+</p>
+<ul>
+<li>abstract syntax definition 
+</li><li>parser
+</li><li>linearizer
+</li><li>lexer
+</li><li>all this in C, C++, C#, Haskell, Java, OCaml
+</li></ul>
+
+<p>
+Today, we will look at how BNF grammars are written, independently of BNFC.
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Abstract and concrete syntax of BNF</h2>
+<p>
+In a sense, the mathematical definition of BNF is its abstract syntax!
+</p>
+<p>
+Concrete syntaxes vary: for instance, in linguistics, the common form is
+</p>
+<pre>    Exp -&gt; Exp + Exp
+</pre>
+<p>
+In Ansi C specification (Kernighan and Ritchie),
+</p>
+<p>
+<i>Exp: Exp</i> <code>+</code> <i>Exp</i>
+</p>
+<p>
+It is also common to group the rules with common LHS:
+</p>
+<pre>    Exp ::= Exp "+" Exp | "2" | "3"
+</pre>
+<p>
+This is often called <b>extended BNF</b> (which also has other abbreviations).
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Example: BNF in BNF</h2>
+<p>
+This is a subset of the 
+<a href="http://www.cs.chalmers.se/~markus/BNFC/BNF.cf">full definition</a>
+</p>
+<pre>    Gr.       Grammar  ::= ListRule ;
+    Rul.      Rule     ::= Ident "." Ident "::=" ListItem ;
+    ITerm.    Item     ::= String ;
+    INonterm. Item     ::= Ident ;
+  
+    NilRule.  ListRule ::= ;
+    ConsRule. ListRule ::= Rule ";" ListRule ;
+  
+    NilItem.  ListItem ::= ;
+    ConsItem. ListItem ::= Item ListItem ;
+</pre>
+<p>
+The grammar uses two primitive (i.e. internally defined) nonterminals:
+</p>
+<ul>
+<li><code>String</code>: quoted string
+</li><li><code>Ident</code> : letter optionally followed by letters, digits, and <code>_ '</code>
+</li></ul>
+
+<p>
+<!-- NEW -->
+</p>
+<h2>Notations for abstract syntax trees</h2>
+<p>
+Graphically:
+</p>
+<table align="center" cellpadding="4">
+<tbody><tr>
+<td><img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/abstract0.png" border="0" alt=""></td>
+</tr>
+</tbody></table>
+
+<p>
+Haskell notation: label followed by subtrees, in parentheses if necessary:
+</p>
+<pre>    EPlus 2 (ETimes 3 4)
+</pre>
+<p>
+Lisp notation: the same, but always in parentheses:
+</p>
+<pre>    (EPlus 2 (ETimes 3 4))
+</pre>
+<p>
+(The original plan was to give Lisp a separate concrete syntax later!)
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Writing a grammar: the main programming language structures</h2>
+<p>
+Usually it is good to proceed top-down: start from the largest program
+structures and proceed to the smallest.
+</p>
+<p>
+In many languages, the levels are roughly:
+</p>
+<ul>
+<li>modules
+</li><li>definitions
+</li><li>statements
+</li><li>expressions
+</li><li>atoms
+</li></ul>
+
+<p>
+Functional languages skip the statement level.
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Example: a simple imperative language</h2>
+<p>
+Each file contains a module, which is a sequence of function definitions.
+</p>
+<p>
+A definition has a header and a sequence of statemens.
+</p>
+<p>
+Statements are built from other statements and expressions.
+</p>
+<p>
+Expressions are built from other expressions and atoms.
+</p>
+<pre>    int plus (int x, int y)  // definition  
+    {
+      return x + y ;            // statement
+    }
+  
+    int test()               // definition
+    {
+      int x ;                   // statements
+      x = readInt() ;
+      int y ;
+      y = readInt() ;           
+      return plus(x,y) ;        
+    }
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Rules for modules and function definitions</h2>
+<p>
+A module is a list of definitions
+</p>
+<pre>    Mod.  Module ::= ListDef ;
+  
+    NilDef.  ListDef ::= ;              -- empty list
+    ConsDef. ListDef ::= Def ListDef ;  -- add one more
+</pre>
+<p>
+A function definition has a header and a list of statements in curly brackets
+</p>
+<pre>    Fun.  Def ::= Header "{" ListStm "}" ;
+  
+    NilStm.  ListStm ::= ;            
+    ConsStm. ListStm ::= Stm ";" ListStm ;
+</pre>
+<p>
+A header has a type, a name (an identifier), and a parameter declaration list
+</p>
+<pre>    Head. Header ::= Type Ident "(" ListDecl ")" ;
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Rule formats for sequences</h2>
+<p>
+Sequences of different kinds are very common.
+</p>
+<p>
+BNFC has a special notation for list categories: <code>[C]</code>.
+</p>
+<p>
+There is also a special notation for list rule ("Nil" and "Cons"):
+</p>
+<pre>    terminator Stm ";" ;
+</pre>
+<p>
+abbreviates the two rules
+</p>
+<pre>    NilStm.  ListStm ::= ; 
+    ConsStm. ListStm ::= Stm ";" ListStm ;
+</pre>
+<p>
+It says: "statements in a statement list are terminated by a semicolon".
+</p>
+<p>
+There is also the form
+</p>
+<pre>    separator Decl "," ;
+</pre>
+<p>
+which says: "declarations in a declaration list are separated by a comma".
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Rules for modules and function definitions: Version 2</h2>
+<p>
+A module is a list of definitions
+</p>
+<pre>    Mod.  Module ::= [Def] ;
+  
+    terminator Def "" ;
+  
+    Fun.  Def    ::= Header "{" [Stm] "}" ;
+  
+    terminator Stm ";" ;
+  
+    Head. Header ::= Type Ident "(" [Decl] ")" ;
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Rules for declarations, statements and expressions</h2>
+<p>
+A declaration has a type and an identifier:
+</p>
+<pre>    DTyp.  Decl   ::= Type Ident ;
+</pre>
+<p>
+A statement is a declaration, an expression, or a return of an expression:
+</p>
+<pre>    SDecl. Stm    ::= Decl ;
+    SExp.  Stm    ::= Exp ;
+    SRet.  Stm    ::= "return" Exp ;
+</pre>
+<p>
+An expression is an identifier, a function call, an assignment, or a sum:
+</p>
+<pre>    EId.   Exp    ::= Ident ;  
+    ECall. Exp    ::= Ident "(" [Exp] ")" ;
+    EAss.  Exp    ::= Ident "=" Exp ;
+    EPlus. Exp    ::= Exp "+" Exp ;
+</pre>
+<p>
+Expressions in a list are separated by commas:
+</p>
+<pre>    separator Exp "," ;
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Atoms</h2>
+<p>
+There is a type of integers:
+</p>
+<pre>    TInt.  Type   ::= "int" ;
+</pre>
+<p>
+The category <code>Ident</code> is defined internally in BNFC, and needs hence
+no rule. (Actually, rules for internally defined categories are illegal.)
+</p>
+<p>
+More on atoms in next week's lectures:
+</p>
+<ul>
+<li>other internally defined types
+</li><li>how to define your own token types
+</li></ul>
+
+<p>
+<!-- NEW -->
+</p>
+<h2>The syntax tree of the example</h2>
+<pre>    Mod [
+      Fun 
+        (Head 
+          TInt 
+          (Ident "plus") 
+          [DTyp TInt (Ident "x"), DTyp TInt (Ident "y")]) 
+        [SRet (EPlus (EId (Ident "x")) (EId (Ident "y")))],
+      Fun 
+        (Head 
+          TInt 
+          (Ident "test") 
+          []) 
+        [SDecl (DTyp TInt (Ident "x")),
+         SExp (EAss (Ident "x") (ECall (Ident "readInt") [])),
+         SDecl (DTyp TInt (Ident "y")),
+         SExp (EAss (Ident "y") (ECall (Ident "readInt") [])),
+         SRet (ECall (Ident "plus") [EId (Ident "x"),EId (Ident "y")])]]
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Abstract syntax representation in Haskell</h2>
+<p>
+Each category is a datatype. Lists are represented as Haskell lists.
+</p>
+<pre>    data Module =
+       Mod [Def]
+  
+    data Def =
+       Fun Header [Stm]
+  
+    data Header =
+       Head Type Ident [Decl]
+  
+    data Stm =
+       SDecl Decl
+     | SExp Exp
+     | SRet Exp
+</pre>
+<p>
+Ident is also a datatype.
+</p>
+<pre>    newtype Ident = Ident String
+</pre>
+<p>
+Syntax-directed translation is implemented as pattern matching (later lecture).
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Abstract syntax representation in Java 1.5</h2>
+<p>
+Each category is an abstract class.
+</p>
+<pre>    public abstract class Stm
+    public abstract class Exp
+</pre>
+<p>
+Each syntax constructor is a subclass of its value type class.
+</p>
+<pre>    public class SDecl extends Stm {
+      public final Decl decl_;
+    }
+    public class SExp extends Stm {
+      public final Exp exp_;
+    }
+    public class EPlus extends Exp {
+      public final Exp exp_1, exp_2;
+    }
+</pre>
+<p>
+Lists are treated using Java's linked lists.
+</p>
+<pre>    public class ListDef extends java.util.LinkedList&lt;Def&gt; {
+    }
+</pre>
+<p>
+The classes have more methods: constructors, equality, visitors.
+</p>
+<p>
+Syntax-directed translation is implemented with visitors (later lecture).
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Ambiguity</h2>
+<p>
+What is the syntax tree for this string?
+</p>
+<pre>    2 + 3 + 4
+</pre>
+<p>
+Two possibilities are permitted by the grammar:
+</p>
+<pre>        +           +
+       / \         / \
+      +   4       2   +
+     / \             / \
+    2   3           3   4
+</pre>
+<p>
+Now, the arithmetic value is the same for both, so one
+might think it doesn't matter. But just add minus to the
+grammar, and consider
+</p>
+<pre>    4 - 3 - 2
+</pre>
+<p>
+The above grammar is <b>ambiguous</b>: it gives more than
+one parse result for some strings. 
+</p>
+<p>
+Sometimes the ambiguity does not affect the meaning, sometimes
+it does.
+</p>
+<p>
+Programming languages in general avoid ambiguity.
+</p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Parentheses, ssociativity and precedence</h2>
+<p>
+One way to avoid ambiguity in a language is to use parentheses:
+</p>
+<pre>    Exp ::= "(" Exp "-" Exp ")"
+</pre>
+<p>
+Then the programmer is forced to write either of
+</p>
+<pre>    (4 - (3 -2))     ((4 - 3) - 2)
+</pre>
+<p>
+However, it is much convenient to have conventions on parsing (and
+evaluation order):
+</p>
+<ul>
+<li><b>left associativity</b> - group as long left as possible:
+<pre>    4 - 3 - 2    ==  (4 - 3) - 2 
+</pre>
+</li><li><b>precedence</b> - e.g. times "binds stronger" than plus:
+<pre>    4 + 3 * 2    ==   4 + (3 * 2)
+</pre>
+</li></ul>
+
+<p>
+Parentheses always have priority over precedence and associativity:
+</p>
+<pre>    (4 + 3) * 2  !=   4 + 3 * 2
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Precedence levels in BNFC</h2>
+<p>
+Having precedence and associativity rules in addition to grammar can be messy.
+</p>
+<p>
+But they can simply be encoded in a BNF grammar by using <b>precedence levels</b>:
+numeral subscripts to categories. Convention: <code>Exp = Exp0</code>.
+</p>
+<pre>     EInt.   Exp3 ::= Integer
+     ETimes. Exp2 ::= Exp2 "*" Exp3
+     EPlus.  Exp1 ::= Exp1 "+" Exp2
+</pre>
+<p>
+The following rules implement <b>coercions</b> between precedence levels.
+</p>
+<pre>     _. Exp3 ::= "(" Exp ")"
+     _. Exp2 ::= Exp3
+     _. Exp1 ::= Exp2
+     _. Exp  ::= Exp1
+</pre>
+<p>
+Coercions are <b>semantic dummies</b>: they add nothing to the abstract
+syntax tree. The symbol <code>_</code> on the constructor place is used to indicate this.
+</p>
+<p>
+A shorthand for such coercions groups is available:
+</p>
+<pre>    coercions Exp 3 ;
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>Precedence levels and trees</h2>
+<p>
+By definition, parse trees show coercions but abstract trees don't.
+</p>
+<table align="center" cellpadding="4">
+<tbody><tr>
+<td><img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/parse0.png" border="0" alt=""> <img align="middle" src="./Ranta-Lecture 2_ Abstract and Concrete Syntax_files/abstract0.png" border="0" alt=""></td>
+</tr>
+</tbody></table>
+
+<p>
+<!-- NEW -->
+</p>
+<h2>A complete grammar Imp.cf</h2>
+<pre>  Mod.   Module ::= [Def] ;
+  
+  Fun.   Def    ::= Header "{" [Stm] "}" ;
+  
+  terminator Def "" ;
+  
+  Head.  Header ::= Type Ident "(" [Decl] ")" ;
+  
+  SDecl. Stm    ::= Decl ;
+  SExp.  Stm    ::= Exp ;
+  SRet.  Stm    ::= "return" Exp ;
+  
+  terminator Stm ";" ;
+  
+  DTyp.  Decl   ::= Type Ident ;
+  
+  separator Decl "," ;
+  
+  EId.   Exp2   ::= Ident ;
+  ECall. Exp1   ::= Ident "(" [Exp] ")" ;
+  EAss.  Exp1   ::= Ident "=" Exp1 ;
+  EPlus. Exp    ::= Exp "+" Exp1 ;
+  
+  coercions Exp 2 ;
+  
+  separator Exp "," ;
+  
+  TInt.  Type   ::= "int" ;
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>A quick run with BNFC</h2>
+<p>
+Install BNFC: see
+</p>
+<pre>    http://digitalgrammars.com/bnfc/
+</pre>
+<p>
+Generate parser and other files from the grammar
+</p>
+<pre>    bnfc -m Imp.cf
+</pre>
+<p>
+Compile a test program
+</p>
+<pre>    make
+</pre>
+<p>
+Run the test program on file <a href="https://www.cse.chalmers.se/edu/year/2011/course/TIN321/lectures/exx/koe.imp"><code>koe.imp</code></a>
+</p>
+<pre>    ./TestImp koe.imp
+</pre>
+<p></p>
+<p>
+<!-- NEW -->
+</p>
+<h2>How to approach lab 1</h2>
+<p>
+You can proceed by modifying <a href="https://www.cse.chalmers.se/edu/year/2011/course/TIN321/lectures/exx/Imp.cf"><code>Imp.cf</code></a>
+</p>
+<p>
+We will make a quick tour of <a href="https://www.cse.chalmers.se/edu/year/2011/course/TIN321/laborations/lab1/lab1.html">Lab 1 PM</a>
+</p>
+<p>
+Have a tight modify-compile-test loop!
+</p>
+<p>
+More practical details in next Tuesday's lecture.
+</p>
+
+<!-- html code generated by txt2tags 2.4 (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags proglang-02.txt -->
+
+</body></html>
