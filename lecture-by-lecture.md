@@ -19,11 +19,12 @@ To clarify the learning outcomes: What we have learned in [Part 0]() and [Part 1
 
 - L 2.1: Haskell lab. We talked about [Rewriting and the Call Stack](https://hackmd.io/@alexhkurz/HJiulVg0U) and [Towers of Hanoi](https://hackmd.io/@alexhkurz/rJQwvpyMY) as well as the homework. We also talked about [currying](https://en.wikipedia.org/wiki/Currying) and type inference. See the video [Haskell Tips II](https://www.youtube.com/watch?v=naNLE4GLrTo) for a quick review. For the new homework see [Towers of Hanoi](https://hackmd.io/@alexhkurz/rJQwvpyMY).
 
-- L 2.1: A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). For Haskell programming techniques have a look at the videos [Haskell Tips II](https://youtu.be/naNLE4GLrTo)
+- L 2.2: A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). For Haskell programming techniques have a look at the videos [Haskell Tips II](https://youtu.be/naNLE4GLrTo)
 and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - Videos: [Order of Operations in CFGs](https://youtu.be/jf1xhZSpCvg) and [Uniqueness of Parse Trees](https://youtu.be/3ZLkPwB_c9g).
 
+<!--
 - L 2.2: We start with a [Short Introduction to Parsing](https://hackmd.io/@alexhkurz/BkSgRX1GF) and then continue with [A calculator: Parser](https://hackmd.io/@alexhkurz/BkSgRX1GF). 
-
+-->
 
