@@ -24,7 +24,6 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - Videos: [Order of Operations in CFGs](https://youtu.be/jf1xhZSpCvg) and [Uniqueness of Parse Trees](https://youtu.be/3ZLkPwB_c9g).
 
-<!--
-- L 2.2: We start with a [Short Introduction to Parsing](https://hackmd.io/@alexhkurz/BkSgRX1GF) and then continue with [A calculator: Parser](https://hackmd.io/@alexhkurz/BkSgRX1GF). 
--->
+- L 3.1: We start with a [Short Introduction to Parsing](https://hackmd.io/@alexhkurz/BkSgRX1GF) and then continue with [A calculator: Parser](). 
+
 

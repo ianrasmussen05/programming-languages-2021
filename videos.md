@@ -7,7 +7,7 @@ For me videos usually works best with playback speed 1.25 or 1.5. Try this if yo
 - [Haskell Tips II](https://youtu.be/naNLE4GLrTo)
 - [gcd and Euclid's algorithm](https://youtu.be/ZcJMj0antos)
 - [Recursion over algebraic data types in Haskell](https://youtu.be2YLfJvOtLwA)
-- [Precedence levels in CFGs](https://youtu.be/jf1xhZSpCvg)  
+- [Order of Operations in CFGs](https://youtu.be/jf1xhZSpCvg)  
 - [Uniqueness of parse trees](https://youtu.be/3ZLkPwB_c9g) 
 - [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14)
 - [Parsing Lambda Calculus Expressions 1](https://youtu.be/eYstx7uuE6c)

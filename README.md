@@ -91,6 +91,7 @@ I would let the modern history of programming languages begin with Fortran and L
 
 #### New for 2021:
 
+- [The Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/).
 - [We need a safer systems programming language](https://msrc-blog.microsoft.com/2019/07/18/we-need-a-safer-systems-programming-language/). Quote: "*whenever possible software should eventually be moved to a completely memory-safe language [...] If there are legitimate reasons for needing the speed, control and predictability of a language like C++, see if you can move to a systems-level programming language that is memory safe*". The next post advertising Rust is also interesting. If you want to see how these problems inspire current research in programming languages look for example at [Project Verona](https://github.com/microsoft/verona/blob/master/docs/faq.md).
 (Btw, I found this article linked in a [blog by Edward Snowden](https://edwardsnowden.substack.com/p/ns-oh-god-how-is-this-legal)  who is always worth reading when it comes to the topics of privacy, surveillence and security.)
 - [10 Papers Every Developer Should Read](https://michaelfeathers.silvrback.com/10-papers-every-developer-should-read-at-least-twice) ... these papers could make an interesting discussion.
