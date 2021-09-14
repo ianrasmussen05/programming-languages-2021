@@ -1,6 +1,6 @@
 # Programming Languages 
 
-(currently being adapted from 2020 ... some links may be broken ... to run next time in Fall 2021)
+(currently running in Fall 2021)
 
 You already know some programming languages (such as Python, Java, or C++) and you are able to teach yourself a new one. But did you ever wonder how to design your own programming language? How would you even get started on a project like this? 
 
