@@ -86,6 +86,10 @@ Enter `alex` in a terminal. If it cannot be found check whether `alex` is in `~/
  
 Now, on entering `bnfc --version` you should see `2.8.3`. (Or some larger number if you if you have a more recent version.)
 
+## Docker
+
+You can also install BNFC inside docker, see also what I wrote [here](https://hackmd.io/@alexhkurz/Hk86XnCzD).
+
 ## Testing BNFC
 
 You should now be able to [continue here](https://hackmd.io/@alexhkurz/HJVtVl068#Generating-a-Parser-from-a-Context-Free-Grammar).
