@@ -53,7 +53,7 @@ Run in a terminal
 
     brew install bnfc
 
-(If `brew install bnfc` fails on a macbook with ARM processor try [this](https://stackoverflow.com/a/64997047/4600290).)
+(If `brew install` fails on a macbook with ARM processor try [this](https://stackoverflow.com/a/64997047/4600290).)
 
 After that take a grammar such as `numbers.cf` and run in a terminal
 
