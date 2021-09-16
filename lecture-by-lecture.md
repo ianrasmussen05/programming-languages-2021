@@ -26,9 +26,9 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - L 3.1: We start with a [Short Introduction to Parsing](https://hackmd.io/@alexhkurz/BkSgRX1GF) and then continue with [A Calculator: Parser](https://hackmd.io/@alexhkurz/Byf812aGF). 
 
-coming up:
-
 - L 3.2: Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2021/blob/main/assignment-1.md).
+
+coming up:
 
 - Video to watch before lecture 4.1: [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
 
