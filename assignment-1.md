@@ -69,7 +69,7 @@ Simlarly, a fraction can be represented as a pair `(numerator,denominator)` wher
 data PP = I | T PP
 ```
 
-and then a type of fractions as an algebraic data type with two components a numerator of type `II` and a denominator of type `PP`
+and then a type of fractions as an algebraic data type with two components, a numerator of type `II` and a denominator of type `PP`
 
 ```haskell
 data QQ = QQ II PN
@@ -94,7 +94,7 @@ multQ :: QQ -> QQ -> QQ
 
 ### Normalisation
 
-You may have noticed that the same integer can be represented in different ways, for example `(S (S O), O)` and `(S( S (S O)), S O)` both represent 2. But `(S (S O), O)` is special in the sense that it has no negative part. Such special forms are often called normal forms and the process of converting data into normal form is called **normalisation**.
+You may have noticed that the same integer can be represented in different ways, for example `(S (S O), O)` and `(S( S (S O)), S O)` both represent 2. But `(S (S O), O)` is special in the sense that both components are as small as possible. Such special forms are often called normal forms and the process of converting data into normal form is called **normalisation**.
 
 Using recursion, write a function
 
