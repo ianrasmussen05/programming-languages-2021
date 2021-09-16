@@ -32,7 +32,7 @@ coming up:
 
 - Video to watch before lecture 4.1: [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
 
-- 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw) ... video reviews on parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA)
+- 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw) ... video reviews on parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
 
 
 
