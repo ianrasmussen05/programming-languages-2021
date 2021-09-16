@@ -164,7 +164,7 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 
     then this would *not* be consistent with `I` meaning $1$, because $1+p=p$ is not a valid  equation of arithmetic.
 
-- *Hint:* The data type `PP` was introduced to make sure that a fraction never has a denominator of $0$. But there are other places where you may allow run-time errors, for example, the function `nn_int` is not defined for negative integers. Alternatively, you can proceed as in item 1 of [8 ways to report errors in Haskell](http://www.randomhacks.net/2007/03/10/haskell-8-ways-to-report-errors/).
+- *Hint:* The data type `PP` was introduced to make sure that a fraction never has a denominator of 0. But there are other places where you may allow run-time errors, for example, the function `nn_int` is not defined for negative integers. Alternatively, you can proceed as in item 1 of [8 ways to report errors in Haskell](http://www.randomhacks.net/2007/03/10/haskell-8-ways-to-report-errors/).
 
 
 
@@ -172,7 +172,7 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 
 In this part, we will allow ourselves to use the built-in arithmetic of Haskell. One of the reasons is that this built-in arithmetic uses binary numbers instead of successor numbers and, therefore, is much more efficient. Another reason is that using the rich arithmetic of the host language makes it much easier to add features to the calculator.
 
-The aim is to extend [the calculator](src/Haskell/Calculator) by new operations. 
+The aim is to extend [the calculator](src/Calculator) by new operations. 
 
 **Finding operations in Haskell:**
  
