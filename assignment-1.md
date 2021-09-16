@@ -4,7 +4,7 @@
 
 The assignment comes in 2 parts and will be implemented in Haskell. We will use Haskell throughout this course and also next semester in Compiler Construction. 
 
-(As a footnote, I want to add that Haskell is only a (very good) tool for us, one could use any other programming language for the same purpose in principle, even if it was infeasible in practice. In fact, if you want to compare Haskell to another programming language you already know, this could be an idea for the report to implement this assignment also in, say, one of Java, Python, C++, etc and then to compare the two implementations.)
+(As a footnote, I want to add that Haskell is only a (very good) tool for us, one could use any other programming language for the same purpose in principle, even if it was tedious in practice. In fact, if you want to compare Haskell to another programming language you already know, this could be an idea for the report to implement this assignment also in, say, one of Java, Python, C++, etc and then to compare the two implementations.)
 
 ## Administrative Preliminaries
 
@@ -31,9 +31,9 @@ The aim of the first part is to practice programming by recursion over algebraic
 
 ### Summary of Instructions
 
-- Download the [specification `arithmetic-specification.hs`](src/Haskell/arithmetic-specification.hs). The aim is to fill in definitions for all functions.
+- Download the [specification `arithmetic-specification.hs`](src/Assignment1/arithmetic-specification.hs). The aim is to fill in definitions for all functions.
 - Do not use functions converting between Haskell-numbers VM-numbers to implement VM-arithmetic. Only use them for normalisation-by-evaluation (see below) and testing.
-- Start from the file [`arithmetic.hs`](src/Haskell/arithmetic.hs). You should be able to run it as `runhaskell arithmetic.hs`. 
+- Start from the file [`arithmetic.hs`](src/Assignment/arithmetic-template.hs). You should be able to run it with `runhaskell arithmetic-template.hs`. 
 
 
 ### Summary of Task
@@ -65,17 +65,11 @@ Simlarly, a fraction can be represented as a pair `(numerator,denominator)` wher
 
     data PP = I | T PP
 
-and then a type of fractions as a type of pairs `(numerator, denominator)` of type `(NN,PN)`
+and then a type of fractions as an algebraic data type with two components a numerator of type `II` and a denominator of type `PP`
 
-    type Frac = (NN,PN)
-
-To program with fractions it is good style to access the first and second component of a pair via pattern matching. Alternatively, given a `pair` in Haskell, one can access the components with `fst pair` and `snd pair`. You can test this in the Haskell console as follows.
-
-    > pair = (2,3)
-    > fst pair
-    2
-    > snd pair
-    3
+```haskell
+data QQ = QQ II PN
+```
 
 The following functions will be implemented by recursion on `PP`.
 
