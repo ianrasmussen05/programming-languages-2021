@@ -94,4 +94,4 @@ You can also install BNFC inside docker, see also what I wrote [here](https://ha
 
 ## Testing BNFC
 
-You should now be able to [continue here](https://hackmd.io/@alexhkurz/HJVtVl068#Generating-a-Parser-from-a-Context-Free-Grammar).
+You should now be able to continue with the lecture on building a parser for the calculator.
