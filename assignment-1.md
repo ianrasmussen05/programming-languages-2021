@@ -148,6 +148,22 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 
 - *Hint:* Spend some time on thinking about the logic behind each function. Once you have the idea, the solution will be short. Most of the functions are two-liners and some are one-liners.
 
+    For example, the two Haskell equations
+
+    ```haskell
+    multN :: NN -> NN -> NN
+    multN O m = O
+    multN (S n) m = addN (multN n m) m
+    ```
+    correspond to the mathematical equations
+
+    0 * n = 0  
+    (1+n) * m = n*m + m
+
+    I recommend that you engineer your function by reversing this process. Think first of the math and then about how to code it.
+
+    How to encode positive numbers using `I` and `T` is discussed in the next hint.
+
 - *Hint:* Mathematically, each line below represents the same number.
 
     | `NN` | `PP` | `Int`
@@ -166,13 +182,13 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
     add O n = n
     ```
 
-    this is consistent with our interpretation of `O` as $0$, because we know that $0+n=n$. On the other hand, if we simply transferred this idea from `NN` to `PP` writing
+    this is consistent with our interpretation of `O` as 0, because we know that 0+n=n. On the other hand, if we simply transferred this idea from `NN` to `PP` writing
 
     ```haskell
     addP I p = p 
     ```
 
-    then this would *not* be consistent with `I` meaning $1$, because $1+p=p$ is not a valid  equation of arithmetic.
+    then this would *not* be consistent with `I` meaning 1, because 1+p=p is not a valid  equation of arithmetic.
 
 - *Hint:* The data type `PP` was introduced to make sure that a fraction never has a denominator of 0. But there are other places where you may allow run-time errors, for example, the function `nn_int` is not defined for negative integers. Alternatively, you can proceed as in item 1 of [8 ways to report errors in Haskell](http://www.randomhacks.net/2007/03/10/haskell-8-ways-to-report-errors/).
 
