@@ -194,7 +194,7 @@ The aim is to extend [the calculator](src/Calculator) by new operations.
         Then, if you want to see how functions such as `(^)` are implemented you can look them up in [Hoogle](https://hoogle.haskell.org/?hoogle=%5E&scope=set%3Astackage) and follow the links that will lead you to the source code. 
     - Another is to study more closely the documentation of [GHC.Real](https://www.haskell.org/haddock/libraries/GHC.Real.html) and [GHC.Num](https://hackage.haskell.org/package/base-4.14.0.0/docs/GHC-Num.html) and [Integral](https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#t:Integral).
 
-**Task 1**: Extend the definition of `Exp` and `eval` in [`Interpreter.hs`](src/Haskell/Calculator/Interpreter.hs) by 6 other operations on the integers including a binary `-`, a unary `-`, and `/` and `^` for integer division and exponentiation. Use the native Haskell operations on `Integer`.
+**Task 1**: Extend the definition of `Exp` and `eval` in [`Interpreter.hs`](src/Calculator/Interpreter.hs) by 6 other operations on the integers including a binary `-`, a unary `-`, and `/` and `^` for integer division and exponentiation. Use the native Haskell operations on `Integer`.
 
 **Task 2**: 
 - Extend the grammar with syntax for the operations from the previous task. 
