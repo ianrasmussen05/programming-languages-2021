@@ -49,10 +49,8 @@ to integers and fractions. We will detail this in the following.
 The idea is that we can use pairs `(n,m)` of natural numbers to represent the integer `n-m`. In Haskell we define a type `II` (to remind us of "Integer") as an algebraic data type with two components of type `NN`:
 
 ```haskell
-type II = II NN NN
+data II = II NN NN
 ```
-
-(The difference between `data` and `type` is that the latter defines an abbreviation and does not create a new type.)
 
 The task now is to implement some familiar arithmetic operations directly on such pairs of numbers, in particular:
 
