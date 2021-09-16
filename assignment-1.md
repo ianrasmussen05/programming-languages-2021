@@ -132,7 +132,7 @@ that implements this strategy.
 
 ### Testing
 
-The `main` function in [`arithmetic-specification.hs`](rc/Arithmetic/arithmetic-specification.hs) contains some test cases, but you should add your own tests.
+The `main` function in [`arithmetic-specification.hs`](src/Arithmetic/arithmetic-specification.hs) contains some test cases, but you should add your own tests.
 
 ### Further Hints and Remarks
 
