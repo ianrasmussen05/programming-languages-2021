@@ -96,15 +96,13 @@ multQ :: QQ -> QQ -> QQ
 
 You may have noticed that the same integer can be represented in different ways, for example `(S (S O), O)` and `(S( S (S O)), S O)` both represent 2. But `(S (S O), O)` is special in the sense that both components are as small as possible. Such special forms are often called normal forms and the process of converting data into normal form is called **normalisation**.
 
-Using recursion, write a function
+Using recursion, write a recursive function
 
 ```haskell
 normalizeI :: II -> II
 ```
 
-that converts and number if type `II` into its normal form.
-
-**Bonus question:** (2 points) You are familiar with the idea of normalising fractions by cancelling common factors. Implement a function `normalizeQ :: QQ -> QQ` that normalises fractions.
+that converts and number of type `II` into its normal form.
 
 ### Converting Numbers
 
@@ -134,7 +132,7 @@ that implements this strategy.
 
 ### Testing
 
-The main function in [`arithmetic-specification.hs`](arithmetic-specification.hs) contains some test cases, but you should add your own tests.
+The `main` function in [`src/Arithmetic/arithmetic-specification.hs`](arithmetic-specification.hs) contains some test cases, but you should add your own tests.
 
 ### Further Hints and Remarks
 
