@@ -40,30 +40,38 @@ The aim of the first part is to practice programming by recursion over algebraic
 
 The overall idea is to explore how to extend our implementation of natural numbers 
 
-    data NN = O | S NN
+```haskell
+data NN = O | S NN
+```
 
 to integers and fractions. We will detail this in the following.
 
 ### Integers
 
-The idea is that we can use pairs `(n,m)` of natural numbers to represent the integer `n-m`. In Haskell we define a type `II` (to remind us of "Integer") as the type of pairs of `NN`s:
+The idea is that we can use pairs `(n,m)` of natural numbers to represent the integer `n-m`. In Haskell we define a type `II` (to remind us of "Integer") as an algebraic data type with two components of type `NN`:
 
-    type II = (NN, NN)
+```haskell
+type II = II NN NN
+```
 
 (The difference between `data` and `type` is that the latter defines an abbreviation and does not create a new type.)
 
 The task now is to implement some familiar arithmetic operations directly on such pairs of numbers, in particular:
 
-    addI :: II -> II -> II
-    multI :: II -> II -> II
-    subtrI :: II -> II -> II
-    negI :: II -> II
+```haskell
+addI :: II -> II -> II
+multI :: II -> II -> II
+subtrI :: II -> II -> II
+negI :: II -> II
+```
 
 ### Fractions
 
 Simlarly, a fraction can be represented as a pair `(numerator,denominator)` where the numerator is an integer and the denominator is a positive integer. So we first define a data type of positive numbers (positive numbers start at 1, not 0)
 
-    data PP = I | T PP
+```haskell
+data PP = I | T PP
+```
 
 and then a type of fractions as an algebraic data type with two components a numerator of type `II` and a denominator of type `PP`
 
@@ -73,16 +81,20 @@ data QQ = QQ II PN
 
 The following functions will be implemented by recursion on `PP`.
 
-    addP :: PP -> PP -> PP
-    multP :: PP -> PP -> PP
-    ii_pp :: PP -> II
+```haskell
+addP :: PP -> PP -> PP
+multP :: PP -> PP -> PP
+ii_pp :: PP -> II
+```
 
 Since Haskell is strongly typed and does not have subtyping, a number of type `PP` is always different from a number of type `II`, so we need a function `ii_pp :: PP -> II` that does the *type-casting*.
 
 Next, we use these functions to implement
 
-    addQ :: QQ -> QQ -> QQ
-    multQ :: QQ -> QQ -> QQ
+```haskell
+addQ :: QQ -> QQ -> QQ
+multQ :: QQ -> QQ -> QQ
+```
 
 ### Normalisation
 
@@ -90,7 +102,9 @@ You may have noticed that the same integer can be represented in different ways,
 
 Using recursion, write a function
 
-    normalizeI :: II -> II
+```haskell
+normalizeI :: II -> II
+```
 
 that converts and number if type `II` into its normal form.
 
@@ -102,19 +116,23 @@ Writing and reading larger successor numbers is tedious. In particular for testi
 
 Implement by recursion
 
-    nn_int :: Integer -> NN
-    int_nn :: NN->Integer
-    ii_int :: Integer -> II
-    int_ii :: II -> Integer
-    pp_int :: Integer -> PP
-    int_pp :: PP->Integer
-    float_qq :: QQ -> Float
+```haskell
+nn_int :: Integer -> NN
+int_nn :: NN->Integer
+ii_int :: Integer -> II
+int_ii :: II -> Integer
+pp_int :: Integer -> PP
+int_pp :: PP->Integer
+float_qq :: QQ -> Float
+```
 
 ### Normalisation by Evaluation
 
 Instead of normalising as above by recursion on `NN` one can also normalise by evaluation, that is, by converting an `II` to a Haskell integer and then back to an `II`. Write a function
 
-    nbv :: II -> II
+```haskell
+nbv :: II -> II
+```
 
 that implements this strategy.
 
@@ -140,11 +158,15 @@ The main function in [`arithmetic-specification.hs`](arithmetic-specification.hs
 
 - *Hint:* Separate clearly in your mind syntax from semantics (=meaning=interpretation): Syntactically, `O` and `I` are just symbols. The meaning of these symbols only arises from the operations on these data. For example, if we write a function
 
-        add O n = n
+    ```haskell
+    add O n = n
+    ```
 
     this is consistent with our interpretation of `O` as $0$, because we know that $0+n=n$. On the other hand, if we simply transferred this idea from `NN` to `PP` writing
 
-        addP I p = p 
+    ```haskell
+    addP I p = p 
+    ```
 
     then this would *not* be consistent with `I` meaning $1$, because $1+p=p$ is not a valid  equation of arithmetic.
 
@@ -162,9 +184,11 @@ The aim is to extend [the calculator](src/Haskell/Calculator) by new operations.
  
 - In ghci you can run `:i Integer` to find information about the data type `Integer`. This leads you to [GHC.Integer](https://hackage.haskell.org/package/integer-gmp-1.0.3.0/docs/GHC-Integer.html) and shows that `Integer` is an instance of various [type classes](http://learnyouahaskell.com/types-and-typeclasses) such as `Num`, `Real`, and `Integral`. To sumarize, run in ghci
 
-        :i Num
-        :i Integral
-        :i Real
+    ```bash
+    :i Num
+    :i Integral
+    :i Real
+    ```
 
     [*Warning:* That the userdefined label `Num` in `Exp` is the same string as the predefined name of the type class `Num` is purely coincidental.]
 
