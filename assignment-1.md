@@ -39,8 +39,8 @@ The aim of the first part is to practice programming by recursion over algebraic
 
 ### Summary of Instructions
 
-- Download the [specification `arithmetic-specification.hs`](src/Assignment1/arithmetic-specification.hs). The aim is to implement definitions for all functions.
-- Do not use functions converting between Haskell-numbers VM-numbers to implement VM-arithmetic. Only use them for normalisation-by-evaluation (see below) and testing.
+- Study the [specification `arithmetic-specification.hs`](src/Assignment1/arithmetic-specification.hs). The aim is to implement all functions.
+- Do not use functions converting between Haskell-numbers and VM-numbers to implement VM-arithmetic. Only use them for normalisation-by-evaluation (see below) and testing.
 - Start from the template file [`arithmetic.hs`](src/Assignment/arithmetic.hs). You should be able to run it with `runhaskell arithmetic.hs`. 
 
 
