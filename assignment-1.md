@@ -6,12 +6,11 @@ The assignment comes in 2 parts and will be implemented in Haskell. We will use 
 
 ## Deadlines
 
-**Deadline 1:** Tue, Sept 21.
-    - Implement `addP` in Part 1
-    - Add subraction to the calculator.
+**Deadline 1:** Tue, Sept 21.  
+- Implement `addP` in Part 1.  
+- Add subtraction to the calculator in Part 2.
 
-**Deadline 2:** Thu, Sept 30.
-    - For the remainder of the assignment.
+**Deadline 2:** Thu, Sept 30 for the remainder of the assignment.
 
 
 ## Administrative Preliminaries
