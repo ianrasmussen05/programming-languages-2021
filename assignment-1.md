@@ -175,19 +175,26 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 
     But in Haskell **these data types are disjoint**. For example, if you input an `I` or a `1` to a function that expects data of type `NN`, you will get an error message.
 
-- *Hint:* Separate clearly in your mind syntax from semantics (=meaning=interpretation): Syntactically, `O` and `I` are just symbols. The meaning of these symbols only arises from the operations on these data. For example, if we write a function
+- *Hint:* Data type definitions such as 
+    ```haskell
+    data NN = O | S NN
+    data PP = I | T PP
+    ```
+    are pure syntax and do not mean anything on their own. Note that both `NN` and `PP` have exactly the same structure. I chose `O` and `S` to indicate their intended meaning (0 and Successor). Similarly, `I` and `T` should remind us of 1 and +1. But this is purely conventional and does not affect the runtime behaviour of Haskell.
+
+- *Hint:* Separate clearly in your mind syntax from semantics (=meaning): Syntactically, `O` and `I` are just symbols. The meaning of these symbols only arises from the operations on these data. For example, if we write a function
 
     ```haskell
     add O n = n
     ```
 
-    this is consistent with our interpretation of `O` as 0, because we know that 0+n=n. On the other hand, if we simply transferred this idea from `NN` to `PP` writing
+    this is consistent with our interpretation of `O` as 0, because we know that 0+n=n in mathematics. On the other hand, if we simply transferred this idea from `NN` to `PP` writing
 
     ```haskell
     addP I p = p 
     ```
 
-    then this would *not* be consistent with `I` meaning 1, because 1+p=p is not a valid  equation of arithmetic.
+    then this would *not* be consistent with `I` meaning 1, because 1+p=p is *not* a valid  equation of arithmetic.
 
 - *Hint:* The data type `PP` was introduced to make sure that a fraction never has a denominator of 0. But there are other places where you may allow run-time errors, for example, the function `nn_int` is not defined for negative integers. Alternatively, you can proceed as in item 1 of [8 ways to report errors in Haskell](http://www.randomhacks.net/2007/03/10/haskell-8-ways-to-report-errors/).
 
