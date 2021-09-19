@@ -91,6 +91,7 @@ I would let the modern history of programming languages begin with Fortran and L
 
 #### New for 2021:
 
+- Pull requests and open source software: [How To Rapidly Improve At Any Programming Language](https://www.cbui.dev/how-to-rapidly-improve-at-any-programming-language/).
 - [Building apps in minutes, not months](https://alexanderobenauer.com/labnotes/001/).
 - Some webpages that illustrate the recent advances in AI: - Language: [New Age Bullshit Generator](https://sebpearce.com/bullshit/); Text and Images: [DALL·E](https://openai.com/blog/dall-e/); Pictures of People: [thispersondoesnotexist](https://thispersondoesnotexist.com/).
 - Writing code in natural language: [OpenAI Codex Live Demo](https://www.youtube.com/watch?v=SGUCcjHTmGY#t=13m8s).
