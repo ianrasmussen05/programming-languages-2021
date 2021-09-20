@@ -44,7 +44,7 @@ The aim of the first part is to practice programming by recursion over algebraic
 - Do not use functions converting between Haskell-numbers and VM-numbers to implement VM-arithmetic. Only use them for normalisation-by-evaluation (see below) and testing.
 - Start from the template file [`arithmetic.hs`](src/Assignment1/arithmetic.hs). You should be able to compile and run it with `runhaskell arithmetic.hs`. Now add an implementation of `addP` plus the corresponding test cases in `main`. 
 
-    (Aside: Use `ghc` if you want to compile only and `runghci` to compile *and* run.)
+    (Aside: Use `ghc` if you want to compile only and `runhaskell` to compile *and* run.)
 
 
 ### Summary of Task
