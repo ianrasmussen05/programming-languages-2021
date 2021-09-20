@@ -41,7 +41,7 @@ The aim of the first part is to practice programming by recursion over algebraic
 - Study the [specification `arithmetic-specification.hs`](src/Assignment1/arithmetic-specification.hs). The aim is to implement all functions.
 - Aside: The specification does not compile because it contains function declarations that are not implemented. Compilation (try it) will give you `"lacks an accompanying binding"` error messages.
 - Do not use functions converting between Haskell-numbers and VM-numbers to implement VM-arithmetic. Only use them for normalisation-by-evaluation (see below) and testing.
-- Start from the template file [`arithmetic.hs`](src/Assignment1/arithmetic.hs). You should be able to run it with `runhaskell arithmetic.hs`. Now add an implementation of `addP` plus the corresponding test cases in `main`.
+- Start from the template file [`arithmetic.hs`](src/Assignment1/arithmetic.hs). You should be able to compile and run it with `runhaskell arithmetic.hs`. Now add an implementation of `addP` plus the corresponding test cases in `main`.
 
 
 ### Summary of Task
