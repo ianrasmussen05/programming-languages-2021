@@ -189,7 +189,7 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 - *Hint:* Separate clearly in your mind syntax from semantics (=meaning): Syntactically, `O` and `I` are just symbols. The meaning of these symbols only arises from the operations on these data. For example, if we write a function
 
     ```haskell
-    add O n = n
+    addN O n = n
     ```
 
     this is consistent with our interpretation of `O` as 0, because we know that 0+n=n in mathematics. On the other hand, if we simply transferred this idea from `NN` to `PP` writing
