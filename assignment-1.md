@@ -109,7 +109,7 @@ multQ :: QQ -> QQ -> QQ
 
 You may have noticed that the same integer can be represented in different ways, for example `(S (S O), O)` and `(S( S (S O)), S O)` both represent 2. But `(S (S O), O)` is special in the sense that both components are as small as possible. Such special forms are often called normal forms and the process of converting data into normal form is called **normalisation**.
 
-Using recursion, write a recursive function
+Using recursion, write a function
 
 ```haskell
 normalizeI :: II -> II
