@@ -90,7 +90,7 @@ Now, on entering `bnfc --version` you should see `2.8.3`. (Or some larger number
 
 ## Docker
 
-You can also install BNFC inside docker, see also what I wrote [here](https://hackmd.io/@alexhkurz/Hk86XnCzD).
+You can also install BNFC inside docker, see also what I wrote [here](https://hackmd.io/@alexhkurz/HyhqVjZQt).
 
 ## Testing BNFC
 
