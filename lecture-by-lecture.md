@@ -19,6 +19,8 @@ To clarify the learning outcomes: What we have learned in [Part 0]() and [Part 1
 
 - L 2.1: Haskell lab. We talked about [Rewriting and the Call Stack](https://hackmd.io/@alexhkurz/HJiulVg0U) and [Towers of Hanoi](https://hackmd.io/@alexhkurz/rJQwvpyMY) as well as the homework. We also talked about [currying](https://en.wikipedia.org/wiki/Currying) and type inference. See the video [Haskell Tips II](https://www.youtube.com/watch?v=naNLE4GLrTo) for a quick review. For the new homework see [Towers of Hanoi](https://hackmd.io/@alexhkurz/rJQwvpyMY).
 
+### Part 1: A Calculator
+
 - L 2.2: A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). For Haskell programming techniques have a look at the videos [Haskell Tips II](https://youtu.be/naNLE4GLrTo)
 and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
@@ -28,13 +30,15 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - L 3.2: Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2021/blob/main/assignment-1.md).
 
+### Part 2: Lambda Calculus
+
 - Video to watch before lecture 4.1: [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
 
 - L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
 
 - Videos on parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
 
-coming up:
+### Coming up next
 
 - Watch before the lecture: [Operational Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
 
