@@ -12,7 +12,7 @@ For me videos usually works best with playback speed 1.25 or 1.5. Try this if yo
 - [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14)
 - [Parsing Lambda Calculus Expressions 1](https://youtu.be/eYstx7uuE6c)
 - [Parsing Lambda Calculus Expressions 2](https://youtu.be/yls1NEUlzZA)
-- [Operational Semantics of Lambda Calculus](https://youtu.beh4aT42t7v9c)
+- [Operational Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m)
 - [Reducing Lambda Expressions](https://youtu.be/for3Meg1Lbc)
 - [Fixed Point Combinator](https://youtu.be/XvDOwbSh3xE)
 - [merge sort](https://youtu.be/W2CknJGgzr0)

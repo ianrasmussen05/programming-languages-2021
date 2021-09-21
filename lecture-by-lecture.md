@@ -28,11 +28,20 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - L 3.2: Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2021/blob/main/assignment-1.md).
 
-coming up:
-
 - Video to watch before lecture 4.1: [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
 
-- 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw) ... video reviews on parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
+- L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
+
+- Videos on parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
+
+coming up:
+
+- Watch before the lecture: [Operational Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
+
+- L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv)
+
+
+
 
 
 
