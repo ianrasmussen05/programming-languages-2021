@@ -8,7 +8,7 @@ This folder contains an interpreter for the lambda calculus as given by the gram
 
     coercions Exp 1 ;
     
-To parse and run a program in the language LambdaNat:
+To parse and run a program:
 
 - (I assume you have Haskell and bnfc)
 
@@ -16,7 +16,7 @@ To parse and run a program in the language LambdaNat:
 
 - `cd` into `LambdaNat0`.
 
-- Use `bnfc` to generate a parser.
+- Use `bnfc` to generate a parser from `grammar/LambdaNat0.cf`.
 
 - `cp grammar/*.hs src`
 
