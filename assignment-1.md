@@ -21,6 +21,18 @@ The assignment comes in 2 parts and will be implemented in Haskell. We will use 
 
 ## Proper use of git will be taken into account for grading
 
+- The only files in your repo should be the following.
+
+        README.md -- names of group members
+        Assignment1
+            README.md -- critical appraisal
+            Part1  
+                arithmetic.hs
+            Part2
+                Calculator.hs
+                Interpreter.hs
+                numbers.cf
+
 - Commit each time, with *meaningful messages*, after you implemented and *tested* 
   - a function in `airthmetic.hs`,
   - a case of `eval` in `Interpreter.hs`, 
