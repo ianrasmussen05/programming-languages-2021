@@ -25,7 +25,7 @@ To parse and run a program:
     stack build 
     ````
 
-- Assuming that `mypgrogram.lc` is in the folder `test`, run 
+- Assuming that `myprogram.lc` is in the folder `test`, run 
     ```
     stack exec LambdaNat-exe test/myprogram.lc
     ```
