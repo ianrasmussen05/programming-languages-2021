@@ -2,25 +2,12 @@
 
 This folder contains an interpreter for the lambda calculus as given by the grammar
 
+    EAbs.   Exp ::= "\\" Id "." Exp ;  
+    EApp.   Exp ::= Exp Exp1 ; 
+    EVar.   Exp1 ::= Id ;
 
-----------------------------------------------
-----------------------------------------------
--- parse the following expressions by running 
---   ./TestLambdaNat test.lc 
--- in the terminal in the directory where you have TestLambdaNat
--- and where test.lc contains any one of the expressions below.
---
--- Verify that the following statements are correct:
---
--- ((x y) z) equals x y z
--- \x.x x x equals \x. ((x x) x) -- whitespace can usually be ignored but not between the x (why?)
--- (\x.x) x x equals (((\x.x) x) x) 
---
--- Btw, I say that two strings are equal if they produce the same parse tree (abstract syntax tree)
-----------------------------------------------
-----------------------------------------------
-
-
+    coercions Exp 1 ;
+    
 To parse and run a program in the language LambdaNat:
 
 - (I assume you have Haskell and bnfc)
@@ -43,4 +30,18 @@ To parse and run a program in the language LambdaNat:
     stack exec LambdaNat-exe test/myprogram.lc
     ```
 
-
+EApp 
+    (EApp 
+        (EApp 
+            (EAbs 
+                (Id "x") 
+                (EAbs 
+                    (Id "y") 
+                    (EApp 
+                        (EApp 
+                            (EVar (Id "x")) 
+                            (EVar (Id "y"))) 
+                        (EVar (Id "z"))))) 
+            (EVar (Id "a"))) 
+        (EVar (Id "b"))) 
+    (EVar (Id "c"))
