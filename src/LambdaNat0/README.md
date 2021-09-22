@@ -2,7 +2,7 @@
 
 This folder contains an interpreter for the lambda calculus as given by the grammar
 
-    EAbs.   Exp ::= "\\" Id "." Exp ;  
+    EAbs.   Exp ::= "\" Id "." Exp ;  
     EApp.   Exp ::= Exp Exp1 ; 
     EVar.   Exp1 ::= Id ;
 
@@ -29,19 +29,3 @@ To parse and run a program in the language LambdaNat:
     ```
     stack exec LambdaNat-exe test/myprogram.lc
     ```
-
-EApp 
-    (EApp 
-        (EApp 
-            (EAbs 
-                (Id "x") 
-                (EAbs 
-                    (Id "y") 
-                    (EApp 
-                        (EApp 
-                            (EVar (Id "x")) 
-                            (EVar (Id "y"))) 
-                        (EVar (Id "z"))))) 
-            (EVar (Id "a"))) 
-        (EVar (Id "b"))) 
-    (EVar (Id "c"))
