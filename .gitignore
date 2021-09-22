@@ -8,4 +8,5 @@
 *.ak
 /.vscode/*
 local/
-
+.stack-work/
+*.lock
