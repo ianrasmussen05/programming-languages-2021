@@ -38,13 +38,13 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - Videos on parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
 
-### Coming up next
-
 - Watch before the lecture: [Operational Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
 
 - L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv)
 
+### Coming up next
 
+Church Encodings
 
 
 
