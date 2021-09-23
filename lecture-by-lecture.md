@@ -44,7 +44,29 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 ### Coming up next
 
-Church Encodings
+The following is only an outline.
+
+- L 5.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7)
+
+- L 5.2: Church Encodings
+
+- Week 6 and 7: Rewriting
+
+- Deadline for Part 1 of the report.
+
+- Week 8: Extending Lambda Calculus to a Functional Programming Language, Assignment 2 out.
+
+- Week 9 and 10: Program Verification and Hoare Logic.
+
+-  Week 11: tba
+
+- Deadline for Part 2 of the report.
+
+- Week 12: Assignment 3 out.
+
+- Week 13: tba
+
+- Deadline for Part 3 of the report.
 
 
 
