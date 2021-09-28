@@ -10,11 +10,16 @@ I believe that this will have several advantages:
 
 The report will be divided in three parts.
 
-- Part I (40 points, approx 10 pages) will be on Haskell
+- Part I (40 points, approx 10 pages) will be on Haskell.
 - Part II (40 points, approx 10 pages) will be on the theoretical aspects of the course.
 - Part III (20 points, approx 5 pages) will be a mini-project of your choice where you can go beyond what we do in class.
 
 The [LaTeX template](report.tex) and the compiled [pdf](report.pdf).
+
+**Deadlines:**
+- Part I: October 17.
+- Part II: tba.
+- Part II: December 21.
 
 ## General Considerations
 
@@ -24,7 +29,7 @@ Learning a new programming language is always a challenge, in particular if it i
 
 ## Writing Tips
 
-The blog is not an English assignment, but I find this classic and entertaining [advice by Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) always useful. 
+The blog is not an English assignment, but I find this classic and entertaining [advice by George Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) always useful. 
 - To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. 
 - "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Perhaps metaphors play a lesser role in our kind of technical writing, but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
 - Orwell recommends to avoid writing something just because it sounds good. Instead, 
@@ -44,16 +49,20 @@ While writing the report, keep in mind that I am interested in answers to the fo
 - How does Haskell compare to your favourite programming language? Give examples of the same algorithm written in your favourite language and in Haskell. What are the respectives strengths and weaknesses of the two programming paradigms?
 - What are, in your opinion, the major stumbling blocks in learning Haskell?
 
-***I don't want to limit your creativity, so let me know if you have your own ideas.***
 
 ## Possible Ideas for the Report
+
+
+To review and explain what we do in the course is a good starting point, but I would expect that you take the opportunity to explore on your own. The following is just a list of prompts to give you some ideas of what is possible ...
+
+***I don't want to limit your creativity, so let me know if you have your own ideas.***
 
 
 ### Haskell
 -  Write a Haskell tutorial. Make your own examples that you think would help a beginning Haskeller to understand Haskell better.
 - Benchmark the same algorithms in Python and Haskell. You can use [gnomon](https://github.com/paypal/gnomon) to measure the time that programs take to run.
 -  I collected some ideas for [Haskell projects](haskell-projects.md) you might want to try.
-- Haskell and $\lambda$-calculus: 
+- Haskell and lambda-calculus: 
   - Write the same program in both languages and compare.
   - Study Church numerals. Make examples. Implement Church numberals and run them in Haskell.
 -  If you know C and have experience in programming with pointers, you will be interested to learn that all of this is still in Haskell, but hidden in the compiler. Study how the Haskell compiler makes working with lists efficient. (This is a big topic and would be worth a whole series of blog posts.)
@@ -63,6 +72,8 @@ While writing the report, keep in mind that I am interested in answers to the fo
     - Haskell has monads 
 
 ### Theory
+
+(much of this will make sense only after the first half of the course)
 
 - Why is lambda-calculus Turing complete?
 - What is the halting problem? Why is it undecidable? What are other undecidable problem?
@@ -100,14 +111,11 @@ The overarching rationale for the grading guidelines below is to assess how much
 Some further considerations:
 
 - Spelling, typesetting, layout, and structure will also be taken into account for grading. Does the form support the understanding of (or does it distract from) the content? 
-- Every section should have something interesting to say and be built around a central idea. If a section entry reads just like a lists of items without a connecting narrative something is missing.
-- A way to describe when a report gets full points: You would be proud to add it to your resume.
-- As usual, for full points I need to be able to see a trail of your work on git (if you don't want to use git get in touch early). Submitting everything in one go just before the deadline will incur a penalty of at least 10%.
+- Every section should have something interesting to say and be built around a central idea. If a section reads just like a lists of items without a connecting narrative something is missing.
+- A way to describe when a report gets full points: You would be proud to add it to your resume and I would be happy to recommend it to next year's students.
+- As usual, for full points I need to be able to see a trail of your work on git (if you don't want to use git get in touch early). 
 
 Again, if you have your own ideas, let me know. I am happy to adapt these guidelines if they do not fit what you have in mind.
-
-
-
 
 <!--
 Grading Guidelines.
