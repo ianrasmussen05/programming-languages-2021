@@ -73,7 +73,7 @@ See [Assessment](assessment.md).
 
 
 ## Final Exam Time
-Please double check the [Final Exam Schedule ](https://www.chapman.edu/students/academic-resources/registrar/student-services/final-exam-schedule.aspx) once the Fall dates are out.
+We have a report instead of midterm and final exams this year.
 
 ## Policies required to be listed via University guidelines
 
