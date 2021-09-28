@@ -10,7 +10,7 @@ The assignment comes in 2 parts and will be implemented in Haskell. We will use 
 - Implement `addP` in Part 1.  
 - Add subtraction to the calculator in Part 2.
 
-**Deadline 2:** Thu, Sept 30 for the remainder of the assignment.
+**Deadline 2:** Sun, Oct 3 for the remainder of the assignment.
 
 
 ## Administrative Preliminaries
