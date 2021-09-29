@@ -181,13 +181,13 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 
 - *Hint:* Mathematically, each line below represents the same number.
 
-    | `NN` | `PP` | `Int`
-    |:---:|:---:|:---:|
-    | O | | 0
-    | S O | I | 1
-    | S (S O) | T I | 2
-    | S (S (S O)) | T(T I) | 3
-    | ... | ... | ...
+    | `NN` | `PP` | `II` | `Int`
+    |:---|:---|:---|:---:|
+    | `O` | | `II O O` | 0
+    | `S O` | `I` | `II (S O) O` |  1
+    | `S (S O)` | `T I` | `II (S (S O)) O` | 2
+    | `S (S (S O))` | `T(T I)` | `II (S (S (S O))) O` | 3
+    | ... | ... | ... | ...
 
     But in Haskell **these data types are disjoint**. For example, if you input an `I` or a `1` to a function that expects data of type `NN`, you will get an error message.
 
