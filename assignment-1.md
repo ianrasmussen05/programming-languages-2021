@@ -179,16 +179,16 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 
     How to encode positive numbers using `I` and `T` is discussed in the next hint.
 
-- *Hint:* Mathematically, each line below represents the same number.
+- *Hint:* Mathematically, below, all entries on the same line  represent the same number.
 
-    | `NN` | `PP` | `II` | `Int`
-    |:---|:---|:---|:---:|
-    |  | | `II O (S O)` | -1
-    | `O` | | `II O O` | 0
-    | `S O` | `I` | `II (S O) O` |  1
-    | `S (S O)` | `T I` | `II (S (S O)) O` | 2
-    | `S (S (S O))` | `T(T I)` | `II (S (S (S O))) O` | 3
-    | ... | ... | ... | ...
+    `Int` | `NN` | `PP` | `II` | `QQ`
+    |:---|:---|:---|:---|:---|
+    | -1  | | | `II O (S O)` | `QQ (II O (S O)) I`
+    | 0 | `O` | | `II O O` | `QQ (II O O) I`
+    | 1/2 | | |  | `QQ (II (S 0) O) (T I)`
+    | 1| `S O` | `I` | `II (S O) O` |  `QQ (II (S 0) O) I`
+    | 2 | `S (S O)` | `T I` | `II (S (S O)) O` | `QQ (II (S(S 0)) O) I`
+    | 3 | `S (S (S O))` | `T(T I)` | `II (S (S (S O))) O` | `QQ (II (S(S(S 0))) O) I`
 
     But in Haskell **these data types are disjoint**. For example, if you input an `I` or a `1` to a function that expects data of type `NN`, you will get an error message.
 
