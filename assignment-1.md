@@ -183,6 +183,7 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
 
     | `NN` | `PP` | `II` | `Int`
     |:---|:---|:---|:---:|
+    |  | | `II O (S O)` | -1
     | `O` | | `II O O` | 0
     | `S O` | `I` | `II (S O) O` |  1
     | `S (S O)` | `T I` | `II (S (S O)) O` | 2
