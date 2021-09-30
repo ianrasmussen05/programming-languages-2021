@@ -2,6 +2,8 @@
 
 The assignment comes in 2 parts and will be implemented in Haskell. We will use Haskell throughout this course and also next semester in Compiler Construction. 
 
+<font color=red>***Prerequisites: Before you continue reading, do the homework in [Part 1, L 2.2 - L 3.2](lecture-by-lecture.md) of the lectures.***</font>
+
 (As a footnote, I want to add that Haskell is only a (very good) tool for us, one could use any other programming language for the same purpose in principle, even if it was tedious in practice. In fact, if you want to compare Haskell to another programming language you already know, this could be an idea for the report to implement this assignment also in, say, one of Java, Python, C++, etc and then to compare the two implementations.)
 
 ## Deadlines
