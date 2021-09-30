@@ -197,7 +197,7 @@ The `main` function in [`arithmetic-specification.hs`](src/Assignment1/arithmeti
     data NN = O | S NN
     data PP = I | T PP
     ```
-    are pure syntax and do not mean anything on their own. Note that both `NN` and `PP` have exactly the same structure. I chose `O` and `S` to indicate their intended meaning (0 and Successor). Similarly, `I` and `T` should remind us of 1 and +1. But this is purely conventional and does not affect the runtime behaviour of Haskell.
+    are pure syntax and do not mean anything on their own. Note that both `NN` and `PP` have exactly the same structure. I chose `O` and `S` to indicate their intended meaning (0 and Successor). Similarly, `I` and `T` should remind us of 1 and +1. But this is purely conventional.
 
 - *Hint:* Separate clearly in your mind syntax from semantics (=meaning): Syntactically, `O` and `I` are just symbols. The meaning of these symbols only arises from the operations on these data. For example, if we write a function
 
@@ -223,7 +223,7 @@ In this part, we will allow ourselves to use the built-in arithmetic of Haskell.
 
 The aim is to extend [the calculator](src/Calculator) by new operations. 
 
-**Finding operations in Haskell:**
+**Finding airthmetic operations in Haskell:**
  
 - In ghci you can run `:i Integer` to find information about the data type `Integer`. This leads you to [GHC.Integer](https://hackage.haskell.org/package/integer-gmp-1.0.3.0/docs/GHC-Integer.html) and shows that `Integer` is an instance of various [type classes](http://learnyouahaskell.com/types-and-typeclasses) such as `Num`, `Real`, and `Integral`. To sumarize, run in ghci
 
@@ -233,9 +233,9 @@ The aim is to extend [the calculator](src/Calculator) by new operations.
     :i Real
     ```
 
-    [*Warning:* That the userdefined label `Num` in `Exp` is the same string as the predefined name of the type class `Num` is purely coincidental.]
+    [*Warning:* That the userdefined label `Num` in the grammar `numbers.cf` is the same string as the predefined name of the type class `Num` is purely coincidental.]
 
-- This gives `(+)` and `(-)` and `(*)` and some more but not exponentiation. I said that "Haskell has no secrets" when we implemented our own arithmetic on successor numbers. But if we start using libraries that is not true anymore. So what can we do? 
+- This gives `(+)` and `(-)` and `(*)` and some more but not exponentiation. (Aside: I said that "Haskell has no secrets" when we implemented our own arithmetic on successor numbers. But if we start using libraries that is not true anymore.) So what can we do? 
     - One is to guess notation and run in ghci a command such as 
 
             :t (^)
@@ -249,7 +249,7 @@ The aim is to extend [the calculator](src/Calculator) by new operations.
 **Task 1** (Parser): 
 - Extend the grammar with syntax for the operations from the previous task. 
 - Generate a parser with `bnfc`.
-- Test the generated parser on a variety of input strings. The parser itself may need some debugging.
+- Test the generated parser on a variety of input strings. The grammar itself may need some debugging.
 
 **Task 2** (Interpreter): Extend the definition of `eval` in [`Interpreter.hs`](src/Calculator/Interpreter.hs).
 
