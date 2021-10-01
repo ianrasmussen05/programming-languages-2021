@@ -40,19 +40,20 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - Watch before the lecture: [Operational Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
 
-- L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv)
+- L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
+
+
+- L 5.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7).  
+
+- L 5.2: [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).  
 
 ### Coming up next
 
 The following is only an outline.
 
-- L 5.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7)
-
-- L 5.2: Church Encodings
-
 - Week 6 and 7: Rewriting
 
-- Deadline for Part 1 of the report.
+- Deadline for Part 1 of the [report](report.md).
 
 - Week 8: Extending Lambda Calculus to a Functional Programming Language, Assignment 2 out.
 
