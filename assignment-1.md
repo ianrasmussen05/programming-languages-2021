@@ -2,7 +2,7 @@
 
 The assignment comes in 2 parts and will be implemented in Haskell. We will use Haskell throughout this course and also next semester in Compiler Construction. 
 
-<font color=red>***Prerequisites: Before you continue reading, do the homework in [Part 1, L 2.2 - L 3.2](lecture-by-lecture.md) of the lectures.***</font>
+***Prerequisites: Before you continue reading, do the homework in [Part 1, L 2.2 - L 3.2](lecture-by-lecture.md) of the lectures.***
 
 (As a footnote, I want to add that Haskell is only a (very good) tool for us, one could use any other programming language for the same purpose in principle, even if it was tedious in practice. In fact, if you want to compare Haskell to another programming language you already know, this could be an idea for the report to implement this assignment also in, say, one of Java, Python, C++, etc and then to compare the two implementations.)
 
@@ -42,7 +42,7 @@ The assignment comes in 2 parts and will be implemented in Haskell. We will use 
 
 ## Submission 
 
-Submission is by sending me an email with a link to the repository. Do not forget the critical appraisal, see [assignments](assignments.md).
+Submission is by sending me an email with a link to the repository. Do not forget the critical appraisal, see [assignments](assignments.md). 
 
 ## Part 1: A Virtual Machine (VM) for Arithmetic (15 points)
 
@@ -245,17 +245,32 @@ The aim is to extend [the calculator](src/Calculator) by new operations.
         Then, if you want to see how functions such as `(^)` are implemented you can look them up in [Hoogle](https://hoogle.haskell.org/?hoogle=%5E&scope=set%3Astackage) and follow the links that will lead you to the source code. 
     - Another is to study more closely the documentation of [GHC.Real](https://www.haskell.org/haddock/libraries/GHC.Real.html) and [GHC.Num](https://hackage.haskell.org/package/base-4.14.0.0/docs/GHC-Num.html) and [Integral](https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#t:Integral).
 
-**Task 0**: Think of 6 other operations on the integers including a binary `-`, a unary `-`, and `/` and `^` for integer division and exponentiation. Research how these operations can be implemented using the native Haskell operations on `Integer`.
+**Task 0**: Think of 6 operations on the integers (other than addition and multiplication) including 
+
+- a binary `-` (subtraction), 
+- a unary `-` (negative),
+- a binary `/` (integer division),
+- a binary `^` (exponentiation). 
+
+Research how these operations can be implemented using the existing Haskell operations on `Integer`.
 
 
 **Task 1** (Parser): 
 - Extend the grammar with syntax for the operations from the previous task. 
 - Generate a parser with `bnfc`.
-- Test the generated parser on a variety of input strings. The grammar itself may need some debugging.
+- Test the generated parser on a variety of input strings. Pay attention to how you implement the order of operations using precedence levels in the grammar (this may need some debugging).
+- Make sure you describe with examples which parentheses you want to be able to drop in case of nested expressions. For example, 
+
+        1+2*3 = 1+(2*3)
+        2^3+4 = (2^3)+4
+        2^3/4^5 = (2^3)/(4^5) 
+
+    etc. Use these expressions to test your parser/calculator.
+
 
 **Task 2** (Interpreter): Extend the definition of `eval` in [`Interpreter.hs`](src/Calculator/Interpreter.hs).
 
-**Remark:** The parser and interpreter can be developed independently, but it may be easier to develop them incrementally together. 
+**Remark:** The parser and interpreter can be developed and tested independently, but it may be easier to develop them incrementally together. 
 
 **Task 3**: 
 - If the interpreter and the parser work separately, then they should also both work together. Compile `Calculator.hs` and test the calculator.
