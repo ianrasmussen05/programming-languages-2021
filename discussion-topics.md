@@ -2,6 +2,8 @@
 
 ## New for 2021:
 
+- [CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research
+](https://deepai.org/publication/compilergym-robust-performant-compiler-optimization-environments-for-ai-research). On how to apply machine learning to compiler optimization.
 - Pull requests and open source software: [How To Rapidly Improve At Any Programming Language](https://www.cbui.dev/how-to-rapidly-improve-at-any-programming-language/). "read other people’s PRs and learn from the comments the maintainer and others leave"
 - [Building apps in minutes, not months](https://alexanderobenauer.com/labnotes/001/).
 - Some webpages that illustrate the recent advances in AI: - Language: [New Age Bullshit Generator](https://sebpearce.com/bullshit/); Text and Images: [DALL·E](https://openai.com/blog/dall-e/); Pictures of People: [thispersondoesnotexist](https://thispersondoesnotexist.com/).

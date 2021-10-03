@@ -32,13 +32,13 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 ### Part 2: Lambda Calculus
 
-- Video to watch before lecture 4.1: [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
+- To watch before lecture 4.1: [Video on Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
 
 - L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
 
 - Videos on parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
 
-- Watch before the lecture: [Operational Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
+- To watch before the lecture: [Video on Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
 
 - L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
 
@@ -46,6 +46,13 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 - L 5.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7).  
 
 - L 5.2: [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).  
+
+### Part 3: Rewriting
+
+- Before the lecture: Read Chapter 1 of [Goedel Escher Bach](GEB.md).
+
+- L 6.1: Rewriting: [Examples](https://hackmd.io/@alexhkurz/rkzITG4nD) ... 
+
 
 ### Coming up next
 
@@ -63,7 +70,7 @@ The following is only an outline.
 
 - Deadline for Part 2 of the report.
 
-- Week 12: Assignment 3 out.
+- Week 12: Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
 
 - Week 13: tba
 
