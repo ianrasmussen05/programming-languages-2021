@@ -49,7 +49,7 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 ### Part 3: Rewriting
 
-- Before the lecture: Read Chapter 1 of [Goedel Escher Bach](GEB.md).
+- Before the lecture: Read Chapter 1 of [Goedel Escher Bach](GEB.md).  
 
 - L 6.1: Rewriting: [Examples](https://hackmd.io/@alexhkurz/rkzITG4nD) and [Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
 
