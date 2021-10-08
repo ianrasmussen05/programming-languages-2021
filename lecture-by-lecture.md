@@ -53,6 +53,10 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - L 6.1: Rewriting: [Examples](https://hackmd.io/@alexhkurz/rkzITG4nD) and [Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
 
+- L6.2: We spent most of the time on the homework in [Rewriting: Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
+
+Homework for next time is to understand the notion of transitive closure of a relation, see the homework in the [Revision Guide on Discrete Maths and Relations](https://hackmd.io/@alexhkurz/SJ1cc-dDr).
+
 ### Coming up next
 
 The following is only an outline.
