@@ -1,7 +1,8 @@
 # Discussion Topics 
 
-## New for 2021:
+## New for 2021: 
 
+- [DEEP LEARNING’S DIMINISHING RETURNS: The cost of improvement is becoming unsustainable](https://spectrum.ieee.org/deep-learning-computational-cost).  
 - [NLP and Film](https://www.theatlantic.com/technology/archive/2016/07/the-six-main-arcs-in-storytelling-identified-by-a-computer/490733/). 
 - [CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research
 ](https://deepai.org/publication/compilergym-robust-performant-compiler-optimization-environments-for-ai-research). On how to apply machine learning to compiler optimization.
