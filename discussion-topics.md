@@ -2,6 +2,7 @@
 
 ## New for 2021:
 
+- [NLP and Film](https://www.theatlantic.com/technology/archive/2016/07/the-six-main-arcs-in-storytelling-identified-by-a-computer/490733/). 
 - [CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research
 ](https://deepai.org/publication/compilergym-robust-performant-compiler-optimization-environments-for-ai-research). On how to apply machine learning to compiler optimization.
 - Pull requests and open source software: [How To Rapidly Improve At Any Programming Language](https://www.cbui.dev/how-to-rapidly-improve-at-any-programming-language/). "read other people’s PRs and learn from the comments the maintainer and others leave"
