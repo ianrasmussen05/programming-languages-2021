@@ -53,11 +53,14 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - L 6.1: Rewriting: [Examples](https://hackmd.io/@alexhkurz/rkzITG4nD) and [Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
 
-- L 6.2: We spent most of the time on the homework in [Rewriting: Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
+- L 6.2: We spent most of the time on the homework in [Rewriting: Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK). The recording contains a detailed explanation of how to use a truth table to analyse the logical relationships between confluence, termination and existence of unique normal forms.
 
 Homework for next time is to understand the notion of transitive closure of a relation, see the homework in the [Revision Guide on Discrete Maths and Relations](https://hackmd.io/@alexhkurz/SJ1cc-dDr).
 
-- 7.1: [Abstract Reduction Systems: Confluence and Normal Forms](https://hackmd.io/@alexhkurz/B1wB3rT4F)
+- L 7.1: [Confluence and Normal Forms](https://hackmd.io/@alexhkurz/B1wB3rT4F). The recordings follow the write-up closely, but contain more explanations.
+
+- L 7.2: [Termination](https://hackmd.io/@alexhkurz/H1O4bLBHK) and [Invariants](https://hackmd.io/@alexhkurz/r1dp-LBBt). 
+The recordings contain a detailed explanation of how to conduct a mathematical proof (that was homework 1), as well as some advice of how to tackle the [string rewriting exercises](https://hackmd.io/@alexhkurz/Syn23oMHF), in particular wrt termination and invariants. 
 
 ### Coming up next
 
