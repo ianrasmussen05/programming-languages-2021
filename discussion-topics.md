@@ -2,6 +2,7 @@
 
 ## New for 2021: 
 
+- Bob Coecke on [Quantum Natural Language Processing](https://www.youtube.com/watch?v=5YZG96t8SLQ), [Bob Coecke and Stephen Wolfram](https://www.youtube.com/watch?v=8CUTXaGqvSQ&list=PLxn-kpJHbPx2xsLWXrRuZLFc9RxLhP42s&index=3).
 -  Douglas Rushkoff's [Survival of the Richest](https://medium.com/s/playback/douglas-rushkoff-survival-of-the-richest-eac5601b935b) became quite well-known, but I didn't know that his podcast mentions Haskell. The line is "I am more of the technology world's old country doctor ... I don't know the actual edge things ... I don't know how to program in Haskell". 
 - [DEEP LEARNING’S DIMINISHING RETURNS: The cost of improvement is becoming unsustainable](https://spectrum.ieee.org/deep-learning-computational-cost).  
 - [NLP and Film](https://www.theatlantic.com/technology/archive/2016/07/the-six-main-arcs-in-storytelling-identified-by-a-computer/490733/). 
