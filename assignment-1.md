@@ -42,7 +42,7 @@ The assignment comes in 2 parts and will be implemented in Haskell. We will use 
 
 ## Submission 
 
-Submission is by sending me an email with a link to the repository. Do not forget the critical appraisal, see [assignments](assignments.md). 
+Submission is by sending me an [email](mailto:akurz@chapman.edu?subject=[Assignment 1]) with subject "Assignment 1" and a link to the repository. Do not forget the critical appraisal, see [assignments](assignments.md). 
 
 ## Part 1: A Virtual Machine (VM) for Arithmetic (15 points)
 
