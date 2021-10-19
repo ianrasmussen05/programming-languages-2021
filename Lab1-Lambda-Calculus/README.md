@@ -84,13 +84,13 @@ If you used `cabal build`, then `cabal exec` instead of `stack exec` should work
 If the executable was not created in the first place, come and see me in my office hours.
 -->
 
-**Exercise:** Write your own lamda calculus programs and execute them. (Recall the lecture on Church numerals.)
+**Homework:** Write your own lamda calculus programs and execute them. (Recall the lecture on Church numerals.)
 
-For now, instead of encoding numbers, conditionals, and recursion in the pure lambda calculus, we will go into a different direction. We will add features to the basic language until we have enough to compute some reasonably interesting examples.
+For the assignment, instead of encoding numbers, conditionals, and recursion in the pure lambda calculus, we will go into a different direction. We will add features to the basic language until we have a language that looks very much like a simple functional programming language. 
 
 ## The Work Cycle: Build a New Language
 
-The Work Cycle that is used to add features to, say, `LambdaNat0` is the following. **I highlighted in bold** the two steps that require actual work, the others steps are just for organisation and bookkeeping. 
+The Work Cycle is used to add features to, say, `LambdaNat0`. **I highlighted in bold** the two steps that require actual work, the others steps are just for organisation and bookkeeping. 
 
 Here we assume that we have `LambdaNatOLD` and want to build a new language called `LambdaNatNEW`. (First time you come here "OLD" is "0" and "NEW" is "1". "OLD" and "NEW" are place-holders for version numbers.)
 
