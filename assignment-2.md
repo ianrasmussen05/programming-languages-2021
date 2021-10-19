@@ -57,7 +57,11 @@ Do the computation `(\ x . S x) S 0 = S S 0` pen and paper. **Think about what y
 - Add two cases for `ENatS` and `ENat0` to `evalCBN`. 
 - Add two cases for `ENatS` and `ENat0` to `subst`. 
 
-These 4 lines of code are simpler than you may think. They are just pushing symbols around. But remember that they need to use abstract syntax (`ENatS` and `ENat0` instead of `S` and `0`). 
+These 4 lines of code are simpler than you may think. They are just pushing symbols around. But remember that they need to use abstract syntax (`ENatS` and `ENat0` instead of `S` and `0`). So I think it should help to first write out the 4 clauses in an informal way, possibly using concrete syntax, before translating them into the correct Haskell code. For example, the case for how `subst` should handle successor could be written in pseudo code as
+```haskell
+subst i e2 (S e3) = S (subst i e2 e3)
+```
+(Recall that we read `subst i e2 e3` as "substitute i with e2 in e3".)
 
 
 
