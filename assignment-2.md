@@ -29,7 +29,7 @@ Each group submits their answer by sending me a link to the github repository vi
 
 (counts for 3 points ... this is only 4 lines of code ... two in `evalCBN` and two in `subst`)
 
-Before you start work through this [README](https://github.com/alexhkurz/programming-languages-2021/tree/main/Lab1-Lambda-Calculus). 
+Before you start, work through this [README](https://github.com/alexhkurz/programming-languages-2021/tree/main/Lab1-Lambda-Calculus). 
 
 Create `LambdaNat1` from `LambdaNat0` according to the work cycle. 
 
