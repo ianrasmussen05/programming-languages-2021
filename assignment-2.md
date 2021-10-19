@@ -63,7 +63,7 @@ subst i e2 (S e3) = S (subst i e2 e3)
 ```
 the idea being that to substitute in `S e3` I need to substitute in `e3` and keep the `S` around.
 
-(Recall that we read `subst i e2 e3` as "substitute i with e2 in e3".)
+(Recall that we read `subst i e2 e3` as "substitute i by e2 in e3".)
 
 
 
