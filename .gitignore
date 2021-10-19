@@ -8,5 +8,8 @@
 *.ak
 /.vscode/*
 local/
+*local/
 .stack-work/
 *.lock
+.DS_Store
+

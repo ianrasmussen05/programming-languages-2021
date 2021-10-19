@@ -64,13 +64,11 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 ### Coming up next
 
+Part 4: An Interpreter for a Functional Programming Language
+
+- L 8.1: Assignment 2
+
 The following is only an outline.
-
-- Week 6 and 7: Rewriting
-
-- Deadline for Part 1 of the [report](report.md).
-
-- Week 8: Extending Lambda Calculus to a Functional Programming Language, Assignment 2 out.
 
 - Week 9 and 10: Program Verification and Hoare Logic.
 
