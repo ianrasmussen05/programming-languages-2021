@@ -20,7 +20,7 @@ How to get started: Download this directory and `cd` into it in a terminal.
 
 - To **create a parser** run
 
-        bnfc -m -haskell LambdaNat0.cf
+        bnfc -m --haskell LambdaNat0.cf
         make
 
 <!--
@@ -84,22 +84,9 @@ If you used `cabal build`, then `cabal exec` instead of `stack exec` should work
 If the executable was not created in the first place, come and see me in my office hours.
 -->
 
-Despite being Turing complete, there seem to be no  "interesting" programs in lambda calculus. Here are some "boring" examples:
-
-    \x.x -- the identity function (returns its argument)
-    \x.\y.x -- the function that takes two arguments and returns the first
-    \x.\y.y -- the function that takes two arguments and returns the second
-    
-These functions are disappointingly simple and would not make one think that all computable functions can be implemented in the lambda calculus. We will come back later to the question how this is possible.
-
-**Exercise:** Write your own lamda calculus programs and execute them.
+**Exercise:** Write your own lamda calculus programs and execute them. (Recall the lecture on Church numerals.)
 
 For now, instead of encoding numbers, conditionals, and recursion in the pure lambda calculus, we will go into a different direction. We will add features to the basic language until we have enough to compute some reasonably interesting examples.
-
-## Homework
-
-Run through all the steps above. Make sure that you can reproduce them.
-
 
 ## The Work Cycle: Build a New Language
 
