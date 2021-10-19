@@ -10,7 +10,7 @@ This assignment comes in several parts.
 
 ## Introduction
 
-The purpose of the assignment is to build a simple functional programming language that has function definitions, function application, numbers, conditionals, recursion and lists.
+The purpose of the assignment is to build a simple functional programming language that has function definitions, function application, numbers, conditionals, recursion and lists. We start from lambda calculus, which already has function definitions and application.
 
 
 ## Instructions
@@ -18,9 +18,9 @@ The purpose of the assignment is to build a simple functional programming langua
 You may form groups again. Easiest for me is if you keep working with the same group in the same repo as before (if that is not possible get in touch). Make folders as follows
 
     YourRepo
-        Assignment1
+        Assignment1 -- contains your work on Assignment 1
         Assignment2
-            LambdaNat0 -- just a copy of my folder
+            LambdaNat0 -- just a copy of my folder LambdaNat0
             LambdaNat1 -- your work as specified below
 
 Each group submits their answer by sending me a link to the github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%202%20Part%20X) where X is the number of the corresponding part of the assignment. 
@@ -61,6 +61,8 @@ These 4 lines of code are simpler than you may think. They are just pushing symb
 ```haskell
 subst i e2 (S e3) = S (subst i e2 e3)
 ```
+the idea being that to substitute in `S e3` I need to substitute in `e3` and keep the `S` around.
+
 (Recall that we read `subst i e2 e3` as "substitute i with e2 in e3".)
 
 
