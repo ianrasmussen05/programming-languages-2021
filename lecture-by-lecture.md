@@ -66,7 +66,7 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 8.1: We run a lab setting up [Assignment 2](https://github.com/alexhkurz/programming-languages-2021/blob/main/assignment-2.md), Part 1.
 
-- L 8.2: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw),video review on the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
+- L 8.2: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw), video review on the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
 
 ### Coming up next
 
