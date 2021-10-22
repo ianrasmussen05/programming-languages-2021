@@ -22,6 +22,8 @@ You may form groups again. Easiest for me is if you keep working with the same g
         Assignment2
             LambdaNat0 -- just a copy of my folder LambdaNat0
             LambdaNat1 -- your work as specified below
+            LambdaNat2 -- my solution to Part 1 (available from Oct 23)
+            LambdaNat3 -- your solution to Part 2
 
 Each group submits their answer by sending me a link to the github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%202%20Part%20X) where X is the number of the corresponding part of the assignment. 
 
@@ -66,4 +68,30 @@ the idea being that to substitute in `S e3` I need to substitute in `e3` and kee
 (Recall that we read `subst i e2 e3` as "substitute `i` by `e2` in `e3`".)
 
 
+## Part 2
 
+The purpose of this part is to add conditionals and recursion to Part 1, see the lecture notes for the necessary background. Your new version will be in a folder called `LambdaNat3`.
+
+We start from the grammar (you have to make this part of your grammar `LambdaNat3.cf`.)
+
+```
+Prog.      Program ::= Exp ;  
+EAbs.      Exp1 ::= "\\" Id "." Exp ;   
+EIf.       Exp2 ::= "if" Exp "=" Exp "then" Exp "else" Exp ; 
+ELet.      Exp2 ::= "let" Id "=" Exp "in" Exp ;               -- let x = A in B is sugar for (\x.B)A  
+ERec.      Exp2 ::= "let rec" Id "=" Exp "in" Exp ;
+EMinusOne. Exp2 ::= "minus_one" Exp ;                         -- because we do not have pattern matching in LambdaNat
+EApp.      Exp3 ::= Exp3 Exp4 ;  
+ENat0.     Exp4 ::= "0" ; 
+ENatS.     Exp4 ::= "S" Exp4 ; 
+EVar.      Exp5 ::= Id ;  
+internal EFix. Exp2 ::= "fix" Exp ;                           -- to implement "let rec"
+```
+
+`internal` means that EFix is part of the abstract syntax but not of the concrete syntax. We need EFix to implement `let rec`.
+
+**Task** (worth 3 points): Implement `EIf`, `ELet` and `EMinusOne` in the interpreter. (6 lines of code.) 
+
+Hints: For `EIf` use Haskell's if-then-else. For `ELet` use the definition of the semantics of `let` as an application of lambda-calculus. For `EMinusOne` use pattern matching (if `n` matches `ENatS m` then `m` is one less than `n`.)
+
+**Bonus Task** (worth 2 extra points): Implement `ERec` and `EFix`.
