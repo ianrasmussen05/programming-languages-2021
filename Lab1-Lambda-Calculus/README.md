@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Our aim is to learn how to extend and modify a small programming language. We start with the pure and untyped lambda calculus, available in the folder [LambdaNat0](https://github.com/alexhkurz/programming-languages-2020/tree/master/Lab1-Lambda-Calculus/LambdaNat0). 
+Our aim is to learn how to extend and modify a small programming language. We start with the pure and untyped lambda calculus, available in the folder `LambdaNat0`. 
 
-Recall that the [syntax](https://hackmd.io/@alexhkurz/S1D0yP8Bw) of the lambda calculus has only variables, abstraction (function definition) and function application. We formalise the syntax in [this context-free grammar](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab1-Lambda-Calculus/LambdaNat0/grammar/LambdaNat0.cf). To execute lambda-calculus programs, we need to know the  [operational semantics](https://hackmd.io/@alexhkurz/H1e4Nv8Bv) consisting of only one computation rule known as capture avoiding substitution or beta-reduction. We will formalise this operational semantics by writing an interpreter for the lambda caclulus in Haskell.
+Recall that the [syntax](https://hackmd.io/@alexhkurz/S1D0yP8Bw) of the lambda calculus has only variables, abstraction (function definition) and function application. We formalise the syntax in the context-free grammar `LambdaNat0.cf`. To execute lambda-calculus programs, we need to know the  [operational semantics](https://hackmd.io/@alexhkurz/H1e4Nv8Bv) consisting of only one computation rule known as capture avoiding substitution or beta-reduction. We will formalise this operational semantics by writing an interpreter for the lambda caclulus in Haskell.
 
 The untyped lambda calculus is a very small programming language an we want to extend this very basic language with new features. There are two main steps: Add the new feature to the parser and then to the interpreter. This is described in the section "The Work Cycle".
 
