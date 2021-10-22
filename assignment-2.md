@@ -5,7 +5,7 @@ This assignment comes in several parts.
 #### Deadlines: 
 
 - Part 1: **Fri, Oct 22**.
-- Part 2: ...
+- Part 2: **Wed, Oct 27**.
 - Part 3: ...
 
 ## Introduction
@@ -21,7 +21,7 @@ You may form groups again. Easiest for me is if you keep working with the same g
         Assignment1 -- contains your work on Assignment 1
         Assignment2
             LambdaNat0 -- just a copy of my folder LambdaNat0
-            LambdaNat1 -- your work as specified below
+            LambdaNat1 -- your work as specified below for Part 1
             LambdaNat2 -- my solution to Part 1 (available from Oct 23)
             LambdaNat3 -- your solution to Part 2
 
