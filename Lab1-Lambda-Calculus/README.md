@@ -1,5 +1,8 @@
 # README
 
+    LambdaNat0 -- just lambda calculus
+    LambdaNat2 -- with "0" and "S", added Oct 23
+
 ## Introduction
 
 Our aim is to learn how to extend and modify a small programming language. We start with the pure and untyped lambda calculus, available in the folder `LambdaNat0`. 
