@@ -17,7 +17,7 @@ The purpose of the assignment is to build a simple functional programming langua
 
 ## Instructions
 
-You may form groups again. Easiest for me is if you keep working with the same group in the same repo as before (if that is not possible get in touch). Make folders as follows
+You may form groups again. Easiest for me is if you keep working with the same group **in the same repo** as before (if that is not possible get in touch). Make folders as follows
 
     YourRepo
         Assignment1 -- contains your work on Assignment 1
