@@ -1,6 +1,6 @@
 # README
 
-    LambdaNat0 -- Assignment 1 starts Oct 19
+    LambdaNat0 -- Assignment 2 starts Oct 19
     LambdaNat2 -- solution to Part 1 added Oct 23
 
 ## Introduction
