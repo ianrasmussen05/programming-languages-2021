@@ -1,6 +1,6 @@
 # README
 
-    LambdaNat0 -- just lambda calculus
+    LambdaNat0 -- Assignment 1 starts Oct 19
     LambdaNat2 -- with "0" and "S", added Oct 23
 
 ## Introduction
