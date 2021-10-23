@@ -30,6 +30,8 @@ You may form groups again. Easiest for me is if you keep working with the same g
 
 Each group submits their answer by sending me a link to the github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%202%20Part%20X) where X is the number of the corresponding part of the assignment. 
 
+**You need to keep my naming conventions as I will run scripts to test your software.** As in Assignment 1, also for this assignment my naming conventions are part of the specifications. 
+
 ## Part 1: From LambdaNat0 to LambdaNat1
 
 (counts for 3 points ... this is only 4 lines of code ... two in `evalCBN` and two in `subst`)
