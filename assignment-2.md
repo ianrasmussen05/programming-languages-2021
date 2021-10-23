@@ -8,6 +8,8 @@ This assignment comes in several parts.
 - Part 2: **Wed, Oct 27**.
 - Part 3: ...
 
+When you submit Part 3, do not forget a critical appraisal covering the whole assignment (worth 3 points).
+
 ## Introduction
 
 The purpose of the assignment is to build a simple functional programming language that has function definitions, function application, numbers, conditionals, recursion and lists. We start from lambda calculus, which already has function definitions and application.
@@ -20,6 +22,7 @@ You may form groups again. Easiest for me is if you keep working with the same g
     YourRepo
         Assignment1 -- contains your work on Assignment 1
         Assignment2
+            README.md -- group members, your critical appraisal
             LambdaNat0 -- just a copy of my folder LambdaNat0
             LambdaNat1 -- your work as specified below for Part 1
             LambdaNat2 -- my solution to Part 1 (available from Oct 23)
