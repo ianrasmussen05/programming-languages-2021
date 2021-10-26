@@ -49,6 +49,13 @@ While writing the report, keep in mind that I am interested in answers to the fo
 - How does Haskell compare to your favourite programming language? Give examples of the same algorithm written in your favourite language and in Haskell. What are the respectives strengths and weaknesses of the two programming paradigms?
 - What are, in your opinion, the major stumbling blocks in learning Haskell?
 
+More Writing Tips:
+- Typeset code different from text.
+- Do not go with the first reference that comes up, try to find the best references for each topic.
+- In case of doubt, put rather more references. The basic idea of scientific writing is that all claims must be justified. (Of course, every community has its common knowledge.) 
+- In Latex, you can use  `\href` to link to online material.
+
+
 
 ## Possible Ideas for the Report
 
