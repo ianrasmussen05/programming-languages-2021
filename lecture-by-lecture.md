@@ -73,6 +73,10 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 The following is only an outline.
 
+- [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY)
+
+- ...
+
 - Week 9 and 10: Program Verification and Hoare Logic.
 
 -  Week 11: tba
