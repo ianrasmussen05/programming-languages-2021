@@ -303,4 +303,4 @@ Here are some more ideas:
 
 - Reflect on the differences between LambdaNat5 and Haskell. In your experience from this assignment, how does writing code in LambdaNat5 and Haskell compare? How far did we come in implementing a functional programming language? What is missing? What can you say about how one should go about extending LambdaNat5 to a more powerful functional language (such as Haskell)?
 
-- Did you notice that the specification "the output-list must be sorted in case that the input-list is sorted" states an invariant? Can you use it to prove that the correctness of `sort` (that is, that `sort` actually does sort)?
+- Did you notice that the specification "the output-list must be sorted in case that the input-list is sorted" states an invariant? Can you use it to prove the correctness of `sort` (that is, that `sort` actually does sort)?
