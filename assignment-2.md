@@ -126,11 +126,11 @@ To build and test LambdaNat4, I run the script `./testlambdanat4`. If you want t
 
 ### Instructions
 
-Add all your solutions to a file `test/solutions.lc`. Each solution will contain one test case, as specified. Add further test cases in comments. Solutions will be separated by `;;`.
+Add all your solutions to a file `test/solutions.lc`. Each solution will contain one test case, as specified. Solutions will be separated by `;;`.
 
 You can also make additional files for further testing.
 
-### Task 1
+### Task 1: Extend the interpreter
 
 Your grammar for LambdaNat5 will be the same as the grammar for LambdaNat 4. For this task, note that the grammar contains
 
@@ -178,7 +178,7 @@ Let us look at some of the details.
 
 **Task:** Implement the computation rule for `less_equal` (which is similar to `+,-,*`). `n less_equal m` should evaluate to `1` if `n` is an integer less or equal to the integer `m` and should evaluate to `0` if `n` is an integer greater than the integer `m`.
 
-### Further Comments
+### Further comments
 
 - Lists can also be nested in order to form trees as in 
 
@@ -209,22 +209,23 @@ As common in functional programming I designed the grammar so that you can drop 
 - to put in enough parentheses so that the program runs in the expected way and then to eliminate all unnecessary parentheses two by two.
 
 
-### Task 2: Write `LambdaNat5` programs
+### Task 2: Write LambdaNat5 programs
 
 - You will provide in `test/solutions.lc` the functions
 
         member
         remove
+        sum
         prod
-        plust_two and map
-        insert and sort
+        plust_two, map
+        insert, sort
 
 
     Running this program with 
                 
         stack exec LambdaNat-exe test/solutions.lc 
     
-    should produce the correct outputs as described in the examples below. Indicate further test cases in comments.
+    should produce the correct outputs as described in the examples below. **Indicate further tests in comments.** (For example, all branches of an if-then-else should be covered by a test.)
 
 #### `member`
 
@@ -232,7 +233,7 @@ As common in functional programming I designed the grammar so that you can drop 
 
 `member 1 2:3:1:#` outputs `1`.
 
-**Hint:** To fullfil this specification your `LambdaNat5` expression needs to fill in the dots in
+**Hint:** To fullfil this specification your LambdaNat5 expression needs to fill in the dots in
 
 ```
 let rec member = \ elem. \list. ...
@@ -260,8 +261,6 @@ In the critical appraisal explain the results for `sum x:2:3:4:#` and `sum 1:2:3
  
 The normal form of `prod 1:2:3:4:# ` is `24`.
 
-In the critical appraisal explain the results for `sum x:2:3:4:#` and `sum 1:2:3:x:#`.
-
 #### `plus_two` and `map`
 
 `plus_two` takes an integer and adds `2`.  
@@ -284,7 +283,7 @@ The task is to write insertion sort.
 
 ### Task 3
 
-Implement the functions of Task 2 also in Haskell and add them to a file `test/solutions.hs`. This file should have a `main`-functions that prints the results of the same test cases (specified above   Task 2) as `test/solutions.lc`.
+Implement the functions of Task 2 also in Haskell and add them to a file `test/solutions.hs`. This file should have a `main`-function that prints the results of the same test cases  as `test/solutions.lc` (as specified above in Task 2).
 
 ## Critical Appraisal
 
@@ -303,3 +302,5 @@ evalCBN (EPlus e1 e2) = (evalCBN e1) + (evalCBN e2)
 similar to what we have done in the calculator?
 
 - Reflect on the differences between LambdaNat5 and Haskell. In your experience from this assignment, how does writing code in LambdaNat5 and Haskell compare? How far did we come in implementing a functional programming language? What is missing? What can you say about how one should go about extending LambdaNat5 to a more powerful language (such as Haskell)?
+
+- Did you notice that the specification "the output-list must be sorted in case that input-list is sorted" states an invariant? Can you use it to prove that the correctness of `sort` (that is, that `sort` actually does sort)?
