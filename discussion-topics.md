@@ -4,6 +4,7 @@ Thanks to everybody who contributed links (Sam Balco, Chris Chang, Matt Raymond,
 
 ## New for 2021: 
 
+- [How to make a bad programming language](https://www.youtube.com/watch?v=2mnYf7L7Amw).
 - Erik Meijer on [The Programming Language World Today](https://www.youtube.com/watch?v=NKeHrApPWlo#t=14m55s), 2017.
 - John Hughes in Computerphile on [Functional Programming & Haskell](https://www.youtube.com/watch?v=LnX3B9oaKzw).
 - [Controlling Complexity in Software Engineering](https://www.youtube.com/watch?v=ZhuHCtR3xq8#t=16m26s).
