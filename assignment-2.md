@@ -289,18 +289,18 @@ Implement the functions of Task 2 also in Haskell and add them to a file `test/s
 
 (3 points, approx one page)
 
-See [assignments](assignments.md). In addition:
+There are a lot of interesting questions. For example, `#:#` does not parse, but `(#):#` does. Why? Does that mean that it would make sense to change the grammar? 
 
-There are a lot of interesting questions. For example, `#:#` does not parse, but `(#):#` does. Why? Does that mean that it would make sense to change the grammar? As you spent quite a lot of time on this assignment, I would like to now about the questions you came up with. 
+As you spent quite a lot of time on this assignment, I would like to now about the questions you came up with. 
 
 Here are some more ideas:
 
-- Reflect on the differences between `LambdaNat5` and the Calculator. In `LambdaNat5`, why can't we implement arithmetic using the simple
-```
-evalCBN (EPlus e1 e2) = (evalCBN e1) + (evalCBN e2)
-```
-similar to what we have done in the calculator?
+- Reflect on the differences between LambdaNat5 and the Calculator. In LambdaNat5, why can't we implement arithmetic using the simple
+    ```
+    evalCBN (EPlus e1 e2) = (evalCBN e1) + (evalCBN e2)
+    ```
+    similar to what we have done in the calculator?
 
-- Reflect on the differences between LambdaNat5 and Haskell. In your experience from this assignment, how does writing code in LambdaNat5 and Haskell compare? How far did we come in implementing a functional programming language? What is missing? What can you say about how one should go about extending LambdaNat5 to a more powerful language (such as Haskell)?
+- Reflect on the differences between LambdaNat5 and Haskell. In your experience from this assignment, how does writing code in LambdaNat5 and Haskell compare? How far did we come in implementing a functional programming language? What is missing? What can you say about how one should go about extending LambdaNat5 to a more powerful functional language (such as Haskell)?
 
 - Did you notice that the specification "the output-list must be sorted in case that input-list is sorted" states an invariant? Can you use it to prove that the correctness of `sort` (that is, that `sort` actually does sort)?
