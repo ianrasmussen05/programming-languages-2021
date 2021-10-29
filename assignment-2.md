@@ -75,7 +75,7 @@ the idea being that to substitute in `S e3` I need to substitute in `e3` and kee
 (Recall that we read `subst i e2 e3` as "substitute `i` by `e2` in `e3`".)
 
 
-## Part 2
+## Part 2: From LambdaNat2 to LambdaNat3
 
 The purpose of this part is to add conditionals and recursion to Part 1, see the [lecture notes](https://hackmd.io/@alexhkurz/rJEeYqZtw) for the necessary background. Your new version will be in a folder `LambdaNat3`.
 
@@ -103,36 +103,36 @@ Hints: For `EIf` use Haskell's if-then-else. For `ELet` use the definition of th
 
 **Bonus Task** (worth 2 extra points): Implement `ERec` and `EFix`.
 
-## Part 3
+## Part 3: From LambdaNat4 to LambdaNat5
 
 (21 points)
 
-The purpose of this part is to add lists to Part 2. Start from my `LambdaNat4`. Your new version will be in a folder `LambdaNat5`.
+The purpose of this part is to add some integer arithmetic and lists to Part 2. Start from my `LambdaNat4`. Your new version will be in a folder `LambdaNat5`.
 
-### What I changed for `LambdaNat4`
+### What I changed for LambdaNat4
 
 Open `LambdaNat4.cf` in an editor.
 
 - Instead of defining our own successor numbers we now use the data type `Integer` built into BNFC and Haskell. I also added operations `+,-,*` and `less_equal`.
 - We now allow a `Prog` to be a list of expressions separated by `;;`. This allows a file to contain several expressions, see `test/test.lc` for an example.
-- I determined the order of operations (precedence levels) in such a way that the rules for dropping parentheses look natural to me. In case you get parsing or run-time errors you cannot make sense of put more parentheses before spending time hunting for other errors.
+- I determined the order of operations (precedence levels) in such a way that the rules for dropping parentheses look natural to me. In case you get parsing or run-time errors check whether more parentheses help before spending time hunting for other errors.
 
 Open `Interpreter.hs` in an editor.
 - I indicated in comments where you need to add new code. `+,-,*` are implemented and `less_equal` will be similar. Are `+,-,*` implemented using call by name or call by value? What could be a reason for this choice?
 
-To build and test `LambdaNat4`, I run the script `./testlambdanat4`. If you want to use it you may have to adapt it to the specifics of your OS.
+To build and test LambdaNat4, I run the script `./testlambdanat4`. If you want to use it you may have to adapt it to the specifics of your OS.
 
-- After building and running `test/test.lc`, you should get the output `0 ;; 24 ;; 55`.
+- After building LambdaNat4 and running `test/test.lc`, you should get the output `0 ;; 24 ;; 55`.
 
 ### Instructions
 
-Add all your solutions to the tasks to a file `test/solutions.lc`. Each solution will contain one test case, as specified. Solutions will be separated by `;;`.
+Add all your solutions to a file `test/solutions.lc`. Each solution will contain one test case, as specified. Add further test cases in comments. Solutions will be separated by `;;`.
 
-Add further test cases to a file `test/mytests.lc`.
+You can also make additional files for further testing.
 
 ### Task 1
 
-Your grammar for LambdaNat5 will be the same as the grammar for LambdaNat 4. For this task, note that `LambdaNat4.cf` contains
+Your grammar for LambdaNat5 will be the same as the grammar for LambdaNat 4. For this task, note that the grammar contains
 
     EHd.       Exp6 ::= "hd" Exp ;
     ETl.       Exp6 ::= "tl" Exp ;
@@ -148,11 +148,11 @@ Let us look at some of the details.
 
     The precedence levels of the grammar are engineered in such a way that `a:b:c:#` is parsed as `a:(b:(c:#))`.
 
-    For the exercise below, recall that abstract syntax is defined in `AbsLambdaNat.hs`, which in turn is generated automatically by bnfc.
+    For the exercise below, recall that abstract syntax is defined in `AbsLambdaNat.hs`, which in turn is generated automatically by BNFC.
 
     **Exercise:** (not necessary to hand this in, but should help to implement the computation rules for `hd` and `tl` in the interpreter) What is the abstract syntax tree of `a:b:c:#`? Write the answer down on paper. Run `a:b:c:#` in the parser and compare with your pen-and-paper answer.
 
-- `hd` and `tl` are pronounced "head" and "tail", respectively. The first task here is to adapt the interpreter of `LambdaNat4` in such a way that head and tail compute as, for example,
+- `hd` and `tl` are pronounced "head" and "tail", respectively. The first task here is to adapt the interpreter of LambdaNat4 in such a way that head and tail compute as, for example,
 
         hd a:b:c:#   --->   a
         tl a:b:c:#   --->   b:c:#
@@ -166,7 +166,7 @@ Let us look at some of the details.
 
     Similarly, one should reduce under a `tl`.
 
-    **Hint:** Recall the `case` expressions for `EApp` or `EMinusOne`.  The code in the interpreter for `EHd e` needs to 
+    **Hint:** The code in the interpreter for `EHd e` needs to 
     - evaluate `e`
     - in case `evalCBN e` is of the form `ECons e1 e2`, evaluate `e1`.
 
@@ -176,7 +176,7 @@ Let us look at some of the details.
 
 **Task:** Implement the computation rules for `EHd`, `ETl`, `ENil`, `ECons` by adding 4 cases to the definition of `evalCBN` in `Interpreter.hs`. 
 
-**Task:** Implement the computation rules for `less_equal` (which are similar to those for `+,-,*`).
+**Task:** Implement the computation rule for `less_equal` (which is similar to `+,-,*`). `n less_equal m` should evaluate to `1` if `n` is an integer less or equal to the integer `m` and should evaluate to `0` if `n` is an integer greater than the integer `m`.
 
 ### Further Comments
 
@@ -188,16 +188,17 @@ Let us look at some of the details.
 
         Plus:N1:(Times:N2:N3)
 
-    (which, by the way, is an abstract syntax tree for `1+2*3`.) The reason we need the EndOfList symbol is that lists are meant to work in situations where we do not know at *programming time* (aka compile time) how long the lists will be at *run time*. 
+    (which, by the way, we can think of as an abstract syntax tree for `1+2*3`.) The reason we need the EndOfList symbol is that lists are meant to work in situations where we do not know at *programming time* (aka compile time) how long the lists will be at *run time*. 
 
 - The previous remark hides a deeper duality between two different readings of `#`, one as the empty list (often written as "nil") and the other has the EndOfList symbol. This duality is known as the duality of **algebras** and **co-algebras**. In the algebraic view, we *build* or *construct* finite data from smallest data (here `ENil` with concrete syntax `#`) by inductively applying a finite number of rules (here `ECons` with concrete syntax `:`). In the co-algebraic view, data is potentially infinite and we *observe* or *deconstruct* this data (here using `hd` and `tl`) until we get to the end symbol (here `#`).
 
-#### Test `LambdaNat5`
+### Testing LambdaNat5
 
 When you start writing your own `LambdaNat5` programs don't forget that unexpected results obtained from running your programs could be due to errors in the interpreter. Here are some test cases I found useful, but you need to create your own in order to gain confidence in your interpreter. Put them in a file `test/mytests.lc`.
 
 | Program | Result |
 |---|---|
+| `hd one:two` | `one` |
 | `hd one:two:#` | `one` |
 | `hd (one:two):#` | `one : two` |
 | `hd (one:two:#):#` | `one : two : #` |
@@ -291,10 +292,14 @@ Implement the functions of Task 2 also in Haskell and add them to a file `test/s
 
 See [assignments](assignments.md). In addition:
 
-Reflect on the differences between `LambdaNat5` and the Calculator. In `LambdaNat5`, why can't we implement arithmetic using the simple
+There are a lot of interesting questions. For example, `#:#` does not parse, but `(#):#` does. Why? Does that mean that it would make sense to change the grammar? As you spent quite a lot of time on this assignment, I would like to now about the questions you came up with. 
+
+Here are some more ideas:
+
+- Reflect on the differences between `LambdaNat5` and the Calculator. In `LambdaNat5`, why can't we implement arithmetic using the simple
 ```
 evalCBN (EPlus e1 e2) = (evalCBN e1) + (evalCBN e2)
 ```
 similar to what we have done in the calculator?
 
-Reflect on the differences between LambdaNat5 and Haskell. In your experience from this assignment, how does writing code in LambdaNat5 and Haskell compare? How far did we come in implementing a functional programming language? What is missing? What can you say about how one should go about extending LambdaNat5 to a more powerful language (such as Haskell)?
+- Reflect on the differences between LambdaNat5 and Haskell. In your experience from this assignment, how does writing code in LambdaNat5 and Haskell compare? How far did we come in implementing a functional programming language? What is missing? What can you say about how one should go about extending LambdaNat5 to a more powerful language (such as Haskell)?
