@@ -72,6 +72,8 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 9.1: We started with a review of the second exercise in [String Rewriting Exercises](https://hackmd.io/@alexhkurz/Syn23oMHF) and then looked the theorem in [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) and its proof in the textbook.
 
+- L 9.2: We continued with [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) from the point of view of Types as Specifications and Proofs as Programs, known as **Curry Howard Correspondence**.
+
 ### Coming up next
 
 - Week 10: Logic and Program Verification and Hoare Logic.
