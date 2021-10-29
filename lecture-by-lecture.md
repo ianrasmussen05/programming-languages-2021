@@ -74,7 +74,7 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 ### Coming up next
 
-- Week 9 and 10: Logic and Program Verification and Hoare Logic.
+- Week 10: Logic and Program Verification and Hoare Logic.
 
 -  Week 11: tba
 
