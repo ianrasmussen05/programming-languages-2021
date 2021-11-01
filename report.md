@@ -10,16 +10,18 @@ I believe that this will have several advantages:
 
 The report will be divided in three parts.
 
-- Part I (40 points, approx 10 pages) will be on Haskell.
-- Part II (40 points, approx 10 pages) will be on the theoretical aspects of the course.
-- Part III (20 points, approx 5 pages) will be a mini-project of your choice where you can go beyond what we do in class.
+- Part 1 (40 points, approx 10 pages) will be on Haskell.
+- Part 2 (40 points, approx 10 pages) will be on the theoretical aspects of the course.
+- Part 3 (20 points, approx 5 pages) will be a mini-project of your choice where you can go beyond what we do in class.
 
 The [LaTeX template](report.tex) and the compiled [pdf](report.pdf).
 
 **Deadlines:**
-- Part I: October 17.
-- Part II: tba.
-- Part II: December 21.
+- Part 1: October 17.
+- Part 2: November 19.
+- Part 3: December 21.
+
+Submission by [email](mailto:akurz@chapman.edu?subject=Report%20Part%20X), where X denotes the part.
 
 ## General Considerations
 
@@ -120,7 +122,7 @@ Some further considerations:
 - Spelling, typesetting, layout, and structure will also be taken into account for grading. Does the form support the understanding of (or does it distract from) the content? 
 - Every section should have something interesting to say and be built around a central idea. If a section reads just like a lists of items without a connecting narrative something is missing.
 - A way to describe when a report gets full points: You would be proud to add it to your resume and I would be happy to recommend it to next year's students.
-- As usual, for full points I need to be able to see a trail of your work on git (if you don't want to use git get in touch early). 
+- As usual, for full points I need to be able to see a trail of your work on git (if you don't want to use git get in touch early ... overleaf could be an alternative). 
 
 Again, if you have your own ideas, let me know. I am happy to adapt these guidelines if they do not fit what you have in mind.
 
