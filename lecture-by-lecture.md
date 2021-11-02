@@ -74,6 +74,8 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 9.2: We continued with [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) from the point of view of Types as Specifications and Proofs as Programs, known as **Curry Howard Correspondence**.
 
+- L 10.1: An interlude on Assignment 2. We discussed the design decisions behind the upgrade from LambdaNat2 to LambdaNat4. Details are available in the recording of the lecture.
+
 ### Coming up next
 
 - Week 10: Logic and Program Verification and Hoare Logic.
