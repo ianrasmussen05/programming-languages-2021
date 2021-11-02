@@ -78,15 +78,17 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 ### Coming up next
 
-- Week 10: Logic and Program Verification and Hoare Logic.
+- Induction, Theorem Proving, Dependent Types
 
--  Week 11: tba
+- Operational and Denotational Semantics
 
-- Deadline for Part 2 of the report.
+- Program Verification and Hoare Logic
+
+- Deadline for Part 2 of the report Nov 19.
 
 - Week 12: Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
 
-- Week 13: tba
+- Week 13, 14: TBA. Possible topics include: Monads, Polymorphism, Typeinference, Mathematics as a Programming Language, ... let me know if you have particular interests ...
 
 - Deadline for Part 3 of the report.
 
