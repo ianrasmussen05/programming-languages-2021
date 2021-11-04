@@ -76,11 +76,11 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 10.1: An interlude on Assignment 2. We discussed the design decisions behind the upgrade from LambdaNat2 to LambdaNat4. Details are available in the recording of the lecture (see my message on the mailinglist).
 
+- L 10.2: [Operational and Denotational Semantics](https://hackmd.io/@alexhkurz/Hkf6BTL6P).
+
 ### Coming up next
 
 - Induction, Theorem Proving, Dependent Types
-
-- Operational and Denotational Semantics
 
 - Program Verification and Hoare Logic
 

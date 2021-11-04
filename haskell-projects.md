@@ -14,6 +14,12 @@ Maybe the following examples can inspire you to choose your Haskell project:
 
 ## From the Programming Languages Course
 
+### Successor Arithmetic (and, possibly, Theorem Proving)
+
+We implemented some arithmetic of successor numbers. A nice project could be to extend this to more operations.
+
+One of the great advantages of successor numbers is that it is easier to prove correctness of various algorithms. This is supported by programming languages such as Isabelle, Idris or Lean. For an extra challenge, in particular if you are a math major, this could be a very interesting project.
+
 ### Calculator
 
 Extend [the calculator](https://hackmd.io/@alexhkurz/HJVtVl068) from the lecture with further features:
@@ -29,7 +35,7 @@ It would also be interesting to hook the calculator up with a web interface, but
 
 ### Roman Numerals
 
-The idea is to implement a simple [string rewriting system](https://hackmd.io/@alexhkurz/BJ23jmpIw#Exercises-String-rewriting-essential-examinable), as discussed in the lectures, in Haskell. My solution has 17 lines of code (rewrite rules, applying a list of rules to a string, normalising) plus some more to convert between roman numerals and integers for testing purposes.
+The idea is to implement a simple [string rewriting system](https://hackmd.io/@alexhkurz/Syn23oMHF), as discussed in the lectures, in Haskell. My solution has 17 lines of code (rewrite rules, applying a list of rules to a string, normalising) plus some more to convert between roman numerals and integers for testing purposes.
 
 Here is the main idea of how we can add roman numerals using a rewrite system.
 
@@ -69,6 +75,10 @@ Implement addition of abacus-numbers in Haskell.
 (I didn't do this myself, so I don't know how much work there is involved exactly.)
 
 A more sophisticated version of the abacus is the [soroban](https://en.wikipedia.org/wiki/Soroban). It is an interesting mix of a [place-value system](https://en.wikipedia.org/wiki/Positional_notation) with Roman numerals as one has a "digit" for the value $5$. 
+
+## A Toolbox for String Rewriting Systems
+
+It would be helpful to be able to explore [examples of string rewriting system](https://hackmd.io/@alexhkurz/Syn23oMHF) with the help of the computer. Write Haskell programs that would help us to do this.
 
 <!--
 ### See also ...

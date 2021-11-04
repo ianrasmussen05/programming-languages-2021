@@ -53,7 +53,7 @@ While writing the report, keep in mind that I am interested in answers to the fo
 
 More Writing Tips:
 - Typeset code different from text.
-- Do not go with the first reference that comes up, try to find the best references for each topic.
+- Do not always go with the first reference that comes up, try to find interesting references for each topic. Cite your references throughout the text.
 - In case of doubt, put rather more references. The basic idea of scientific writing is that all claims must be justified. (Of course, every community has its common knowledge.) 
 - In Latex, you can use  `\href` to link to online material.
 
@@ -69,16 +69,19 @@ To review and explain what we do in the course is a good starting point, but I w
 
 ### Haskell
 -  Write a Haskell tutorial. Make your own examples that you think would help a beginning Haskeller to understand Haskell better.
-- Benchmark the same algorithms in Python and Haskell. You can use [gnomon](https://github.com/paypal/gnomon) to measure the time that programs take to run.
+- Benchmark the same algorithms in Haskell, Python, etc. You can use [gnomon](https://github.com/paypal/gnomon) to measure the time that programs take to run.
 -  I collected some ideas for [Haskell projects](haskell-projects.md) you might want to try.
 - Haskell and lambda-calculus: 
   - Write the same program in both languages and compare.
-  - Study Church numerals. Make examples. Implement Church numberals and run them in Haskell.
+  - Study Church numerals. Make examples. Implement Church numerals and run them in Haskell.
 -  If you know C and have experience in programming with pointers, you will be interested to learn that all of this is still in Haskell, but hidden in the compiler. Study how the Haskell compiler makes working with lists efficient. (This is a big topic and would be worth a whole series of blog posts.)
 - Write about some features of Haskell that only appear on the sidelines in this course:
     - Haskell is lazy
     - Haskell has type classes
     - Haskell has monads 
+- Topics we didn't have time for at all:
+    - History of Haskell  
+    - Application of Haskell in industry
 
 ### Theory
 
@@ -104,7 +107,7 @@ To review and explain what we do in the course is a good starting point, but I w
 
 - ... let me know if you have your own ideas ... the blog is a space where you can be creative ...
 
-- Maybe browising through the list of [discussion topics]() gives some further ideas.
+- Maybe browising through the list of [discussion topics](discussion-topics.md) gives some further ideas.
 
 ## Grading Guidelines
 
