@@ -1,0 +1,50 @@
+#!/bin/zsh
+
+# Automatic Tests for Assignment 2
+    echo -e "\e[36m================================================================================\e[0m"
+    echo -e "\e[36m================================================================================\e[0m"
+    echo -e "\e[36m================================================================================\e[0m"
+## Test LambdaNat1
+cd LambdaNat1
+cd grammar
+bnfc -m --haskell LambdaNat1.cf > /dev/null
+make > /dev/null
+cd .. 
+cp grammar/*.hs src ; 
+stack build > /dev/null
+echo "(\ x. S x) S S 0" | stack exec LambdaNat-exe
+    echo -e "\e[31m================================================================================\e[0m"
+echo "(\ x. \y. S x y) S S 0" | stack exec LambdaNat-exe
+    echo -e "\e[31m================================================================================\e[0m"
+cd ..
+
+## Test LambdaNat3
+cd LambdaNat3
+cd grammar
+bnfc -m --haskell LambdaNat3.cf > /dev/null
+make > /dev/null
+cd .. 
+cp grammar/*.hs src ; 
+stack build > /dev/null
+echo "let x = S 0 in if minus_one x = 0 then left else right" | stack exec LambdaNat-exe
+    echo -e "\e[31m================================================================================\e[0m"
+echo "let x = S 0 in if x=0 then left else right" | stack exec LambdaNat-exe
+    echo -e "\e[31m================================================================================\e[0m"
+cd ..
+
+## Test LambdaNat5
+cd LambdaNat5
+cd grammar
+bnfc -m --haskell LambdaNat5.cf > /dev/null
+make > /dev/null
+cd .. 
+cp grammar/*.hs src ; 
+stack build > /dev/null
+stack exec LambdaNat-exe test/test.lc
+    echo -e "\e[31m================================================================================\e[0m"
+stack exec LambdaNat-exe test/solutions.lc
+    echo -e "\e[31m================================================================================\e[0m"
+cd ..
+
+
+
