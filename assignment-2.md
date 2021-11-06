@@ -34,6 +34,18 @@ Each group submits their answer by sending me a link to the github repository vi
 
 **You need to keep my naming conventions as I will run scripts to test your software.** As in Assignment 1, also for this assignment my naming conventions are part of the specifications. 
 
+## Remark on Debugging
+
+As the interpreter and programs gets more complicated, you are likely to run into problems with debugging.
+
+- One way out would be to modify the interpreter so that it produces more meaningful error messages. But there is a trade-off as it complicates the interpreter. In my experience, one can do the assignment without going down that route.
+
+- One difficulty is to determine whether unexpected results are caused by the program or by the interpreter. Because we are creating here our own new programming language, we have to take into account that we may have to change the interpreter as well as the program.
+
+- If you run into unexpected behaviour create a minimal interesting example (MIE). An MIE consists of two programs and an specification. The smaller program shows expected behaviour. The larger program adds one feature to the smaller one and shows unexpected behaviour. The specification describes the expected behaviour of the larger program.
+
+I would expect that, more often than not, once you have an MIE, you will also have an idea of what to try next. But in case you get stuck, send the MIE to me, together with a link to your github repo so that I can reproduce your MIE.
+
 ## Part 1: From LambdaNat0 to LambdaNat1
 
 (counts for 3 points ... this is only 4 lines of code ... two in `evalCBN` and two in `subst`)
