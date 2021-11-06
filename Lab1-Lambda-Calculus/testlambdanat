@@ -1,0 +1,37 @@
+# Automatic Tests for Assignment 2
+
+## Test LambdaNat1
+cd LambdaNat1
+cd grammar
+bnfc -m --haskell LambdaNat1.cf 
+make 
+cd .. 
+cp grammar/*.hs src ; 
+stack build 
+echo "(\ x. S x) S S 0" | stack exec LambdaNat-exe
+echo "(\ x. \y. S x y) S S 0" | stack exec LambdaNat-exe
+cd ..
+
+## Test LambdaNat3
+cd LambdaNat3
+cd grammar
+bnfc -m --haskell LambdaNat3.cf 
+make 
+cd .. 
+cp grammar/*.hs src ; 
+stack build 
+echo "let x = S 0 in if minus_one x = 0 then left else right" | stack exec LambdaNat-exe
+echo "let x = S 0 in if x=0 then left else right" | stack exec LambdaNat-exe
+cd ..
+
+## Test LambdaNat5
+cd LambdaNat5
+cd grammar
+bnfc -m --haskell LambdaNat5.cf 
+make 
+cd .. 
+cp grammar/*.hs src ; 
+stack build 
+stack exec LambdaNat-exe test/test.lc
+stack exec LambdaNat-exe test/solutions.lc
+cd ..
