@@ -42,7 +42,7 @@ As the interpreter and programs gets more complicated, you are likely to run int
 
 - One difficulty is to determine whether unexpected results are caused by the program or by the interpreter. Because we are creating here our own new programming language, we have to take into account that we may have to change the interpreter as well as the program.
 
-- If you run into unexpected behaviour create a minimal interesting example (MIE). 
+- If you run into unexpected behaviour create a **minimal interesting example** (MIE). 
 
     An MIE consists of two programs and a specification. The smaller program shows expected behaviour. The larger program adds one feature to the smaller one and shows unexpected behaviour. The specification describes the expected behaviour of the larger program.
 
