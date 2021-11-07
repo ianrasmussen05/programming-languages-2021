@@ -1,5 +1,3 @@
-MIE.md
-
 # Minimal Interesting Example (MIE)
 
 Honing the craft of creating MIEs is important for debugging in general, but crucial for debugging interpreters and compilers.
@@ -16,4 +14,4 @@ If you think you have an MIE, more often than not, you will also have an idea of
 
 If guess-and-verify does not solve the problem, it is worth spending more time on making the MIE even smaller. Once you have done this, execute the MIE pen-and-paper. Doing this carefully should give you information about how to fix the problem.
 
-If you are still stuck at this point, send me your MIE and a link to your github.
+If you are still stuck at this point, send me your MIE and a link to your repo.
