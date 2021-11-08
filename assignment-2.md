@@ -6,7 +6,7 @@ This assignment comes in several parts.
 
 - Part 1: **Fri, Oct 22**.
 - Part 2: **Thu, Oct 28**.
-- Part 3: **Sum, Nov 7**. 
+- Part 3: ~~Sun, Nov 7~~ **Wed, Nov 10**. 
 
 When you submit Part 3, do not forget a critical appraisal covering the whole assignment (worth 3 points). See further below for details.
 
