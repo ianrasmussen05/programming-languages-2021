@@ -1,4 +1,4 @@
-(* Samuel Balco and Alexander Kurz, Sept 2018, Oct 2019 *)
+(* Samuel Balco 2018 and Alexander Kurz 2019, 2021 *)
 
 (* This file is an Isabelle/HOL supplement to the lecture notes https://hackmd.io/@alexhkurz/HJnQDm1wK *)
 
@@ -41,7 +41,7 @@ value "eval_exp (Mult (Num (S One)) (Num One))"
 (* Commutativity on the semantic side is easy because addition in integers is commutative *)
 (* In fact, the proof can be done automatically by the tactic "simp".  *)
 lemma "eval_exp (e\<^sub>1 :+: e\<^sub>2) = eval_exp (e\<^sub>2 :+: e\<^sub>1)"
-  by simp
+ by simp
 
 (* How can we prove commutativity on the syntactic side? 
    We need to assume something, that captures that Plus is addition.
