@@ -1,4 +1,4 @@
-(* Samuel Balco 2018 and Alexander Kurz 2019, 2021 *)
+(* Samuel Balco 2018 and Alexander Kurz 2019, 2021 *) 
 
 (* This file is an Isabelle/HOL supplement to the lecture notes https://hackmd.io/@alexhkurz/HJnQDm1wK *)
 
