@@ -21,7 +21,7 @@ The [LaTeX template](report.tex) and the compiled [pdf](report.pdf).
 - Part 2: November 19.
 - Part 3: December 21.
 
-Submission by [email](mailto:akurz@chapman.edu?subject=Report%20Part%20X), where X denotes the part.
+Submission by [email](mailto:akurz@chapman.edu?subject=Report%20Part%20X), where X denotes the part. Send me a pdf or a link to your private github repo where you keep your .tex and .pdf as well as the accompanying code of your Haskell project. (Get in touch if you want to do a theory project without Haskell code.)
 
 ## General Considerations
 

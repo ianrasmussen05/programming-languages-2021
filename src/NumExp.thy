@@ -146,7 +146,7 @@ next
 qed
 
 (* We added a simple tactic called exp_tac, which simply tries 
-   all* the rules on a goal in this order:
+   all the rules on a goal in this order:
 
    1) try refl
    2) try plusone
@@ -156,7 +156,7 @@ qed
    7) try custom derived rule
    8) try symmetry and then custom rule
 
-   this tactic does not apply the trans rule (why?)
+   this tactic does not apply the transitivity rule (why?)
 *)
 
 method exp_tac uses rule = 
