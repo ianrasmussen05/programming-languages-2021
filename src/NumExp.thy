@@ -1,15 +1,6 @@
 (* Samuel Balco and Alexander Kurz, Sept 2018, Oct 2019 *)
 
-(* This file is an Isabelle/HOL supplement to the lecture notes
-
-       How does indcution reall work?
-
-   at
-   
-       https://hackmd.io/02w2FuLsT_uKYQxkPSdvtw# 
-
-*)
-
+(* This file is an Isabelle/HOL supplement to the lecture notes https://hackmd.io/@alexhkurz/HJnQDm1wK *)
 
 section "Arithmetic Expressions"
 
@@ -47,33 +38,31 @@ value "eval_exp (Plus (Num (S One)) (Num One))"
 value "eval_exp (\<langle>\<one>+\<one>\<rangle> :+: \<langle>\<one>+\<one>\<rangle> :*: \<langle>\<one>+\<one>+\<one>\<rangle>)"
 value "eval_exp (Mult (Num (S One)) (Num One))"
 
-(* We can not prove properties of the language and the interpreter. *)
 (* Commutativity on the semantic side is easy because addition in integers is commutative *)
-(* In fact, the prove can be done automatically by the tactic auto.  *)
+(* In fact, the proof can be done automatically by the tactic "simp".  *)
 lemma "eval_exp (e\<^sub>1 :+: e\<^sub>2) = eval_exp (e\<^sub>2 :+: e\<^sub>1)"
-  by auto
+  by simp
 
-(* How can we prove commutativity on the syntactic side? *)
-(* We need to assume something, that captures that Plus is addition *)
-(* In our simple situation, associativity is enough *)
+(* How can we prove commutativity on the syntactic side? 
+   We need to assume something, that captures that Plus is addition.
+   In our simple situation, associativity is enough *)
 
-(* First, we define syntactic equality. 
-   In the lecture notes, we wrote \<approx> where here we have \<equiv>ex.*) 
-inductive equal_exp :: "exp \<Rightarrow> exp \<Rightarrow> bool" (infix "\<equiv>ex" 13) where
-equal_exp_refl:         "e \<equiv>ex e" |
-equal_exp_symm:         "e\<^sub>1 \<equiv>ex e\<^sub>2 \<Longrightarrow> e\<^sub>2 \<equiv>ex e\<^sub>1" |
-equal_exp_trans[trans]: "e\<^sub>1 \<equiv>ex e\<^sub>2 \<Longrightarrow> e\<^sub>2 \<equiv>ex e\<^sub>3 \<Longrightarrow> e\<^sub>1 \<equiv>ex e\<^sub>3" |
-equal_exp_cong_plus:    "e\<^sub>1 \<equiv>ex e\<^sub>1' \<Longrightarrow> e\<^sub>2 \<equiv>ex e\<^sub>2' \<Longrightarrow> e\<^sub>1 :+: e\<^sub>2 \<equiv>ex e\<^sub>1' :+: e\<^sub>2'" |
-equal_exp_plusone:      "\<langle>n+\<one>\<rangle> \<equiv>ex \<langle>n\<rangle> :+: \<langle>\<one>\<rangle>" |
-equal_exp_assoc:        "(e\<^sub>1 :+: (e\<^sub>2 :+: e\<^sub>3)) \<equiv>ex ((e\<^sub>1 :+: e\<^sub>2) :+: e\<^sub>3)" 
+(* First, we define syntactic equality. *) 
+inductive equal_exp :: "exp \<Rightarrow> exp \<Rightarrow> bool" (infix "\<approx>" 13) where
+equal_exp_refl:         "e \<approx> e" |
+equal_exp_symm:         "e\<^sub>1 \<approx> e\<^sub>2 \<Longrightarrow> e\<^sub>2 \<approx> e\<^sub>1" |
+equal_exp_trans[trans]: "e\<^sub>1 \<approx> e\<^sub>2 \<Longrightarrow> e\<^sub>2 \<approx> e\<^sub>3 \<Longrightarrow> e\<^sub>1 \<approx> e\<^sub>3" |
+equal_exp_cong_plus:    "e\<^sub>1 \<approx> e\<^sub>1' \<Longrightarrow> e\<^sub>2 \<approx> e\<^sub>2' \<Longrightarrow> e\<^sub>1 :+: e\<^sub>2 \<approx> e\<^sub>1' :+: e\<^sub>2'" |
+equal_exp_plusone:      "\<langle>n+\<one>\<rangle> \<approx> \<langle>n\<rangle> :+: \<langle>\<one>\<rangle>" |
+equal_exp_assoc:        "(e\<^sub>1 :+: (e\<^sub>2 :+: e\<^sub>3)) \<approx> ((e\<^sub>1 :+: e\<^sub>2) :+: e\<^sub>3)" 
 
 (* Proposition 1 in the lecture notes. *)
-lemma plusone: "\<langle>\<one>\<rangle> :+: \<langle>n\<rangle> \<equiv>ex \<langle>n\<rangle> :+: \<langle>\<one>\<rangle>"
+lemma plusone: "\<langle>\<one>\<rangle> :+: \<langle>n\<rangle> \<approx> \<langle>n\<rangle> :+: \<langle>\<one>\<rangle>"
 (* Show 1+n=n+1 by induction on n:
    Base case: 1+1=1+1
    Inductive case: 1+Sn = 1+(n+1) = (1+n)+1 = (n+1)+1 = Sn+1
 *)
-  apply (induction n)
+  apply (induction n) 
     (* Open the output pane and tick the Proof state box *)
     (* The goal is to show the base case and the incuctive step *)
   apply (rule equal_exp_refl)
@@ -104,9 +93,9 @@ lemma plusone: "\<langle>\<one>\<rangle> :+: \<langle>n\<rangle> \<equiv>ex \<la
 (* Exercise: Compare the Isabelle proof to the pen and paper proof of the lecture notes. *)
 
 (* Commutativity on the syntactic side. *)
-(* Recall that "\<langle>n\<rangle> :+: \<langle>m\<rangle> \<equiv>ex \<langle>m\<rangle> :+: \<langle>n\<rangle>" is an abbreviation for
+(* Recall that "\<langle>n\<rangle> :+: \<langle>m\<rangle> \<approx> \<langle>m\<rangle> :+: \<langle>n\<rangle>" is an abbreviation for
    "equal_exp (Plus (Num n) (Num m)) (Plus (Num m) (Num n))".  *)
-lemma commutativity_num: "\<langle>n\<rangle> :+: \<langle>m\<rangle> \<equiv>ex \<langle>m\<rangle> :+: \<langle>n\<rangle>"
+lemma commutativity_num: "\<langle>n\<rangle> :+: \<langle>m\<rangle> \<approx> \<langle>m\<rangle> :+: \<langle>n\<rangle>"
 (* Recall the pen and paper proof:
    Induction on m: 
    If n=1, then we need to show 1+m=m+1, which we proved in lemma plusone
@@ -119,36 +108,36 @@ case One
   then show ?case by (rule plusone)
 next
   case (S l)
-  have "\<langle>l+\<one>\<rangle> :+: \<langle>m\<rangle> \<equiv>ex (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>m\<rangle>"
+  have "\<langle>l+\<one>\<rangle> :+: \<langle>m\<rangle> \<approx> (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>m\<rangle>"
     apply(rule equal_exp_cong_plus)
     apply(rule equal_exp_plusone)
     by(rule equal_exp_refl)
-  also have      "\<dots> \<equiv>ex (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>) :+: \<langle>m\<rangle>"
+  also have      "\<dots> \<approx> (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>) :+: \<langle>m\<rangle>"
     apply(rule equal_exp_cong_plus)
     apply(rule equal_exp_symm)
     apply(rule plusone)
     by(rule equal_exp_refl)
-  also have      "\<dots> \<equiv>ex \<langle>\<one>\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>m\<rangle>)"
+  also have      "\<dots> \<approx> \<langle>\<one>\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>m\<rangle>)"
     apply(rule equal_exp_symm)
     by(rule equal_exp_assoc)
-  also have      "\<dots> \<equiv>ex \<langle>\<one>\<rangle> :+: (\<langle>m\<rangle> :+: \<langle>l\<rangle>)"
+  also have      "\<dots> \<approx> \<langle>\<one>\<rangle> :+: (\<langle>m\<rangle> :+: \<langle>l\<rangle>)"
     apply(rule equal_exp_cong_plus)
     apply(rule equal_exp_refl)
     by(rule S)
-  also have      "\<dots> \<equiv>ex (\<langle>\<one>\<rangle> :+: \<langle>m\<rangle>) :+: \<langle>l\<rangle>"
+  also have      "\<dots> \<approx> (\<langle>\<one>\<rangle> :+: \<langle>m\<rangle>) :+: \<langle>l\<rangle>"
     by(rule equal_exp_assoc)
-  also have      "\<dots> \<equiv>ex (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>l\<rangle>"
+  also have      "\<dots> \<approx> (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>l\<rangle>"
     apply(rule equal_exp_cong_plus)
     apply(rule plusone)
     by(rule equal_exp_refl)
-  also have      "\<dots> \<equiv>ex \<langle>m\<rangle> :+: (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>)"
+  also have      "\<dots> \<approx> \<langle>m\<rangle> :+: (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>)"
     apply(rule equal_exp_symm)
     by(rule equal_exp_assoc)
-  also have      "\<dots> \<equiv>ex \<langle>m\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>)"
+  also have      "\<dots> \<approx> \<langle>m\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>)"
     apply(rule equal_exp_cong_plus)
     apply(rule equal_exp_refl)
     by(rule plusone)
-  also have      "\<dots> \<equiv>ex \<langle>m\<rangle> :+: \<langle>l+\<one>\<rangle>"
+  also have      "\<dots> \<approx> \<langle>m\<rangle> :+: \<langle>l+\<one>\<rangle>"
     apply(rule equal_exp_cong_plus)
     apply(rule equal_exp_refl)
     apply(rule equal_exp_symm)
@@ -181,7 +170,7 @@ method exp_tac uses rule =
     (rule equal_exp_symm ; rule rule)
 
 (* Here is another way of writing the proof of 1+n=n+1. *)
-lemma plusone_isar: "\<langle>\<one>\<rangle> :+: \<langle>n\<rangle> \<equiv>ex \<langle>n\<rangle> :+: \<langle>\<one>\<rangle>"
+lemma plusone_isar: "\<langle>\<one>\<rangle> :+: \<langle>n\<rangle> \<approx> \<langle>n\<rangle> :+: \<langle>\<one>\<rangle>"
 (* Show 1+n=n+1 by induction on n:
    If n=1, then 1+1=1+1
    If n=Sm, then 1+n = 1+Sm = 1+(m+1) = (1+m)+1 = (m+1)+1 = Sm+1 = n+1
@@ -191,15 +180,15 @@ proof (induction n)
   then show ?case by (simp add: equal_exp_refl)
 next
   case (S m)
-  have "\<langle>\<one>\<rangle> :+: \<langle>m+\<one>\<rangle> \<equiv>ex \<langle>\<one>\<rangle> :+: (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>)" by exp_tac
-  also have      "\<dots> \<equiv>ex (\<langle>\<one>\<rangle> :+: \<langle>m\<rangle>) :+: \<langle>\<one>\<rangle>" by exp_tac
-  also have      "\<dots> \<equiv>ex (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>\<one>\<rangle>" by(exp_tac rule:S)
-  also have      "\<dots> \<equiv>ex (\<langle>m+\<one>\<rangle>) :+: \<langle>\<one>\<rangle>" by exp_tac
+  have "\<langle>\<one>\<rangle> :+: \<langle>m+\<one>\<rangle> \<approx> \<langle>\<one>\<rangle> :+: (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>)" by exp_tac
+  also have      "\<dots> \<approx> (\<langle>\<one>\<rangle> :+: \<langle>m\<rangle>) :+: \<langle>\<one>\<rangle>" by exp_tac
+  also have      "\<dots> \<approx> (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>\<one>\<rangle>" by(exp_tac rule:S)
+  also have      "\<dots> \<approx> (\<langle>m+\<one>\<rangle>) :+: \<langle>\<one>\<rangle>" by exp_tac
   finally show ?case by simp
 qed
 
 (* Here is another way of writing the proof of 1+n=n+1. *)
-lemma commutativity_num_isar: "\<langle>n\<rangle> :+: \<langle>m\<rangle> \<equiv>ex \<langle>m\<rangle> :+: \<langle>n\<rangle>"
+lemma commutativity_num_isar: "\<langle>n\<rangle> :+: \<langle>m\<rangle> \<approx> \<langle>m\<rangle> :+: \<langle>n\<rangle>"
 (* Induction on m: 
    If n=1, then we need to show 1+m=m+1, which we proved in lemma plusone
    If n = Sl, then 
@@ -211,15 +200,15 @@ case One
   then show ?case by (rule plusone)
 next
   case (S l)
-  have "\<langle>l+\<one>\<rangle> :+: \<langle>m\<rangle> \<equiv>ex (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>m\<rangle>" by exp_tac
-  also have      "\<dots> \<equiv>ex (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>) :+: \<langle>m\<rangle>" by(exp_tac rule:plusone)
-  also have      "\<dots> \<equiv>ex \<langle>\<one>\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>m\<rangle>)" by exp_tac
-  also have      "\<dots> \<equiv>ex \<langle>\<one>\<rangle> :+: (\<langle>m\<rangle> :+: \<langle>l\<rangle>)" by(exp_tac rule:S)
-  also have      "\<dots> \<equiv>ex (\<langle>\<one>\<rangle> :+: \<langle>m\<rangle>) :+: \<langle>l\<rangle>" by exp_tac
-  also have      "\<dots> \<equiv>ex (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>l\<rangle>" by(exp_tac rule:plusone)
-  also have      "\<dots> \<equiv>ex \<langle>m\<rangle> :+: (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>)" by exp_tac
-  also have      "\<dots> \<equiv>ex \<langle>m\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>)" by(exp_tac rule:plusone)
-  also have      "\<dots> \<equiv>ex \<langle>m\<rangle> :+: \<langle>l+\<one>\<rangle>" by exp_tac
+  have "\<langle>l+\<one>\<rangle> :+: \<langle>m\<rangle> \<approx> (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>m\<rangle>" by exp_tac
+  also have      "\<dots> \<approx> (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>) :+: \<langle>m\<rangle>" by(exp_tac rule:plusone)
+  also have      "\<dots> \<approx> \<langle>\<one>\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>m\<rangle>)" by exp_tac
+  also have      "\<dots> \<approx> \<langle>\<one>\<rangle> :+: (\<langle>m\<rangle> :+: \<langle>l\<rangle>)" by(exp_tac rule:S)
+  also have      "\<dots> \<approx> (\<langle>\<one>\<rangle> :+: \<langle>m\<rangle>) :+: \<langle>l\<rangle>" by exp_tac
+  also have      "\<dots> \<approx> (\<langle>m\<rangle> :+: \<langle>\<one>\<rangle>) :+: \<langle>l\<rangle>" by(exp_tac rule:plusone)
+  also have      "\<dots> \<approx> \<langle>m\<rangle> :+: (\<langle>\<one>\<rangle> :+: \<langle>l\<rangle>)" by exp_tac
+  also have      "\<dots> \<approx> \<langle>m\<rangle> :+: (\<langle>l\<rangle> :+: \<langle>\<one>\<rangle>)" by(exp_tac rule:plusone)
+  also have      "\<dots> \<approx> \<langle>m\<rangle> :+: \<langle>l+\<one>\<rangle>" by exp_tac
   finally show ?case by simp
 qed
 

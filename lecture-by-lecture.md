@@ -80,13 +80,15 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 ### Coming up next
 
-- Induction, Theorem Proving, Dependent Types
+- L 11.1: Theorem Proving: [Induction](https://hackmd.io/@alexhkurz/HJG08mJvY) and  [Theorem Proving and Dependent Types](https://hackmd.io/@alexhkurz/HJnQDm1wK).
 
-- Program Verification and Hoare Logic
+- L 11.2 and 12.1: Program Verification and Hoare Logic
+
+- L 12.2: Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
 
 - Deadline for Part 2 of the report Nov 19.
 
-- Week 12: Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
+- Thanksgiving break
 
 - Week 13, 14: TBA. Possible topics include: Monads, Polymorphism, Typeinference, Mathematics as a Programming Language, ... let me know if you have particular interests ...
 
