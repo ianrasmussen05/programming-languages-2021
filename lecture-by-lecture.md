@@ -68,7 +68,7 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 8.2: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw), video review of the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
 
-### Part 5: Logic
+### Part 5: Advanced Topics
 
 - L 9.1: We started with a review of the second exercise in [String Rewriting Exercises](https://hackmd.io/@alexhkurz/Syn23oMHF) and then looked the theorem in [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) and its proof in the textbook.
 
@@ -76,11 +76,11 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 10.1: An interlude on Assignment 2. We discussed the design decisions behind the upgrade from LambdaNat2 to LambdaNat4. Details are available in the recording of the lecture (see my message on the mailinglist).
 
-- L 10.2: [Operational and Denotational Semantics](https://hackmd.io/@alexhkurz/Hkf6BTL6P).
+- L 10.2: **Operational and Denotational Semantics.** [Notes](https://hackmd.io/@alexhkurz/Hkf6BTL6P).
+
+- L 11.1: **Theorem Proving.** (Occasionally refers back to the lectures on the Curry-Howard Correspondence and on Operational and Denotational Semantics.) In this lecture we tackle a classical AI topic, namely how to implement *human-style reasoning about algorithms and mathematics*. The starting point is [NumExp.thy](https://github.com/alexhkurz/programming-languages-2021/blob/main/src/NumExp.thy) which implements a simple example of a proof in [Isabelle](https://isabelle.in.tum.de/index.html), which is a programming language that helps us to write proofs and has a proof checker to verify that proofs are correct. We then followed my notes on [Induction](https://hackmd.io/@alexhkurz/HJG08mJvY) arriving at a *formal inductive definition of proof* in a special logic called equational logic. We also proved a simple theorem about commutativity in this logic. With this background we went back into Isabelle and `NumExp.thy` and saw how proofs are implemented as elements of an inductive data type and how the commutativity proof is formally verified in Isabelle. Finally, we looked at the same proof in Idris, a **dependently typed programming language**. Idris implements the Curry-Howard Correspondence we have seen in an earlier lecture. In particular, theorems are types, proofs are programs and proof checking is type checking. More details are available in my notes on [Theorem Proving](https://hackmd.io/@alexhkurz/HJnQDm1wK).
 
 ### Coming up next
-
-- L 11.1: Theorem Proving: [Induction](https://hackmd.io/@alexhkurz/HJG08mJvY) and  [Theorem Proving and Dependent Types](https://hackmd.io/@alexhkurz/HJnQDm1wK).
 
 - L 11.2 and 12.1: Program Verification and Hoare Logic
 
