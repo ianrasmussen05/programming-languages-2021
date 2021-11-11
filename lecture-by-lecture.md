@@ -82,7 +82,7 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 ### Coming up next
 
-- L 11.2 and 12.1: Program Verification: [Hoare Logic](https://hackmd.io/Df57tnuCSGaW8wqqsl57FQ) ... [Exercises](https://hackmd.io/@alexhkurz/rkhVZNzjH)
+- L 11.2 and 12.1: Program Verification: [Hoare Logic](https://hackmd.io/Df57tnuCSGaW8wqqsl57FQ) ... [Exercises](https://hackmd.io/@alexhkurz/rkhVZNzjH)  
 
 - L 12.2: Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
 
