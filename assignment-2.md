@@ -277,7 +277,8 @@ The normal form of `prod 1:2:3:4:# ` is `24`.
 
 `plus_two` takes an integer and adds `2`.  
 
-`map` takes a function from lists to lists and takes a list and applies the function to each element.
+`map` takes a function from elements to elements, and a list, and recursively applies the function to each element of the list.
+
 
 `map plus_two 1:2:3:4:#` evaluates to `3:4:5:6:#`.
 

@@ -12,5 +12,6 @@ local/
 .stack-work/
 *.lock
 .DS_Store
-.ibc
+*.ibc
+*.thy~
 
