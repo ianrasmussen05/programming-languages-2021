@@ -29,15 +29,6 @@ This course can only scratch the surface of so many topics in programming langua
 
 Learning a new programming language is always a challenge, in particular if it is your first functional programming language. You only know that you understand something if you can explain it to somebody else. So a good way to start the report is to write about Haskell. Moreover, for the course we only need some basics features of Haskell, essentially recursion over [algebraic data types](https://www.google.com/search?q=haskell+%22algebraic+data+type%22&oq=haskell+%22algebraic+data+type%22). So I invite you to take the opportunity to learn more about Haskell than we need and to write a tutorial on what you learned is a great way to showcase this.
 
-## Writing Tips
-
-The report is not an English assignment, but I find this classic and entertaining [advice by George Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) always useful. 
-- To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. 
-- "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Perhaps metaphors play a lesser role in our kind of technical writing, but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
-- Orwell recommends to avoid writing something just because it sounds good. Instead, 
-    - "put off using words as long as possible and get one's meaning as clear as one can through pictures". 
-    - first "think wordlessly, and then, [...] describe the thing you have been visualising". 
-
 
 ## General remarks on content
 
@@ -57,15 +48,11 @@ More Writing Tips:
 - In case of doubt, put rather more references. The basic idea of scientific writing is that all claims must be justified. (Of course, every community has its common knowledge.) 
 - In Latex, you can use  `\href` to link to online material.
 
-
-
 ## Possible Ideas for the Report
-
 
 To review and explain what we do in the course is a good starting point, but I would expect that you take the opportunity to explore on your own. The following is just a list of prompts to give you some ideas of what is possible ...
 
 ***I don't want to limit your creativity, so let me know if you have your own ideas.***
-
 
 ### Haskell
 -  Write a Haskell tutorial. Make your own examples that you think would help a beginning Haskeller to understand Haskell better.
@@ -104,6 +91,8 @@ Here are some bigger questions that can help you to relate different parts of th
 - What is the halting problem? Why is it undecidable? What are other undecidable problem?
 - Some modern programming languages such as [Dafny](https://hackmd.io/@alexhkurz/SJyBbDQjv) implement verification of termination and Hoare triples. Explore.
 - [Reversible computing](https://hackmd.io/@alexhkurz/H1PIwnSqw).
+- Maybe browsing through the list of [discussion topics](discussion-topics.md) gives some further ideas.
+
 
 And some more advanced questions if you want to explore more:
 
@@ -112,19 +101,6 @@ And some more advanced questions if you want to explore more:
 - Can we prove confluence automatically? What is the Knuth-Bendix algorithm?
 - Not all terminating programs can be proved terminating with a termination measure that takes values in natural numbers. How can we go beyond this?
 - Interactive theorem provers (Isabelle, Idris, Coq, Agda, Lean, ...) are functional programming languages in which one can prove mathematical theorems. Explore.
-
-
-### General Programming Languages Topics
-
-- Multi-paradigm languages:
-  - Haskell is close to what one calls "pure functional programming" but there are also multi-paradigm languages such as OCaml and, more recently, Scala and Julia. You can pick Julia or Scala and write about how they integrate FP and OO. What are the benefits (apart from just having both FP and OO)?
-  - In case you have an interest in logic programming (eg PROLOG), there is some interesting literature on building multi-paradigm languages that combine functional and logic programming. 
-
-#### Other Topics
-
-- ... let me know if you have your own ideas ... the report is a space where you can be creative ...
-
-- Maybe browising through the list of [discussion topics](discussion-topics.md) gives some further ideas.
 
 ## Grading Guidelines
 
@@ -146,16 +122,13 @@ Some further considerations:
 
 Again, if you have your own ideas, let me know. I am happy to adapt these guidelines if they do not fit what you have in mind.
 
-<!--
-Grading Guidelines.
 
-... 
+## More Writing Tips
 
-Suggestions for Part I:
-
-Suggestions for Part II:
-
-Suggestions for Part III:
--->
-
+The report is not an English assignment, but I find this classic and entertaining [advice by George Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) always useful. 
+- To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. 
+- "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Perhaps metaphors play a lesser role in our kind of technical writing, but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
+- Orwell recommends to avoid writing something just because it sounds good. Instead, 
+    - "put off using words as long as possible and get one's meaning as clear as one can through pictures". 
+    - first "think wordlessly, and then, [...] describe the thing you have been visualising". 
 
