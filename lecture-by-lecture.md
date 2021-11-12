@@ -42,7 +42,6 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
 
-
 - L 5.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7).  
 
 - L 5.2: [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).  
@@ -70,9 +69,9 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 ### Part 5: Advanced Topics
 
-- L 9.1: We started with a review of the second exercise in [String Rewriting Exercises](https://hackmd.io/@alexhkurz/Syn23oMHF) and then looked the theorem in [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) and its proof in the textbook.
+- L 9.1: As an example for a mathematical proof about a model of computation: We started with a review of the second exercise in [String Rewriting Exercises](https://hackmd.io/@alexhkurz/Syn23oMHF) and then looked the theorem in [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) and its proof in the textbook.
 
-- L 9.2: We continued with [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) from the point of view of Types as Specifications and Proofs as Programs, known as **Curry Howard Correspondence**.
+- L 9.2: We continued with [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) from the point of view of Types as Specifications and Proofs as Programs, known as **Curry Howard Correspondence**. We also had a brief look at **type inference**, see my notes on [Typed Lambda Calculus](https://hackmd.io/@alexhkurz/S1Sopqo6w).  
 
 - L 10.1: An interlude on Assignment 2. We discussed the design decisions behind the upgrade from LambdaNat2 to LambdaNat4. Details are available in the recording of the lecture (see my message on the mailinglist).
 

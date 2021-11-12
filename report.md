@@ -31,7 +31,7 @@ Learning a new programming language is always a challenge, in particular if it i
 
 ## Writing Tips
 
-The blog is not an English assignment, but I find this classic and entertaining [advice by George Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) always useful. 
+The report is not an English assignment, but I find this classic and entertaining [advice by George Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) always useful. 
 - To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. 
 - "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Perhaps metaphors play a lesser role in our kind of technical writing, but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
 - Orwell recommends to avoid writing something just because it sounds good. Instead, 
@@ -74,7 +74,7 @@ To review and explain what we do in the course is a good starting point, but I w
 - Haskell and lambda-calculus: 
   - Write the same program in both languages and compare.
   - Study Church numerals. Make examples. Implement Church numerals and run them in Haskell.
--  If you know C and have experience in programming with pointers, you will be interested to learn that all of this is still in Haskell, but hidden in the compiler. Study how the Haskell compiler makes working with lists efficient. (This is a big topic and would be worth a whole series of blog posts.)
+-  If you know C and have experience in programming with pointers, you will be interested to learn that all of this is still in Haskell, but hidden in the compiler. Study how the Haskell compiler makes working with lists efficient. 
 - Write about some features of Haskell that only appear on the sidelines in this course:
     - Haskell is lazy
     - Haskell has type classes
@@ -88,13 +88,15 @@ To review and explain what we do in the course is a good starting point, but I w
 (much of this will make sense only after the first half of the course)
 
 A good starting point would be the homework in the lecture notes. Topics of revelance are (choose some of them):
-- Parsing. Existence of unique parse trees. Precedence levels.
-- Lambda Calculus. Binding and scope, Church encodings. 
-- String Rewriting. Confluence, normal forms, termination, invariants and exercises. (Recommended.)
-- Operational and Denotational Semantics, Theorem Proving. (More difficult.)
-- Hoare Logic.
+- **Parsing.** Example topics: Give your own examples of ambiguous and non-ambiguous grammars. Explain, at the hand of an example, how to make a grammart non-ambiguous. Modify the grammar of your calculator by changing precedence levels and explain how different precedence levels correspond to different conventions about which parentheses can be dropped.
+- **Lambda Calculus.** Examples: Make your own examples and exercises on variable binding and scope. Show sample reductions that explain how computations with the fixed point combinator or with Church numerals work. Implement Church numerals in Haskell (you need to think about how to print them). What is the type of the Haskell Church numerals? Can you explain them?
+- **String Rewriting.** Confluence, normal forms, termination, invariants and exercises. (Recommended.) For more challenges have a look at the Baader-Nipkow book. You could for example take some other proof of the book and treat in the way we have done [here](https://hackmd.io/@alexhkurz/BkNlJ07IY).
+- Curry Howard Isomorphism and Type Inference. Take some simple lambda terms and type them. Interpret the types as logical formulas and show that they are tautologies. Conversely, choose some tautologies and find lambda expressions of that type.
+- Operational and Denotational Semantics. The lecture on operational semantics contains a number of exercises that could be fun for the mathematically inclined student. Get in touch if you want to do this.
+- Theorem Proving. Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/) have a collection of exercises very much in the spirit of this lecture, but they are more challenging than my own homework exercises. This can easily fill Part 2 of the report without the need to tackle another topic.
+- **Hoare Logic.** Have a look at the exercises. I can also provide more.
 
-Whatever topics you choose, I want to see that you can solve some concrete exercises and also that you can connect the theory with other aspects of  the course.
+The topics which we looked at in more depth are in boldface. Whatever topics you choose, I want to see that you can solve some concrete exercises and also that you can connect the theory with other aspects of  the course.
 
 Here are some bigger questions that can help you to relate different parts of the course:
 
@@ -115,12 +117,12 @@ And some more advanced questions if you want to explore more:
 ### General Programming Languages Topics
 
 - Multi-paradigm languages:
-  - Haskell is close to what one calls "pure functional programming" but there are also multi-paradigm languages such as OCaml and, more recently, Scala and Julia. You can pick Julia or Scala and write one or more blogs about how they integrate FP and OO. What are the benefits (apart from just having both FP and OO)?
+  - Haskell is close to what one calls "pure functional programming" but there are also multi-paradigm languages such as OCaml and, more recently, Scala and Julia. You can pick Julia or Scala and write about how they integrate FP and OO. What are the benefits (apart from just having both FP and OO)?
   - In case you have an interest in logic programming (eg PROLOG), there is some interesting literature on building multi-paradigm languages that combine functional and logic programming. 
 
 #### Other Topics
 
-- ... let me know if you have your own ideas ... the blog is a space where you can be creative ...
+- ... let me know if you have your own ideas ... the report is a space where you can be creative ...
 
 - Maybe browising through the list of [discussion topics](discussion-topics.md) gives some further ideas.
 
