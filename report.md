@@ -87,15 +87,30 @@ To review and explain what we do in the course is a good starting point, but I w
 
 (much of this will make sense only after the first half of the course)
 
-- Why is lambda-calculus Turing complete?
+A good starting point would be the homework in the lecture notes. Topics of revelance are (choose some of them):
+- Parsing. Existence of unique parse trees. Precedence levels.
+- Lambda Calculus. Binding and scope, Church encodings. 
+- String Rewriting. Confluence, normal forms, termination, invariants and exercises. (Recommended.)
+- Operational and Denotational Semantics, Theorem Proving. (More difficult.)
+- Hoare Logic.
+
+Whatever topics you choose, I want to see that you can solve some concrete exercises and also that you can connect the theory with other aspects of  the course.
+
+Here are some bigger questions that can help you to relate different parts of the course:
+
+- Why is lambda-calculus Turing complete? Why is it normalizing but not terminating?
 - What is the halting problem? Why is it undecidable? What are other undecidable problem?
+- Some modern programming languages such as [Dafny](https://hackmd.io/@alexhkurz/SJyBbDQjv) implement verification of termination and Hoare triples. Explore.
+- [Reversible computing](https://hackmd.io/@alexhkurz/H1PIwnSqw).
+
+And some more advanced questions if you want to explore more:
+
 - What is combinatory logic? Is combinatory logic Turing complete? 
 - Beta-reduction is an important computational mechanism. Explore how to efficiently implement it using de Bruin indices.
 - Can we prove confluence automatically? What is the Knuth-Bendix algorithm?
 - Not all terminating programs can be proved terminating with a termination measure that takes values in natural numbers. How can we go beyond this?
-- Some modern programming languages such as [Dafny](https://hackmd.io/@alexhkurz/SJyBbDQjv) implement verification of termination and Hoare triples. Explore.
-- [Reversible computing](https://hackmd.io/@alexhkurz/H1PIwnSqw).
-- Interactive theorem provers (Isabelle, Coq, Agda, Lean, ...) are functional programming languages in which one can prove mathematical theorems. Explore.
+- Interactive theorem provers (Isabelle, Idris, Coq, Agda, Lean, ...) are functional programming languages in which one can prove mathematical theorems. Explore.
+
 
 ### General Programming Languages Topics
 
