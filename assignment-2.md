@@ -34,17 +34,21 @@ Each group submits their answer by sending me a link to the github repository vi
 
 **You need to keep my naming conventions as I will run scripts to test your software.** As in Assignment 1, also for this assignment my naming conventions are part of the specifications. 
 
-## Remark on Debugging
+## General Remarks 
 
-As the interpreter and programs gets more complicated, you are likely to run into problems with debugging.
+### Rationale
 
-- One direction to take would be to modify the interpreter so that it produces more meaningful error messages. But there is a trade-off here, as this complicates the interpreter. In my experience, one can do the assignment without going down that route.
+We are aiming for the simplest possible interpreter of the simplest interesting functional programming language. Amongst many other simplifications, the language is untyped and the interpreter does not produce meaningful error messages. 
 
-- One difficulty is to determine whether unexpected results are caused by the program or by the interpreter. Because we are creating here our own new programming language, we have to take into account that we may have to change the interpreter as well as the program.
+### Interpreter
 
-- If you run into unexpected behaviour create a [minimal interesting example (MIE)](MIE.md). 
+For each constructor in the grammar there will be one clause in the definitions of `subst` and `evalCBN`.
 
+`subst` just applies `subst` recursively to sub-expressions. For `evalCBN` this is often not enough. For `evalCBN e` you may want to use Haskell's `case` to make a case-distinction on the result of evaluating `e`.
 
+### Debugging
+
+As the interpreter and programs gets more complicated, you are likely to run into problems with debugging. One difficulty is to determine whether unexpected results are caused by the program or by the interpreter. If you run into unexpected behaviour create a [minimal interesting example (MIE)](MIE.md). 
 
 ## Part 1: From LambdaNat0 to LambdaNat1
 
@@ -86,7 +90,6 @@ the idea being that to substitute in `S e3` I need to substitute in `e3` and kee
 
 (Recall that we read `subst i e2 e3` as "substitute `i` by `e2` in `e3`".)
 
-
 ## Part 2: From LambdaNat2 to LambdaNat3
 
 The purpose of this part is to add conditionals and recursion to Part 1, see the [lecture notes](https://hackmd.io/@alexhkurz/rJEeYqZtw) for the necessary background. Your new version will be in a folder `LambdaNat3`.
@@ -113,7 +116,7 @@ internal EFix. Exp2 ::= "fix" Exp ;                           -- to implement "l
 
 Hints: For `EIf` use Haskell's if-then-else. For `ELet` use the definition of the semantics of `let` as an application of lambda-calculus. For `EMinusOne` use pattern matching (if `n` matches `ENatS m` then `m` is one less than `n`.)
 
-**Bonus Task** (worth 2 extra points): Implement `ERec` and `EFix`.
+**Bonus Task** (worth 2 extra points (but max points is 30)): Implement `ERec` and `EFix`.
 
 ## Part 3: From LambdaNat4 to LambdaNat5
 

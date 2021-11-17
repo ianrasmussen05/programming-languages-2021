@@ -81,11 +81,11 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 11.2: Program Verification: After a general introduction to [Hoare Logic](https://hackmd.io/Df57tnuCSGaW8wqqsl57FQ), we spent most of the time studying the [Rules of Hoare Logic](https://hackmd.io/@alexhkurz/BJyjAXGoB). We finished with a look at [Dafny](https://hackmd.io/@alexhkurz/SJyBbDQjv) which is a programming language that knows enough about logic so that it can automatically verify substantial correctness properties. 
 
-### Coming up next
+- L 12.1: We continued with [Hoare Logic](https://hackmd.io/Df57tnuCSGaW8wqqsl57FQ), looking at examples of while loops in some detail. I also have a list of [exercises](https://hackmd.io/@alexhkurz/rkhVZNzjH).
 
-- L 12.1: We look at examples of while loops in some detail, see [Rules of Hoare Logic](https://hackmd.io/@alexhkurz/BJyjAXGoB). I also have a list of [exercises](https://hackmd.io/@alexhkurz/rkhVZNzjH).
+### Coming up next  
 
-- L 12.2: Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
+- L 12.2: Overview of next semester's course on [Compiler Construction](https://github.com/alexhkurz/compiler-construction-2022). Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
 
 - Deadline for Part 2 of the report Nov 19.
 
