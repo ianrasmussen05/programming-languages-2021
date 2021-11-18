@@ -85,7 +85,7 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 ### Coming up next  
 
-- L 12.2: Overview of next semester's course on [Compiler Construction](https://github.com/alexhkurz/compiler-construction-2022). Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
+- L 12.2: Overview of next semester's course on [Compiler Construction](https://github.com/alexhkurz/compiler-construction-2022). Undecidability of the [Halting Problem](https://hackmd.io/@alexhkurz/HyHUQYXuY). Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
 
 - Deadline for Part 2 of the report Nov 19.
 

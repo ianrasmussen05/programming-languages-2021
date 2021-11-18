@@ -2,6 +2,8 @@
 
 In addition to individual feedback, here are some general remarks.
 
+The two extra points for the fixed point combinator cannot get you above 30 (=100%). I apologise if that was not clear from my instructions.
+
 ## The Functions
 
 - `prod []` should evaluate to `1`. (No points deducted if it works on all other inputs.) The reason is that the underlying data structure is what mathematicians and Haskeller's call a **monoid**, see here for the [math](https://en.wikipedia.org/wiki/Monoid) and here for [Haskell](https://wiki.haskell.org/Monoid). If `a` is a data type with a 'neutral element' `mempty :: a` and binary operation `mappend :: a -> a -> a`, then one can define an operation
