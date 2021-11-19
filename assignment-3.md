@@ -96,7 +96,7 @@ The assignment provides the round robin algorithm, but asks you to implement the
 
 Each group submits their answer by sending me a link to a github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%203%20Part%202).
 
-To assess your work, I will run the code in the file `round_robin.lc`, so make sure that the functions you implement all run as expected. 
+To assess your work, I will run the code in the file [round-robin.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/round-robin/round-robin.lc), so make sure that the functions you implement all run as expected. 
 
 **You need to include the tests of [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/round-robin/round-robin-test.lc) in round_robin.lc.** In particular, upon loading `round-robin.lc`, the function `testAll` should be executed.
 
