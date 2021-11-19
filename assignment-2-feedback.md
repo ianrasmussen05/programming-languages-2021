@@ -30,7 +30,7 @@ The two extra points for the fixed point combinator cannot get you above 30 (=10
 
 ## Critical Appraisal
 
-- `sum x:2:3:4:#` results in `x+9`, while `sum 1:2:3:x:#` results in `1+(2+(3+(x+0)))`. As opposed to what I wrote earlier here, that has nothing to do with the grammar, but rather with the fact the recursion
+- `sum x:2:3:4:#` results in `x+9`, while `sum 1:2:3:x:#` results in `1+(2+(3+(x+0)))`. **As opposed to what I wrote earlier here**, that has nothing to do with the grammar, but rather with the fact the recursion
     ```haskell
     sum list = if list=# then 0 else (hd list) + (sum (tl list))
     ```
