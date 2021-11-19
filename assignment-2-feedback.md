@@ -34,7 +34,7 @@ The two extra points for the fixed point combinator cannot get you above 30 (=10
     ```haskell
     sum list = if list=# then 0 else (hd list) + (sum (tl list))
     ```
-    works left-to-right until it hits `#` and then sums up "on the way back". In the case of `sum x:2:3:4:#`, the recursion can add `4+0`, then `3+4`, then `2+7` before hitting the free variable `x`. In the case of  `sum 1:2:3:x:#` already `x+0` cannot be simplified and the interpreter then returns the expression itself. What would happen in these cases, if we simplified the definition of the interpreter on `EPlus` to the following?
+    works left-to-right until it hits `#` and then sums up "on the way back". In the case of `sum x:2:3:4:#`, the recursion can add `4+0`, then `3+4`, then `2+7` before hitting the free variable `x`. In the case of  `sum 1:2:3:x:#` already `x+0` cannot be simplified and the interpreter returns the expression itself. What would happen in these cases, if we simplified the definition of the interpreter on `EPlus` to the following?
     ```haskell
     evalCBN (EPlus e1 e2) = case (evalCBN e1) of
         (EInt n) -> case (evalCBN e2) of
