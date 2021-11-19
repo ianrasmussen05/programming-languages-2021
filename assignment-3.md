@@ -81,7 +81,7 @@ Use the same private github repository as for Assignment 1 and 2. If you think t
 
     - The notation for lists changed, for example, `#` is now `[]`.
 
-- **(worth 6 points)**: Add a file `mergesort.lc` to `test` that contains your solution to Assignment 2 (the function `mergeLists` and its helper functions) but now runs in `LambdaFun`.
+- **(worth 3 points)**: Write the programs of Assignment 2.
 
 - Let me know if there are any problems, questions, etc
 
