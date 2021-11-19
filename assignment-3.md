@@ -85,25 +85,21 @@ Use the same private github repository as for Assignment 1 and 2. If you think t
 
 - Let me know if there are any problems, questions, etc
 
-## Part 2
+## Part 2 
 
 If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](https://hackmd.io/@alexhkurz/HkEBbgGnS) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc). 
 
-This assignment is about a simple round robin algorithm that allocates CPU time to tasks held in cyclic list.
+This assignment is about a round robin algorithm that allocates CPU time to tasks held in cyclic list.
 
 The assignment provides the round robin algorithm, but asks you to implement the library functions needed to run it.
 
 #### Instructions
 
-This assignment is worth 13% of the total grade.
-
-**Deadline** for hand-in is Sunday, **Dec 20**.
-
-Each group submits their answer by sending me a link to a github repository via [email using this link](mailto:akurz@chapman.edu?subject=CPSC-354-Assignment-3).
+Each group submits their answer by sending me a link to a github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%203%20Part%202).
 
 To assess your work, I will run the code in the file `round_robin.lc`, so make sure that the functions you implement all run as expected. 
 
-**You need to include the tests of [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/solution/round-robin-test.lc) in round_robin.lc.** In particular, upon loading `round-robin.lc`, the function `testAll` should be executed.
+**You need to include the tests of [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/solution/round-robin-test.lc) in round_robin.lc.** In particular, upon loading `round-robin.lc`, the function `testAll` should be executed.
 
 #### Specification
 
@@ -120,7 +116,7 @@ The library will consist of the following functions.[^types]
 
 `newClist` takes an element and returns (the address of) a circular list of length 1 containing the element. The data structure looks like this, namely we use a pair `[e,a]`, where `e` is the element stored in the list and `a` is a pointer which points back at the pair    
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./newCList.svg" width=105px>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./pictures/newCList.svg" width=105px>
 
 ---
 
@@ -144,7 +140,7 @@ The library will consist of the following functions.[^types]
 
 |            Before                   |               After                 |
 |:-----------------------------------:|:-----------------------------------:|
-|<img src="./insert1.svg" width=180px>|<img src="./insert2.svg" width=180px>|
+|<img src="./pictures/insert1.svg" width=180px>|<img src="./pictures/insert2.svg" width=180px>|
 
 ---
 
@@ -152,7 +148,7 @@ The library will consist of the following functions.[^types]
 
 |            Before                   |               After                 |
 |:-----------------------------------:|:-----------------------------------:|
-|<img src="./delete1.svg" width=248px>|<img src="./delete2.svg" width=248px>|
+|<img src="./pictures/delete1.svg" width=248px>|<img src="./pictures/delete2.svg" width=248px>|
 
 ### Testing
 
@@ -160,7 +156,7 @@ The explanations below refer to the file [round-robin-test.lc](https://github.co
 
 #### Testing the individual functions
 
-The file [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/solution/round-robin-test.lc) contains tests such as `testInsert1`. But feel free to write your own.
+The file [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/solution/round-robin-test.lc) contains tests such as `testInsert1`. But feel free to write your own.
 
 After you implemented all the functions and they test as expected you can turn to the round robin algorithm described next.
 
