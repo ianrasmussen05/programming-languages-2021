@@ -31,19 +31,15 @@ The two extra points for the fixed point combinator cannot get you above 30 (=10
 ## Critical Appraisal
 
 - `sum x:2:3:4:#` results in `x+9`, while `sum 1:2:3:x:#` results in `1+(2+(3+(x+0)))`. As opposed to what I wrote earlier here, that has nothing to do with the grammar, but rather with the fact the recursion
-```haskell
-sum list = if list=# then 0 else (hd list) + (sum (tl list))
-```
-works left-to-right until it hits `#` and then sums up "on the way back". In the case of `sum x:2:3:4:#`, the recursion can add `4+0`, then `3+4`, then `2+7` before hitting the free variable `x`. In the case of  `sum 1:2:3:x:#` already `x+0` cannot be simplified and the interpreter then returns the expression itself due to the fact that the definition
-```haskell=
-evalCBN (EPlus e1 e2) = case (evalCBN e1) of
-    (EInt n) -> case (evalCBN e2) of
-        (EInt m) -> EInt (n+m)
-        e2' -> EPlus (EInt n) e2'
-    e1' -> case (evalCBN e2) of 
-        (EInt m) -> EPlus e1' (EInt m)
-        e2' -> EPlus e1' e2'
-```
+    ```haskell
+    sum list = if list=# then 0 else (hd list) + (sum (tl list))
+    ```
+works left-to-right until it hits `#` and then sums up "on the way back". In the case of `sum x:2:3:4:#`, the recursion can add `4+0`, then `3+4`, then `2+7` before hitting the free variable `x`. In the case of  `sum 1:2:3:x:#` already `x+0` cannot be simplified and the interpreter then returns the expression itself. What would happen in these cases, if we simplified the definition of the interpreter on `EPlus` to the following?
+    ```haskell
+    evalCBN (EPlus e1 e2) = case (evalCBN e1) of
+        (EInt n) -> case (evalCBN e2) of
+            (EInt m) -> EInt (n+m)
+    ```
 
 - `#:#` does not parse because in the grammar, we have 
     ```
