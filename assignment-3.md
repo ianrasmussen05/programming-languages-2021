@@ -11,7 +11,7 @@ The purpose of the assignment is to learn how a functional programming languages
 
 - Part 1 introduces only a small amount of more convenient syntax: Better notation for lists, pattern matching, separate definitions. Nothing serious, so apart from getting used to the new syntax, you should be able to carry over everything you learned from Assignment 2.
 
-- Part 2 and 3 will add sequential composition, assignment, while loops and pointers, possibly arrays.
+- Part 2 will add sequential composition, assignment, while loops and pointers, possibly arrays.
 
 
 ## Instructions
