@@ -34,7 +34,7 @@ The two extra points for the fixed point combinator cannot get you above 30 (=10
     ```haskell
     sum list = if list=# then 0 else (hd list) + (sum (tl list))
     ```
-works left-to-right until it hits `#` and then sums up "on the way back". In the case of `sum x:2:3:4:#`, the recursion can add `4+0`, then `3+4`, then `2+7` before hitting the free variable `x`. In the case of  `sum 1:2:3:x:#` already `x+0` cannot be simplified and the interpreter then returns the expression itself. What would happen in these cases, if we simplified the definition of the interpreter on `EPlus` to the following?
+    works left-to-right until it hits `#` and then sums up "on the way back". In the case of `sum x:2:3:4:#`, the recursion can add `4+0`, then `3+4`, then `2+7` before hitting the free variable `x`. In the case of  `sum 1:2:3:x:#` already `x+0` cannot be simplified and the interpreter then returns the expression itself. What would happen in these cases, if we simplified the definition of the interpreter on `EPlus` to the following?
     ```haskell
     evalCBN (EPlus e1 e2) = case (evalCBN e1) of
         (EInt n) -> case (evalCBN e2) of
@@ -48,14 +48,15 @@ works left-to-right until it hits `#` and then sums up "on the way back". In the
     ```
     (The first `#` in `#:#` must be at level 16 but an `Exp16` cannot produce a `#` (only an `Exp15` can).) One might think about changing this to `ECons.     Exp15 ::=    Exp15 ":" Exp15 ;` but then the grammar would not specify  anymore whether `a:b:c` would be parsed as `a:(b:c)` or `(a:b):c`. What happens if you try it? Does it work or not?  
 
-- Differences between LambdaNat and Haskell
-    - Types
-    - Pattern matching
-    - Input/Output
-    - Error handling
-    - Syntactic sugar: abbreviations for lists, etc
-    - Predefined operations and libraries
-    - Efficient compiler
+- As opposed to Haskell, LambdaNat does not have
+    - types,
+    - pattern matching,
+    - input/output,
+    - error handling,
+    - syntactic sugar for lists etc, 
+    - predefined operations and libraries,
+    - a REPL,
+    - a compiler
     - ...
 
 
