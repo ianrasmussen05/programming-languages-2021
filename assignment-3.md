@@ -3,8 +3,7 @@
 #### Deadlines: 
 
 - Part 1: **Monday, Nov 29**. 
-- Part 2: ...
-- Part 3: ...
+- Part 2: **Wednesday, Dec 8**.
 
 ## Introduction
 
