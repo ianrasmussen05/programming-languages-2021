@@ -12,8 +12,13 @@ The two extra points for the fixed point combinator cannot get you above 30 (=10
     flatten [] = mempty
     flatten (x:xs) = mappend x (flatten xs)
     ```
-    Monoids are ubiquitous in math and software engineering. In the assignment, we have seen that both `sum` and `prod` fit into this pattern (if, indeed, we define `prod [] = 1`, taking into account that the neutral element of multiplication is 1.)
+    Monoids are ubiquitous in math and software engineering. In the assignment, we have seen that both `sum` and `prod` fit into this pattern 
 
+    |`mempty` | `mappend`|`flatten`|
+    |:---:|:---:|:---:|
+    | `0`|`+`|`sum`
+    |`1`|`*`|`prod`
+    
     For more on this topic read [Haskell Monoids and their Uses](http://blog.sigfpe.com/2009/01/haskell-monoids-and-their-uses.html) for the basics and [Monoids and Finger Trees](https://apfelmus.nfshost.com/articles/monoid-fingertree.html) for a sophisticated application. 
     
     The beauty of [Monoids and Finger Trees](https://apfelmus.nfshost.com/articles/monoid-fingertree.html) is that a wide range of different trees can be implemented in a uniform way by working with different instances of the typeclass `Monoid`, for example:
