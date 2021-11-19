@@ -19,7 +19,7 @@ The purpose of the assignment is to learn how a functional programming languages
 
 You may form groups of up to 2 students. 
 
-Each group submits their answer by sending me a link to their github repository via [email using this link](mailto:akurz@chapman.edu?subject=CPSC-354-Assignment-3-Part-X).
+Each group submits their answer by sending me a link to their github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%203%20Part%20X).
 
 Use the same private github repository as for Assignment 1 and 2. If you think that this is not possible/appropriate get in touch. 
 
