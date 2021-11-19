@@ -64,4 +64,5 @@ The two extra points for the fixed point combinator cannot get you above 30 (=10
     - a compiler
     - ...
 
+    On the positive side, the interpreter for LambdaNat5 has only 74 lines of code.
 
