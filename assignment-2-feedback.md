@@ -58,7 +58,7 @@ The two extra points for the fixed point combinator cannot get you above 30 (=10
     - pattern matching,
     - input/output,
     - error handling,
-    - syntactic sugar for lists etc, 
+    - syntactic sugar for lists, 
     - predefined operations and libraries,
     - a REPL,
     - a compiler
