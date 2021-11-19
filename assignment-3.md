@@ -32,11 +32,11 @@ Use the same private github repository as for Assignment 1 and 2. If you think t
 
 - Start from [Lab2-Lambda-Calculus/LambdaFun](https://github.com/alexhkurz/programming-languages-2021/tree/master/Lab2-Lambda-Calculus/LambdaFun).
 
-- Build the interpreter (can take a while) and start the REPL as explained in the [README.md](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md).
+- Build the interpreter (can take a while) and start the REPL as explained in the [README.md](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md).
 
-- Study the grammar at [README.md](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md). The syntax is slightly different and there are new features, most prominently, sequential composition, while loops, assignment. (You do not need the new features for Part 1).
+- Study the grammar at [README.md](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md). The syntax is slightly different and there are new features, most prominently, sequential composition, while loops, assignment. (You do not need the new features for Part 1).
 
-- Study the example programs in [test/examples.lc](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/examples.lc).
+- Study the example programs in [test/examples.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/examples.lc).
 
 - Run in a terminal
 
@@ -87,7 +87,7 @@ Use the same private github repository as for Assignment 1 and 2. If you think t
 
 ## Part 2 
 
-If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](https://hackmd.io/@alexhkurz/HkEBbgGnS) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc). 
+If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](https://hackmd.io/@alexhkurz/HkEBbgGnS) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc). 
 
 This assignment is about a round robin algorithm that allocates CPU time to tasks held in cyclic list.
 
@@ -152,7 +152,7 @@ The library will consist of the following functions.[^types]
 
 ### Testing
 
-The explanations below refer to the file [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/solution/round-robin-test.lc).
+The explanations below refer to the file [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/solution/round-robin-test.lc).
 
 #### Testing the individual functions
 
