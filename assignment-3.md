@@ -30,7 +30,7 @@ Use the same private github repository as for Assignment 1 and 2. If you think t
 
 #### Instructions
 
-- Start from [Lab2-Lambda-Calculus/LambdaFun](https://github.com/alexhkurz/programming-languages-2020/tree/master/Lab2-Lambda-Calculus/LambdaFun).
+- Start from [Lab2-Lambda-Calculus/LambdaFun](https://github.com/alexhkurz/programming-languages-2021/tree/master/Lab2-Lambda-Calculus/LambdaFun).
 
 - Build the interpreter (can take a while) and start the REPL as explained in the [README.md](https://github.com/alexhkurz/programming-languages-2020/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md).
 
