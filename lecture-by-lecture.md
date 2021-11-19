@@ -83,9 +83,10 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 12.1: We continued with [Hoare Logic](https://hackmd.io/Df57tnuCSGaW8wqqsl57FQ), looking at examples of while loops in some detail. I also have a list of [exercises](https://hackmd.io/@alexhkurz/rkhVZNzjH).
 
+- L 12.2: Overview of next semester's course on [Compiler Construction](https://github.com/alexhkurz/compiler-construction-2022). Undecidability of the [Halting Problem](https://hackmd.io/@alexhkurz/HyHUQYXuY). Extending Lambda Calculus to an Imperative Programming Language. [Assignment 3 out](assignment-3.md).
+
 ### Coming up next  
 
-- L 12.2: Overview of next semester's course on [Compiler Construction](https://github.com/alexhkurz/compiler-construction-2022). Undecidability of the [Halting Problem](https://hackmd.io/@alexhkurz/HyHUQYXuY). Extending Lambda Calculus to an Imperative Programming Language. Assignment 3 out.
 
 - Deadline for Part 2 of the report Nov 19.
 
