@@ -67,7 +67,7 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 8.2: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw), video review of the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
 
-### Part 5: Advanced Topics
+### Part 5: Advanced Topics 1
 
 - L 9.1: As an example for a mathematical proof about a model of computation: We started with a review of the second exercise in [String Rewriting Exercises](https://hackmd.io/@alexhkurz/Syn23oMHF) and then looked the theorem in [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY) and its proof in the textbook.
 
@@ -83,14 +83,17 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 12.1: We continued with [Hoare Logic](https://hackmd.io/Df57tnuCSGaW8wqqsl57FQ), looking at examples of while loops in some detail. I also have a list of [exercises](https://hackmd.io/@alexhkurz/rkhVZNzjH).
 
+## Part 6: An Interpreter for an Imperative Programming Language
+
 - L 12.2: Overview of next semester's course on [Compiler Construction](https://github.com/alexhkurz/compiler-construction-2022). Undecidability of the [Halting Problem](https://hackmd.io/@alexhkurz/HyHUQYXuY). Extending Lambda Calculus to an Imperative Programming Language. [Assignment 3 out](assignment-3.md).
 
 ### Coming up next  
 
-
-- Deadline for Part 2 of the report Nov 19.
+- Deadline for Part 2 of the report Nov 28.
 
 - Thanksgiving break
+
+- L 13.1: The memory model of LambdaFun.
 
 - Week 13, 14: TBA. Possible topics include: Monads, Polymorphism, Typeinference, Mathematics as a Programming Language, ... let me know if you have particular interests ...
 
