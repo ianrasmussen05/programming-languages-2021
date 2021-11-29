@@ -19,12 +19,18 @@ You may form groups of up to 2 students.
 
 Each group submits their answer by sending me a link to their github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%203%20Part%20X).
 
-As usual, I will use a script to run your programs, so make sure that they are named as follows.
-
-    LambdaFun/test/solutions.lc -- for Part 1
-    LambdaFun/test/round-robin.lc -- for Part 2
-
 Use the same private github repository as for Assignment 1 and 2. If you think that this is not possible/appropriate get in touch. 
+
+Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-2021/tree/main/Lab2-Lambda-Calculus/LambdaFun) in your repository. The file structure should look as follows.
+
+    Assignment1
+    Assignment2
+    Assignment3
+        README.md -- name of students, critical appraisal
+        LambdaFun -- copy of LambdaFun plus your solutions
+            test/solutions.lc -- solution for Part 1
+            test/round-robin.lc -- solution for Part 2
+
 
 ## Part 1
 
