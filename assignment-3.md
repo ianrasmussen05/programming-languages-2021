@@ -13,12 +13,16 @@ The purpose of the assignment is to learn how a functional programming languages
 
 - Part 2 will add sequential composition, assignment, while loops and pointers, possibly arrays.
 
-
 ## Instructions
 
 You may form groups of up to 2 students. 
 
 Each group submits their answer by sending me a link to their github repository via [email using this link](mailto:akurz@chapman.edu?subject=Assignment%203%20Part%20X).
+
+As usual, I will use a script to run your programs, so make sure that they are named as follows.
+
+    LambdaFun/test/solutions.lc -- for Part 1
+    LambdaFun/test/round-robin.lc -- for Part 2
 
 Use the same private github repository as for Assignment 1 and 2. If you think that this is not possible/appropriate get in touch. 
 
@@ -80,7 +84,7 @@ Use the same private github repository as for Assignment 1 and 2. If you think t
 
     - The notation for lists changed, for example, `#` is now `[]`.
 
-- **(worth 3 points)**: Write the programs of Assignment 2.
+- **(3 points)**: Write the programs of Assignment 2.
 
 - Let me know if there are any problems, questions, etc
 
