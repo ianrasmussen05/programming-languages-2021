@@ -31,6 +31,7 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
             test/solutions.lc -- solution for Part 1
             test/round-robin.lc -- solution for Part 2
 
+I will run `stack build` on my side, so do not commit any files that `stack build` generates on your side.
 
 ## Part 1
 
