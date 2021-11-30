@@ -15,5 +15,4 @@ local/
 *.ibc
 *.thy~
 .history
-.lamfun
 ChangeLog.md
