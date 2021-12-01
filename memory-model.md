@@ -144,7 +144,7 @@ Explain, by inspecting the environment, in which sense the above defines a cycli
     λ val ptr = new [];;
     λ ptr := !a;;
 
-this code creates a pointer `ptr` that points to the same memory location (address) as `a`. The content of a pointer is an address. Verify that 
+this code creates a pointer `ptr` that points to the same data as `a`. Verify that 
 
     λ ptr := !(head(tail !a));; 
     
