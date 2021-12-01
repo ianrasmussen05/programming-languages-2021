@@ -200,7 +200,7 @@ instance Interpreter 'LamMem where
     "Built in functions:\n" ++
     (intercalate ", " $ map (\(k,v) -> toS k) $ toList builtin) ++
     "\n\ESC[32mEnv:\ESC[30m\n" ++ -- prints green https://replit.com/@alexhkurz/ColouredHaskellOutput#Main.hs
-    (intercalate "\n" $ map (\(k,v) -> toS k ++ " -> " ++ showVal False v) $ filter (\(k,_) -> not $ k `member` builtin_set) $ toList env) ++
+    (intercalate "\n" $ map (\(k,v) -> toS k ++ " = " ++ showVal False v) $ filter (\(k,_) -> not $ k `member` builtin_set) $ toList env) ++
     "\n\ESC[32mMemory:\ESC[30m\n" ++ -- prints green
     (intercalate "\n" $ map (\(k,v) -> show k ++ " -> " ++ case v of {Just v' -> showVal False v'; _ -> "un-initialized"}) $ toList mem)
 

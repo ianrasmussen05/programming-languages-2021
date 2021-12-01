@@ -11,7 +11,7 @@ which creates a new name `a` on the stack and a new memory cell (or address) on 
 upon which we get to see a full list of the stack (called `Env` below for environment) and the heap (called `Memory` below). I only show part of the overall output.
 
     Env:
-    a -> <address 0>
+    a = <address 0>
     Memory:
     0 -> un-initialized
     
@@ -24,15 +24,15 @@ Our first experiment gives a familiar result.
     λ a:=3;;
     λ :env
     Env:
-    a -> <address 0>
+    a = <address 0>
     Memory:
     0 -> 3
 
 This tells us that, after the assignment, address `a` (which is `0`) has content `3`. 
 
-**Remark:** We use different language to say `a -> <address 0>` ("`a` is address `0`") and to say `0 -> 3` ("address `0` has content `3`"). This reflects an importance difference in the meaning of the two arrows`->`.  The first one, `a -> <address 0>` is immutable, while the second one, `0 -> 3`, can be changed via assignment. 
+**Remark:** While ` = ` and ` -> ` can both be read as "the name on the left refers to the value on the right" we chose a different notation and language.  We read `a = <address 0>` as "`a` is address `0`" and we read `0 -> 3` as "address `0` stores content `3`". The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. 
 
-For example, we can change the content of address `a` as follows.
+For example, we can change not `a` but its content as follows.
 
     λ a:=4;;
 
@@ -40,11 +40,11 @@ To verify that this has the expected result we inspect stack and heap:
 
     λ :env
     Env:
-    a -> <address 0>
+    a = <address 0>
     Memory:
     0 -> 4
 
-We see that `a -> <address 0>` did not change ("`a` is still address `0`")  while `0 -> 3` became `0 -> 4` ("the content of `a` changed from `3` to `4`").
+We see that `a = <address 0>` did not change ("`a` is still address `0`")  while `0 -> 3` became `0 -> 4` ("the content of `a` changed from `3` to `4`").
 
 So far, we have seen the familiar behaviour of a variable `a` updated by assignment. The first indication that something is different comes from the following.
 
@@ -62,8 +62,8 @@ The next experiment highlights the difference between a name that is an integer 
 
     λ val b = 5;;     
     λ :env
-    a -> <address 0>
-    b -> 5
+    a = <address 0>
+    b = 5
     0 -> 3
 
 **Exercise:** Explain what happens after
@@ -74,8 +74,8 @@ On the other hand, the following works as expected:
 
     λ a:=b;;
     λ :env
-    a -> <address 0>
-    b -> 5
+    a = <address 0>
+    b = 5
     0 -> 5
 
 Now `a`, which is address `0`, has content `5`.
@@ -90,15 +90,15 @@ What may be unexpected is the following.
 
 Pause for a moment and ponder that there are two ways to answer the question `λ :env` now.  
 
-    a -> <address 0>
+    a = <address 0>
     0 -> ???
 
 Do we want to replace `???` by the content of `c`, which is `7`, or by the address of `c`, which is `1`?
 
 In fact, the console will choose the second answer: 
 
-    a -> <address 0>
-    c -> <address 1>
+    a = <address 0>
+    c = <address 1>
     0 -> <address 1>
     1 -> 7
 
@@ -112,8 +112,8 @@ Recall that we can write `!c` to express "the content of `c`". And, indeed,
 
 gives us
 
-    a -> <address 0>
-    c -> <address 1>
+    a = <address 0>
+    c = <address 1>
     0 -> 7
     1 -> 7
 
@@ -138,12 +138,10 @@ gives us
     λ b := [2,a];;
     λ a := [3,b];;
     
-Inspecting the environment with `:env`
+Inspect the environment with `:env`
 
-    Env:
-    a -> <address 0>
-    b -> <address 1>
-    Memory:
+    a = <address 0>
+    b = <address 1>
     0 -> [3, <address 1>]
     1 -> [2, <address 0>]
 
@@ -169,7 +167,20 @@ What happens if you execute `case !(!ptr) of { [e,x] -> ptr := x };;` again? And
 
 (See also the function length in [linked-list.lc](test/linked-list.lc).) 
 
+**Remark:** After the previous exercise, the environment contains
+
+    a = <address 0>
+    b = <address 1>
+    ptr = <address 2>
+    0 -> [3, <address 1>]
+    1 -> [2, <address 0>]
+    2 -> <address 0>
+
+where in the last line the content of address `2` depends on whether `ptr` points to address `0` (which is `a`) or whether it points to address `1` (which is `b`). Notice that `ptr` is different from `a` and `b` in that not only `ptr` is an address, but also `!ptr` contains an address. So while we have to write `!a` to access the content of `a`, we have to write `!(!ptr)` to access the data represented by `ptr`.
+
+
 **Exercise** (can be skipped): Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
+
 
 **Exercise:** Continuing from the above, write a function `next` that satisfies the following.
 
