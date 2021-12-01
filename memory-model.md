@@ -160,6 +160,8 @@ What happens if you execute `case !(!ptr) of { [e,x] -> ptr := x };;` again? And
 
 (See also the function length in [linked-list.lc](test/linked-list.lc).) 
 
+**Exercise:** Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
+
 [^immutable-stack]: The stack is mutable at the top level. This can be seen by 
 
         λ val i = 0;;
