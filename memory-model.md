@@ -160,7 +160,20 @@ What happens if you execute `case !(!ptr) of { [e,x] -> ptr := x };;` again? And
 
 (See also the function length in [linked-list.lc](test/linked-list.lc).) 
 
-**Exercise:** Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
+**Exercise** (can be skipped): Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
+
+**Exercise:** Continuing from the above, write a function `next` that satisfies the following.
+
+    λ next a == b;;
+    true  
+    λ next b == a;;
+    true
+
+    λ next a;;
+    <address 1>
+    λ next b;;
+    <address 0>
+
 
 [^immutable-stack]: The stack is mutable at the top level. This can be seen by 
 
