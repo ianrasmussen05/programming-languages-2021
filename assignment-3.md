@@ -11,7 +11,7 @@ The purpose of the assignment is to learn how a functional programming languages
 
 - Part 1 introduces only a small amount of more convenient syntax: Better notation for lists, pattern matching, separate definitions. Nothing serious, so apart from getting used to the new syntax, you should be able to carry over everything you learned from Assignment 2.
 
-- Part 2 will add sequential composition, assignment, while loops and pointers, possibly arrays.
+- Part 2 will add sequential composition, assignment, while loops and pointers, possibly arrays. 
 
 ## Instructions
 
@@ -99,9 +99,11 @@ I will run `stack build` on my side, so do not commit any files that `stack buil
 
 If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](https://hackmd.io/@alexhkurz/HkEBbgGnS) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc). 
 
-This assignment is about a round robin algorithm that allocates CPU time to tasks held in cyclic list.
+This assignment is about a round robin algorithm that allocates CPU time to tasks held in a cyclic list. 
 
 The assignment provides the round robin algorithm, but asks you to implement the library functions needed to run it.
+
+This example is taken from operating systems, see [Round-robin scheduling](https://en.wikipedia.org/wiki/Round-robin_scheduling) for general background.
 
 #### Instructions
 
