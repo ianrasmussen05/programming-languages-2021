@@ -138,14 +138,23 @@ gives us
     λ b := [2,a];;
     λ a := [3,b];;
     
-Explain, by inspecting the environment, in which sense the above defines a cyclic list.
+Inspecting the environment with `:env`
+
+    Env:
+    a -> <address 0>
+    b -> <address 1>
+    Memory:
+    0 -> [3, <address 1>]
+    1 -> [2, <address 0>]
+
+and explain in which sense the above defines a cyclic list.
 
 **Exercise:** Continue from the exercise above as follows.
 
     λ val ptr = new [];;
     λ ptr := a;;
 
-This creates a pointer `ptr` that points to `a`. A pointer has as its content an address. The content of `ptr` is `a`:
+This creates a pointer `ptr` that points to `a`. A pointer has as its content an address. The content of `ptr` is (the address of) `a`:
 
     λ !ptr == a;;
     true
