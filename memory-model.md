@@ -132,6 +132,7 @@ gives us
 
 **Exercise:** Run through the following, at each step predicting the result and then inspecting the environment.
 
+    λ val a = new [];;
     λ a := [1,"NULL"];;
     λ val b = new [];;
     λ b := [2,a];;
@@ -139,16 +140,25 @@ gives us
     
 Explain, by inspecting the environment, in which sense the above defines a cyclic list.
 
-**Exercise:** Continuing from the exercise above,
+**Exercise:** Continue from the exercise above as follows.
 
     λ val ptr = new [];;
-    λ ptr := !a;;
+    λ ptr := a;;
 
-this code creates a pointer `ptr` that points to the same data as `a`. Verify that 
+This creates a pointer `ptr` that points to `a`. A pointer has as its content an address. The content of `ptr` is `a`:
 
-    λ ptr := !(head(tail !a));; 
+    λ !ptr == a;;
+    true
+
+Verify that 
+
+    λ case !(!ptr) of { [e,x] -> ptr := x };;
     
-moves the pointer `ptr` one element along the cyclic list, from `!a` to `!b`. 
+moves the pointer `ptr` one element along the cyclic list, from `a` to `b`. 
+
+What happens if you execute `case !(!ptr) of { [e,x] -> ptr := x };;` again? And again? 
+
+(See also the function length in [linked-list.lc](test/linked-list.lc).) 
 
 [^immutable-stack]: The stack is mutable at the top level. This can be seen by 
 
@@ -157,4 +167,4 @@ moves the pointer `ptr` one element along the cyclic list, from `!a` to `!b`.
         λ val i = i+1;;
         λ i;;
 
-    but this does not work insdide a function.
+    but this does not work inside a function.
