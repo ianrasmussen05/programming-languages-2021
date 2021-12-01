@@ -169,4 +169,4 @@ What happens if you execute `case !(!ptr) of { [e,x] -> ptr := x };;` again? And
         λ val i = i+1;;
         λ i;;
 
-but this does not work inside a function.
+    but this does not work inside a function.
