@@ -180,7 +180,7 @@ where in the last line the content of address `2` depends on whether `ptr` point
 
 It is important to practice to translate the output of `:env` into more abstract pictures, see 
 
-<img src="./pictures/cyclic-list.png" width=300px>.
+<img src="./pictures/cyclic-list.png" width=400px>.
 
 
 **Exercise** (can be skipped): Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
