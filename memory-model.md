@@ -186,7 +186,10 @@ It is important to practice to translate the output of `:env` more abstract pict
 
 **Exercise** (optional): Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
 
-**Remark:** The function `length` works by moving a pointer along the list. In our setting this means that the pointer must be mutable, hence on the heap. For the `next` function, which only takes "one step to the right", we do not need pointers, see the next exercise.
+**Remark:** The function `length` works by moving a pointer along the list. In our setting this means that the pointer must be mutable, hence on the heap. For the `next` function, which only takes "one step to the right", we do not need pointers. In other words, we can simplify the relevant picture to
+
+<img src="./pictures/cyclic-list.png" width=400px>.
+
 
 **Exercise:** Write a function `next` that satisfies the following.
 
