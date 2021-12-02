@@ -178,6 +178,8 @@ What happens if you execute `case !(!ptr) of { [e,x] -> ptr := x };;` again? And
 
 where in the last line the content of address `2` depends on whether `ptr` points to address `0` (which is `a`) or whether it points to address `1` (which is `b`). Notice that `ptr` is different from `a` and `b` in that not only `ptr` is an address, but also `!ptr` contains an address. So while we have to write `!a` to access the content of `a`, we have to write `!(!ptr)` to access the data represented by `ptr`.
 
+It is important to practice to translate the output of `:env` into more abstract pictures, see <img src="./pictures/cyclic-list.png" width=180px>.
+
 
 **Exercise** (can be skipped): Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
 
