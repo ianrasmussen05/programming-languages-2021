@@ -165,7 +165,7 @@ moves the pointer `ptr` one element along the cyclic list, from `a` to `b`.
 
 What happens if you execute `case !(!ptr) of { [e,x] -> ptr := x };;` again? And again? 
 
-(See also the function length in [linked-list.lc](test/linked-list.lc).) 
+(See also the function `length` in [linked-list.lc](test/linked-list.lc).) 
 
 **Remark:** After the previous exercise, the environment contains
 
@@ -181,8 +181,9 @@ where in the last line the content of address `2` depends on whether `ptr` point
 
 **Exercise** (can be skipped): Continuing from the above, express `case !(!ptr) of { [e,x] -> ptr := x }` with the help of `head` and `tail` without using `case` or `:=`.
 
+**Remark:** The function `length` works by moving a pointer along the list. In our setting this means that the pointer must be mutable, hence on the heap. For the `next` function, which only takes "one step to the right", we do not need pointers, see the next exercise.
 
-**Exercise:** Continuing from the above, write a function `next` that satisfies the following.
+**Exercise:** Write a function `next` that satisfies the following.
 
     λ next a == b;;
     true  

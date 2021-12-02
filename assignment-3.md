@@ -11,7 +11,7 @@ The purpose of the assignment is to learn how a functional programming languages
 
 - Part 1 introduces only a small amount of more convenient syntax: Better notation for lists, pattern matching, separate definitions. Nothing serious, so apart from getting used to the new syntax, you should be able to carry over everything you learned from Assignment 2.
 
-- Part 2 will add sequential composition, assignment, while loops and pointers, possibly arrays. 
+- Part 2 will add sequential composition, assignment, while loops and pointers. 
 
 ## Instructions
 
@@ -126,7 +126,7 @@ The library will consist of the following functions.[^types]
 
 ---
 
-`newClist` takes an element and returns (the address of) a circular list of length 1 containing the element. The data structure looks like this, namely we use a pair `[e,a]`, where `e` is the element stored in the list and `a` is a pointer which points back at the pair    
+`newClist` takes an element and returns (the address of) a circular list of length 1 containing the element. The data structure looks like this, namely we use a pair `[e,a]`, where `e` is the element stored in the list and `a` is an address which points back at the pair    
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./pictures/newCList.svg" width=105px>
 
@@ -210,4 +210,4 @@ Note that waiting for one clock cycle moves the last task in the cyclic list to 
 - The function `roundRobin` takes a list `ts` of tasks such as `[addTask 6,tick,tick,addTask 5,tick]`, or just `[6,0,0,5,0]` for short, and takes a cyclic list `a` and simulates a round robin algorithm that inserts the tasks into the cyclic list and, for each `tick`, reduces the current task by 1 and goes on to the next task.
 - The function `testRRobin` takes a list of tasks, calls `roundRobin` with this list of tasks on the cyclic list containing 0, and then converts the resulting cyclic list into an ordinary list.
 
-[^types]: `LambdaFun` has no built-in types. The types are listed only for documentation purposes. Also note that the type `clist` represents references (pointers, addresses) to circular lists. These are not functions in the mathematical sense that can be understood as transforming inputs to outputs. Rather they work by their side-effects on memory.
+[^types]: `LambdaFun` has no built-in types. The types are listed only for documentation purposes. Also note that the type `clist` represents references (pointers, addresses) to circular lists. These are not mathematical functions transforming inputs to outputs. Rather they work by their side-effects on memory.
