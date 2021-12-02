@@ -89,15 +89,11 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 13.1: The [memory model](memory-model.md) of LambdaFun, version LamMem.
 
-### Coming up next  
+- L 13.2 and 14.1: Working on Assignment 3 in class.
 
-- Deadline for Part 2 of the report Nov 28.
+## Coming up next
 
-- Thanksgiving break
-
-- L 13.1: The memory model of LambdaFun.
-
-- Week 13, 14: TBA. Possible topics include: Monads, Polymorphism, Typeinference, Mathematics as a Programming Language, ... let me know if you have particular interests ...
+- Week 14.2: TBA. Possible topics include: Monads, Polymorphism, Typeinference, Mathematics as a Programming Language, ... let me know if you have particular interests ...
 
 - Deadline for Part 3 of the report.
 

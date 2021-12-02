@@ -154,6 +154,8 @@ The library will consist of the following functions.[^types]
 |:-----------------------------------:|:-----------------------------------:|
 |<img src="./pictures/insert1.svg" width=180px>|<img src="./pictures/insert2.svg" width=180px>|
 
+(One could make the case for `insert` to insert before the entry point. What would be involved in doing this?)
+
 ---
 
 `delete` takes a circular list `a` and "deletes" the element after the current element of `a` (if it exists) by reassigning the pointer of `a` pointing to the successor. In particular, deleting from the one-element cyclic list does not change the list. 
@@ -166,13 +168,13 @@ The library will consist of the following functions.[^types]
 
 The explanations below refer to the file [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/round-robin/round-robin-test.lc).
 
-#### Testing the individual functions
+#### Test the individual functions
 
 The file [round-robin-test.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/round-robin/round-robin-test.lc) contains tests such as `testInsert1`. But feel free to write your own.
 
 After you implemented all the functions and they test as expected you can turn to the round robin algorithm described next.
 
-#### Testing by running the round robin algorithm
+#### Test by running the round robin algorithm
 
 One of the standard applications of cyclic lists is to collect tasks and work on them one by one going around the list until all tasks are completed. The following tests are based on this idea.
 
