@@ -4,6 +4,7 @@ Thanks to everybody who contributed links (Sam Balco, Chris Chang, Pablo Labbate
 
 ## New for 2021: 
 
+- [Who invented video games?](https://theconversation.com/who-invented-video-games-169792) Note that Christopher Strachey is one of the pioneers of programming languages.
 - [The Web's Freedom Fallacy](https://ez.substack.com/p/the-webs-freedom-fallacy). If you are interested in blockchain, decentralised social media and their intersection with law this article has some interesting links to follow.  
 - [Facebook fights spam with Haskell](https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/). "The Haskell-powered Sigma now runs in production, serving more than one million requests per second. [...] We haven’t seen any crashes in either the Haskell runtime or the Haskell code itself across our whole fleet."
 - [How to make a bad programming language](https://www.youtube.com/watch?v=2mnYf7L7Amw).
