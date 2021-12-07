@@ -4,8 +4,9 @@ Thanks to everybody who contributed links (Sam Balco, Chris Chang, Pablo Labbate
 
 ## New for 2021: 
 
+- Transcribing music as a parsing problem, see Example 1 in [Symbolic Weighted Language Models, Quantitative Parsing and Verification over Infinite Alphabets](https://hal.inria.fr/hal-03380268/document). 
 - Byron Cook: [Formal Reasoning about the Security of Amazon Web Services](https://www.youtube.com/watch?v=JfjLKBO27nw).
-- Peter O'Hearn on how to solve unsolvable problems: [Facebook's Code Checker](https://www.youtube.com/watch?v=tKR2UZdRpV0). Also: [Continuous Reasoning: Scaling the impact of formal methods](https://www.youtube.com/watch?v=HW5Zq1TsQqU). 
+- Peter O'Hearn on how to solve unsolvable problems: [Facebook's Code Checker](https://www.youtube.com/watch?v=tKR2UZdRpV0). See also the lecture [Continuous Reasoning: Scaling the impact of formal methods](https://www.youtube.com/watch?v=HW5Zq1TsQqU) and the article [Scaling Static Analyses at Facebook](https://dl.acm.org/doi/pdf/10.1145/3338112), which give valuable insights in the continuous integration process at a big software company. Of particular importance is the concept of *diff time continuous reasoning*.
 - [Who invented video games?](https://theconversation.com/who-invented-video-games-169792) Note that Christopher Strachey is one of the pioneers of programming languages.
 - [The Web's Freedom Fallacy](https://ez.substack.com/p/the-webs-freedom-fallacy). If you are interested in blockchain, decentralised social media and their intersection with law this article has some interesting links to follow.  
 - [Facebook fights spam with Haskell](https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/). "The Haskell-powered Sigma now runs in production, serving more than one million requests per second. [...] We haven’t seen any crashes in either the Haskell runtime or the Haskell code itself across our whole fleet."
