@@ -89,7 +89,9 @@ The recordings contain a detailed explanation of how to conduct a mathematical p
 
 - L 13.1: The [memory model](memory-model.md) of LambdaFun, version LamMem.
 
-- L 13.2 and 14.1: Working on Assignment 3 in class.
+- L 13.2: Working on Assignment 3 in class.
+
+- L 14.1: Review of String Rewriting.
 
 ## Coming up next
 
