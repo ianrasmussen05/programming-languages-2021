@@ -3,7 +3,7 @@
 Thanks to everybody who contributed links (Sam Balco, Chris Chang, Pablo Labbate, Matt Raymond, ... ).
 
 ## New for 2021: 
-
+- Are the following Turing complete? [Minecraft](https://www.youtube.com/watch?v=1X21HQphy6I), [Power Point](https://www.youtube.com/watch?v=uNjxe8ShM-8), [LaTeX](https://stackoverflow.com/questions/2968411/ive-heard-that-latex-is-turing-complete-are-there-any-programs-written-in-late), [Excel](https://visualstudiomagazine.com/articles/2021/01/27/excel-lambda.aspx), ... [surprisingly Turing complete](https://www.gwern.net/Turing-complete) ... [accidentally Turing complete](http://beza1e1.tuxen.de/articles/accidentally_turing_complete.html) ... [Wang tiles](https://grahamshawcross.com/2012/10/12/wang-tiles-and-turing-machines/) ... [even more links](https://news.ycombinator.com/item?id=16383072) ...
 - Transcribing music as a parsing problem, see Example 1 in [Symbolic Weighted Language Models, Quantitative Parsing and Verification over Infinite Alphabets](https://hal.inria.fr/hal-03380268/document). 
 - Byron Cook: [Formal Reasoning about the Security of Amazon Web Services](https://www.youtube.com/watch?v=JfjLKBO27nw).
 - Peter O'Hearn on how to solve unsolvable problems: [Facebook's Code Checker](https://www.youtube.com/watch?v=tKR2UZdRpV0). See also the lecture [Continuous Reasoning: Scaling the impact of formal methods](https://www.youtube.com/watch?v=HW5Zq1TsQqU) and the article [Scaling Static Analyses at Facebook](https://dl.acm.org/doi/pdf/10.1145/3338112), which give valuable insights in the continuous integration process at a big software company. Of particular importance is the concept of *diff time continuous reasoning*.
