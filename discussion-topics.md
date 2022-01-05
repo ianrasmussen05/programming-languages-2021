@@ -5,9 +5,10 @@ Thanks to everybody who contributed links (Sam Balco, Chris Chang, Pablo Labbate
 ## New for 2021: 
 
 - Formal Methods at Facebook:
-  - [Applying Formal Verification to Microkernel IPC at
-Meta](https://www.cs.cornell.edu/~noamz/files/pubs/cpp22.pdf), 2022.
+  - [Applying Formal Verification to Microkernel IPC at Meta](https://www.cs.cornell.edu/~noamz/files/pubs/cpp22.pdf), 2022.
   - [Finding Real Bugs in Big Programs with Incorrectness Logic](http://www0.cs.ucl.ac.uk/staff/p.ohearn/RealBigDraft.pdf), 2021.
+- Formal Methods at Amazon:
+  - Byron Cook: [On the Business of Proof ](https://www.youtube.com/watch?v=g-DH_b5bFd4), 2021.
 - [Recursion in Programming - Full Course](https://www.youtube.com/watch?v=IJDJ0kBx2LM&t=834s).
 - Are the following Turing complete? [Minecraft](https://www.youtube.com/watch?v=1X21HQphy6I), [Power Point](https://www.youtube.com/watch?v=uNjxe8ShM-8), [LaTeX](https://stackoverflow.com/questions/2968411/ive-heard-that-latex-is-turing-complete-are-there-any-programs-written-in-late), [Excel](https://visualstudiomagazine.com/articles/2021/01/27/excel-lambda.aspx), ... [surprisingly Turing complete](https://www.gwern.net/Turing-complete) ... [accidentally Turing complete](http://beza1e1.tuxen.de/articles/accidentally_turing_complete.html) ... [Wang tiles](https://grahamshawcross.com/2012/10/12/wang-tiles-and-turing-machines/) ... [even more links](https://news.ycombinator.com/item?id=16383072) ...
 - Transcribing music as a parsing problem, see Example 1 in [Symbolic Weighted Language Models, Quantitative Parsing and Verification over Infinite Alphabets](https://hal.inria.fr/hal-03380268/document). 
